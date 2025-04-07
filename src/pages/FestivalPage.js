@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './FestivalPage.css';
-import { Link } from 'react-router-dom';
 
 // Import all images
 import margueriteImage from '../assets/Marguerite.jpeg';
