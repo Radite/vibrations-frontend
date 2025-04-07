@@ -16,7 +16,6 @@ const CommunityOutreach = () => {
         ></div>
         <h1>Community Outreach</h1>
         <p>Supporting arts, culture, and education across Jamaica</p>
-        <a href="#featured-event" className="btn">View Events</a>
       </section>
 
       {/* Featured Event Section */}
@@ -47,7 +46,6 @@ const CommunityOutreach = () => {
               of the poster. This sponsorship reflects our support of other art forms and 
               our community outreach to other charitable organizations.
             </p>
-            <a href="#rsvp" className="btn">Learn More</a>
           </div>
         </div>
       </section>
