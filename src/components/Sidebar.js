@@ -1,4 +1,4 @@
-// Sidebar.js - Updated to accept props instead of using global window object
+// Sidebar.js - Updated to include Community Outreach link
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       <div className="divider"></div>
       
       <nav>
-        {/* Updated link order */}
+        {/* Updated link order with Community Outreach added */}
         <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
           Home
         </Link>
@@ -38,6 +38,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         </Link>
         <Link to="/vendors" className={location.pathname === '/vendors' ? 'active' : ''}>
           Call for Vendors
+        </Link>
+        <Link to="/community-outreach" className={location.pathname === '/community-outreach' ? 'active' : ''}>
+          Community Outreach
         </Link>
         <Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>
           Gallery

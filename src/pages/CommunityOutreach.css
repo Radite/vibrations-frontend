@@ -1,0 +1,314 @@
+/* Jamaican Flag-Inspired Color Palette */
+:root {
+  --jamaican-green: #009B3A;
+  --jamaican-yellow: #FED100;
+  --jamaican-black: #000000;
+  --cream: #FFFFF0;
+  --light-yellow: #FFF5CC;
+  --dark-green: #006B28;
+}
+
+/* Hero Section with Jamaican-Inspired Styling */
+.hero {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 0;
+  overflow: hidden;
+  color: white;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--jamaican-yellow);
+  color: var(--jamaican-black);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.btn:hover {
+  background-color: var(--jamaican-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
+.content-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--jamaican-black);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+}
+
+/* Featured Event */
+.featured-event {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 60px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.featured-event::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+}
+
+.event-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.event-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.event-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--jamaican-black);
+}
+
+.event-details p {
+  margin-bottom: 20px;
+}
+
+.sponsor-note {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--dark-green);
+}
+
+/* Community Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card i {
+  font-size: 2.5rem;
+  margin-bottom: 20px; 
+  color: var(--jamaican-green);
+}
+
+.project-card:nth-child(2) i {
+  color: var(--jamaican-yellow);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--jamaican-black);
+}
+
+.project-card p {
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  color: var(--jamaican-green);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.project-card a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--jamaican-yellow);
+  transition: width 0.3s ease;
+}
+
+.project-card a:hover::after {
+  width: 100%;
+}
+
+/* Join Us Section */
+.join-us {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--light-yellow) 0%, var(--cream) 100%);
+  position: relative;
+  margin-top: 60px;
+}
+
+.join-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(45deg, 
+    var(--jamaican-black) 0%, var(--jamaican-black) 25%, 
+    var(--jamaican-yellow) 25%, var(--jamaican-yellow) 50%, 
+    var(--jamaican-green) 50%, var(--jamaican-green) 75%, 
+    var(--jamaican-black) 75%, var(--jamaican-black) 100%);
+  background-size: 100px 100%;
+}
+
+.join-us-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.join-us h2 {
+  color: var(--jamaican-black);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.join-us p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .event-image, .event-details {
+    min-width: 100%;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
