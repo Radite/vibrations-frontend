@@ -97,7 +97,7 @@ const Vendors = () => {
         {/* Hero Section - Updated to use global hero styles */}
         <section className="site-hero">
           <div className="site-hero-content">
-            <h1>Cultural Marketplace</h1>
+            <h1>Call for Vendors</h1>
             <p>Join our vibrant community of artisans, craftspeople, and cultural entrepreneurs showcasing authentic Caribbean creativity</p>
           </div>
         </section>
