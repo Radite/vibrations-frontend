@@ -1,14 +1,4 @@
-/* CSS Variables for Jamaican-themed colors */
-:root {
-    --jamaican-green: #009B3A;
-    --jamaican-yellow: #FED100;
-    --jamaican-black: #000000;
-    --dark-green: #006400;
-    --light-green: #7CFC00;
-    --light-yellow: #FFFF99;
-    --off-white: #F8F8F8;
-  }
-  
+
   /* Global Styles */
   .community-outreach-page {
     font-family: 'Montserrat', sans-serif;
