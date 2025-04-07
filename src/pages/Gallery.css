@@ -79,7 +79,7 @@
   transform: translateY(40px);
   opacity: 0;
   transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 1s ease;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3 / 4; /* Portrait feel */
 }
 
 .gallery-page .gallery-item.in-view {
