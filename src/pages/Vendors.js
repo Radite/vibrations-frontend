@@ -4,9 +4,7 @@ import './Vendors.css';
 import './global-hero.css'; // Import global hero CSS
 
 // Import any components you might need
-import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
 
 const Vendors = () => {
   const [formData, setFormData] = useState({
