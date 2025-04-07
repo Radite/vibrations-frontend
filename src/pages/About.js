@@ -56,7 +56,7 @@ const AboutPage = () => {
               <div className="founder-info">
                 <h3>Canute Lawrence</h3>
                 <p>
-                  Canute Lawrence is an award-winning poet, educator, and author whose work captures the complexity of human experiences in the face of societal challenges. His book <em>Pathology of a Pandemic</em>, published in 2021, explores a range of voices and perspectives during the COVID-19 pandemic. With over three decades as a language and literature teacher in Jamaica, the United States, and Canada, Canute continues to inspire young minds as a full-time teacher with the Toronto District School Board.
+                  Canute Lawrence is an award-winning author, educator, and author whose work captures the complexity of human experiences in the face of societal challenges. His book <em>Pathology of a Pandemic</em>, published in 2021, explores a range of voices and perspectives during the COVID-19 pandemic. With over three decades as a language and literature teacher in Jamaica, the United States, and Canada, Canute continues to inspire young minds as a full-time teacher with the Toronto District School Board.
                 </p>
               </div>
             </div>
@@ -66,7 +66,7 @@ const AboutPage = () => {
               <div className="founder-info">
                 <h3>Marguerite C. Anderson</h3>
                 <p>
-                  Marguerite C. Anderson is an international-award winning poet, educator, actress, and advocate for the arts. Born in Kingston, she has spent over three decades teaching in Jamaica and the Turks &amp; Caicos Islands, and has authored several books which include three poetry collections including - <em>Echoes From The Naked Soul</em> (2020), <em>I Exist On This Page</em> (2024), and <em>Proclamations</em> (2025). Her poignant ballad <em>In Memory's Absence</em> gained global recognition after winning 1st-Place prize on Poetry.com.
+                  Marguerite C. Anderson is an internationally acclaimed poet, educator, actress and advocate for the arts. Born in Kingston, she has spent over three decades teaching in Jamaica and the Turks &amp; Caicos Islands, and has authored several books which include three poetry collections including - <em>Echoes From The Naked Soul</em> (2020), <em>I Exist On This Page</em> (2024), and <em>Proclamations</em> (2025). Her poignant ballad <em>In Memory's Absence</em> gained global recognition after winning 1st-Place prize on Poetry.com.
                 </p>
               </div>
             </div>
