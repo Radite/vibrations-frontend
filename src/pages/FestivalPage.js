@@ -119,8 +119,8 @@ const FestivalPage = () => {
               {/* About Tab */}
               <div className={`tab-pane ${activeTab === 'about' ? 'active' : ''}`} id="about">
                 <h3>About the Festival</h3>
-                <p>Welcome to the Vibrations Poetry Festival (VPF), a dynamic and exciting new literary celebration dedicated to nurturing the art of poetry in Jamaica. Our inaugural festival, scheduled for August 9, 2025 at Edna Manley College of the Visual & Performing Arts, promises to be a landmark event that showcases the creativity, resilience, and vibrancy of emerging and established Jamaican poets. With a rich cultural heritage to draw from, VPF is committed to providing a platform that fosters growth and transformation within the Jamaican poetry community and beyond.</p>
-                <p>At the heart of the Vibrations Poetry Festival is our unwavering dedication to creating an inclusive space for aspiring poets to learn, grow, and express themselves. We believe that poetry has the power to uplift, challenge, and inspire, and through our festival, we seek to highlight the ways in which the art form can impact not only individual lives but society as a whole.</p>
+                <p>Welcome to Vibrations Poetry Festival (VPF), a dynamic and exciting new literary celebration dedicated to nurturing the art of poetry in Jamaica. Our inaugural festival, scheduled for August 9, 2025 at Edna Manley College of the Visual & Performing Arts, promises to be a landmark event that showcases the creativity, resilience, and vibrancy of emerging and established Jamaican poets. With a rich cultural heritage to draw from, VPF is committed to providing a platform that fosters growth and transformation within the Jamaican poetry community and beyond.</p>
+                <p>At the heart of Vibrations Poetry Festival is our unwavering dedication to creating an inclusive space for aspiring poets to learn, grow, and express themselves. We believe that poetry has the power to uplift, challenge, and inspire, and through our festival, we seek to highlight the ways in which the art form can impact not only individual lives but society as a whole.</p>
                 
                 <h4>Our Vision</h4>
                 <p>VPF is dedicated to fostering a passion for poetry writing and creating an inclusive space for aspiring and emerging Jamaican poets to showcase and hone their poetry writing and performance skills. By celebrating the rich tradition of Jamaican poetry, we aim to cultivate a new generation of poets who will shape the cultural and literary landscape for years to come.</p>
@@ -136,7 +136,7 @@ const FestivalPage = () => {
               {/* Presenters Tab - Keeping this unchanged as requested */}
               <div className={`tab-pane ${activeTab === 'presenters' ? 'active' : ''}`} id="presenters">
                 <h3>Festival Presenters & Founders</h3>
-                <p>Meet the accomplished poets, emerging and aspiring artists who will be presenting at the Vibrations Poetry Festival 2025.</p>
+                <p>Meet the accomplished poets, emerging and aspiring artists who will be presenting at Vibrations Poetry Festival 2025.</p>
                 
                 
                 <div className="presenters-section">
