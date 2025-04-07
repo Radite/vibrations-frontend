@@ -66,13 +66,10 @@ const FestivalPage = () => {
             </div>
             <div className="overview-stats">
               <div className="stat-item">
-                <span className="stat-number">50+</span>
+                <span className="stat-number">8</span>
                 <span className="stat-label">Poets & Artists</span>
               </div>
-              <div className="stat-item">
-                <span className="stat-number">10</span>
-                <span className="stat-label">Workshops</span>
-              </div>
+
               <div className="stat-item">
                 <span className="stat-number">1</span>
                 <span className="stat-label">Day</span>
@@ -142,7 +139,9 @@ const FestivalPage = () => {
                 <p>Meet the accomplished poets and artists who will be presenting at the Vibrations Poetry Festival 2025.</p>
                 
                 <div className="presenters-section">
-                  <h4>About the Founders</h4>
+                
+                <div className="presenters-section">
+                  <h4>Featured Presenters</h4>
                   <div className="presenters-grid">
                     <div className="presenter-card">
                       <img src={margueriteImage} alt="Marguerite Anderson" className="presenter-image" />
@@ -151,7 +150,6 @@ const FestivalPage = () => {
                         <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
                           <p>Marguerite C. Anderson is an internationally acclaimed poet, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as a language and literature teacher in Jamaica and the Turks & Caicos Islands. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
-                          <p>Marguerite has authored several books, including three poetry collections: "Echoes From The Naked Soul" (May 2020), "I Exist On This Page" (June 2024), and "Proclamations" (Jan 2025).</p>
                         </div>
                       </div>
                     </div>
@@ -163,15 +161,10 @@ const FestivalPage = () => {
                         <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
                           <p>Canute Lawrence is an award-winning author, educator, and actor. His book "Pathology of a Pandemic" won the International Book Award in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives.</p>
-                          <p>In addition to his literary work, Canute Lawrence has spent over three decades as a language and literature teacher in Jamaica, the United States, and Canada. He has also contributed significantly to the arts as a thespian, appearing in and directing theatre productions in Jamaica, New York City, and Toronto. Currently residing in Toronto, Canada, Canute continues to inspire young minds as a full-time teacher with the Toronto District School Board.</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="presenters-section">
-                  <h4>Featured Presenters</h4>
                   <div className="presenters-grid">
                     <div className="presenter-card">
                       <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
@@ -302,16 +295,7 @@ const FestivalPage = () => {
             </div>
           </div>
           
-          {/* Call to Action */}
-          <div className="festival-cta">
-            <h3>Be Part of Our Inaugural Festival</h3>
-            <p>Early bird tickets are available until May 31, 2025. Join our mailing list for updates and announcements.</p>
-            <div className="cta-buttons">
-              {/*<Link to="/ticket-page">
-                <button className="btn primary-btn">Get Tickets</button>
-              </Link> */}
-            </div>
-          </div>
+
         </div>
       </section>
     </div>
