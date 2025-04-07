@@ -1,0 +1,262 @@
+/* Jamaican Flag-Inspired Color Palette */
+:root {
+  --jamaican-green: #009B3A;
+  --jamaican-yellow: #FED100;
+  --jamaican-black: #000000;
+  --cream: #FFFFF0;
+  --light-yellow: #FFF5CC;
+  --dark-green: #006B28;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--jamaican-black);
+  background-color: var(--cream);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+/* Hero Section with Jamaican-Inspired Styling */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 0;
+  overflow: hidden;
+  color: white;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--jamaican-yellow);
+  color: var(--jamaican-black);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background-color: var(--jamaican-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Jamaican-Inspired Highlights Section */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--light-yellow) 0%, var(--cream) 100%);
+  position: relative;
+}
+
+.highlight {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 25px;
+  border-radius: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 155, 58, 0.2);
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.highlight i {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--jamaican-green);
+}
+
+.highlight:nth-child(even) i {
+  color: var(--jamaican-yellow);
+}
+
+.highlight h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--jamaican-black);
+}
+
+.highlight p {
+  flex-grow: 1;
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.highlight a {
+  color: var(--jamaican-green);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.highlight a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--jamaican-yellow);
+  transition: width 0.3s ease;
+}
+
+.highlight a:hover::after {
+  width: 100%;
+}
+
+/* Diagonal Stripe Accent - Jamaican Flag Inspired */
+.highlights::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(45deg, 
+    var(--jamaican-black) 0%, var(--jamaican-black) 25%, 
+    var(--jamaican-yellow) 25%, var(--jamaican-yellow) 50%, 
+    var(--jamaican-green) 50%, var(--jamaican-green) 75%, 
+    var(--jamaican-black) 75%, var(--jamaican-black) 100%);
+  background-size: 100px 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .highlight {
+    min-width: 100%;
+  }
+}
+
+/* Join Us Section Styles */
+.join-us {
+  background-color: #f8f4e3;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.join-us-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.join-us h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.join-us p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.join-us .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #6b3fa0;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.join-us .btn:hover {
+  background-color: #522f79;
+}

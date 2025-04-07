@@ -1,0 +1,22 @@
+.header {
+  background-color: #FFFFF0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hamburger {
+  font-size: 2rem;
+  color: #FED100;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(254, 209, 0, 0.3));
+}

@@ -1,0 +1,373 @@
+/* Poetry Competitions Page - Scoped Styles */
+
+/* Base styles for competitions container */
+.competitions-container {
+  font-family: 'Roboto', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.competitions-container h1, 
+.competitions-container h2, 
+.competitions-container h3, 
+.competitions-container h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+.competitions-hero {
+  position: relative;
+  background: url('../assets/banner.png') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.competitions-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(10,10,10,0.9));
+  z-index: 1;
+}
+
+.competitions-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.competitions-hero h1 {
+  position: relative;
+  z-index: 2;
+  color: #FED100;
+  opacity: 0;
+  animation: competitionsFadeInDown 1.2s ease forwards;
+  font-size: 4em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.competitions-hero p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4em;
+  color: #fff;
+  opacity: 0;
+  animation: competitionsFadeInUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.competitions-hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a0a0a, transparent);
+  z-index: 2;
+}
+
+/* Page Content */
+.competitions-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  position: relative;
+}
+
+.competitions-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, #00843D, #FED100);
+}
+
+/* Competition Items */
+.competition-item {
+  background: #151515;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 5px solid #FED100;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: competitionsFadeInUp 1s ease forwards;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.competition-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at top right, rgba(254, 209, 0, 0.1), transparent 70%);
+}
+
+.competition-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Stagger each competition item */
+.competition-item:nth-child(1) { animation-delay: 0.4s; }
+.competition-item:nth-child(2) { animation-delay: 0.7s; }
+.competition-item:nth-child(3) { animation-delay: 1s; }
+
+.competition-item h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #FED100;
+  letter-spacing: 1px;
+}
+
+.competition-item p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.competition-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.detail-item strong {
+  display: block;
+  color: #FED100;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.competitions-btn {
+  background: #FED100;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1em;
+  border: 2px solid #FED100;
+  box-shadow: 0 5px 15px rgba(254, 209, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.competitions-btn-outline {
+  background: transparent;
+  color: #FED100;
+}
+
+.competitions-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.4s ease;
+}
+
+.competitions-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(254, 209, 0, 0.4);
+}
+
+.competitions-btn:hover::before {
+  left: 100%;
+}
+
+.competitions-btn-outline:hover {
+  background: rgba(254, 209, 0, 0.1);
+}
+
+/* Winners Section */
+.competitions-winners-section {
+  margin-top: 80px;
+  text-align: center;
+  opacity: 0;
+  animation: competitionsFadeIn 1.2s ease forwards;
+  animation-delay: 1.2s;
+  position: relative;
+  padding-top: 60px;
+}
+
+.competitions-winners-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, #00843D, #FED100);
+}
+
+.competitions-winners-section h2 {
+  font-size: 3em;
+  color: #FED100;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.competitions-winners-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.competitions-winner-card {
+  background: #151515;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 5px solid #FED100;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  margin: 0 auto;
+  max-width: 800px;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.competitions-winner-card::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 8em;
+    color: rgba(254, 209, 0, 0.1);
+    line-height: 0.6;
+  }
+  
+.competitions-winner-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.competitions-winner-card h3 {
+  color: #FED100;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.competitions-winner-card p {
+  font-style: italic;
+  margin-bottom: 25px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* Decorative Elements */
+.competitions-decorative-line {
+  height: 3px;
+  background: linear-gradient(to right, transparent, #FED100, transparent);
+  margin: 80px auto;
+  max-width: 200px;
+  opacity: 0.3;
+}
+
+/* Keyframe Animations - scoped with namespace */
+@keyframes competitionsFadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes competitionsFadeInDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes competitionsFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .competitions-hero h1 {
+    font-size: 3em;
+  }
+  
+  .competitions-hero p {
+    font-size: 1.2em;
+  }
+  
+  .competition-item {
+    padding: 30px;
+  }
+  
+  .competition-item h2 {
+    font-size: 1.8em;
+  }
+  
+  .competitions-winner-card {
+    padding: 30px;
+  }
+  
+  .competitions-winner-card h3 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .competitions-hero h1 {
+    font-size: 2.5em;
+  }
+  
+  .competitions-hero {
+    height: 50vh;
+  }
+  
+  .button-container {
+    flex-direction: column;
+  }
+  
+  .competitions-btn {
+    width: 100%;
+  }
+}

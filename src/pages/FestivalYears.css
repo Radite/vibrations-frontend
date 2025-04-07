@@ -1,0 +1,215 @@
+/* Festival Years Page Specific Styles */
+.festival-years-page {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.festival-years-page h1, 
+.festival-years-page h2, 
+.festival-years-page h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Hero Section */
+.years-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/image2.jfif');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.years-hero h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Years Content */
+.years-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Header Styles */
+.years-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.years-header h1 {
+  font-size: 2.8rem;
+  color: #006400; /* var(--jamaican-green) */
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.years-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #fed100; /* var(--jamaican-yellow) */
+}
+
+.years-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Timeline Decoration */
+.timeline-decoration {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.timeline-decoration span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fed100; /* var(--jamaican-yellow) */
+  margin: 0 5px;
+}
+
+.timeline-decoration span:nth-child(even) {
+  background: #006400; /* var(--jamaican-green) */
+}
+
+/* Years Grid */
+.years-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Year Card */
+.year-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.year-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.year-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #006400, #fed100); /* var(--jamaican-green), var(--jamaican-yellow) */
+}
+
+.year-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.year-card h2 {
+  font-size: 2.2rem;
+  color: #006400; /* var(--jamaican-green) */
+  margin-bottom: 15px;
+}
+
+.year-card p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  background: rgba(254, 209, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: #006400; /* var(--jamaican-green) */
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #006400; /* var(--jamaican-green) */
+}
+
+/* Button Styles */
+.festival-years-page .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #006400; /* var(--jamaican-green) */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.festival-years-page .btn:hover {
+  background: #005200;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .years-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .years-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .year-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .years-hero {
+    height: 200px;
+  }
+  
+  .years-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .years-content {
+    padding: 40px 15px;
+  }
+  
+  .years-grid {
+    grid-template-columns: 1fr;
+  }
+}

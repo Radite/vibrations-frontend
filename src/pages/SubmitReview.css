@@ -1,0 +1,229 @@
+/* Submit Review Page Specific Styles */
+.submit-review-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  background-color: #FFFFF0;
+}
+
+/* Form Container */
+.submit-review-page .form-container {
+  max-width: 800px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+.submit-review-page form {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-review-page form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #009B3A, #FED100);
+}
+
+/* Form Groups */
+.submit-review-page .form-group {
+  margin-bottom: 25px;
+}
+
+.submit-review-page label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.submit-review-page input,
+.submit-review-page textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.submit-review-page input:focus,
+.submit-review-page textarea:focus {
+  border-color: #009B3A;
+  outline: none;
+}
+
+.submit-review-page small {
+  display: block;
+  color: #777;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+/* Rating Selector */
+.submit-review-page .rating-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.submit-review-page .star {
+  font-size: 2rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.submit-review-page .star.filled {
+  color: #FED100;
+}
+
+.submit-review-page .star:hover {
+  color: #FED100;
+}
+
+/* Form Actions */
+.submit-review-page .form-actions {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.submit-review-page .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #FED100;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.submit-review-page .btn:hover {
+  background-color: #009B3A;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Success Message */
+.submit-review-page .success-message {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-review-page .success-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #009B3A, #FED100);
+}
+
+.submit-review-page .success-icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #009B3A;
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.submit-review-page .success-message h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.submit-review-page .success-message p {
+  color: #666;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Back to Reviews Section */
+.submit-review-page .back-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.submit-review-page .back-link {
+  color: #009B3A;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.submit-review-page .back-link:hover {
+  color: #FED100;
+}
+
+.submit-review-page .back-arrow {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .submit-review-page form {
+    padding: 30px 25px;
+  }
+  
+  .submit-review-page .success-message {
+    padding: 30px 25px;
+  }
+  
+  .submit-review-page .star {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit-review-page form {
+    padding: 25px 20px;
+  }
+  
+  .submit-review-page .success-message {
+    padding: 25px 20px;
+  }
+  
+  .submit-review-page .btn {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  
+  .submit-review-page .star {
+    font-size: 1.5rem;
+  }
+  
+  .submit-review-page .success-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.6rem;
+  }
+}

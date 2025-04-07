@@ -1,0 +1,174 @@
+/* Jamaican Flag-Inspired Color Palette */
+:root {
+  --jamaican-green: #009B3A;
+  --jamaican-yellow: #FED100;
+  --jamaican-black: #000000;
+  --cream: #FFFFF0;
+  --light-yellow: #FFF5CC;
+  --dark-green: #006B28;
+}
+
+/* Blog Listing Container - specific class to avoid conflicts */
+.blog-listing-container {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--jamaican-black);
+  line-height: 1.6;
+}
+
+.blog-listing-container h1, 
+.blog-listing-container h2, 
+.blog-listing-container h3, 
+.blog-listing-container h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+/* Hero Section - using the global hero classes */
+/* Make sure the styles from global-hero.css don't conflict */
+
+/* Blog Listing Content */
+.blog-listing-content {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  background-color: var(--cream);
+}
+
+/* Blog Listing Grid */
+.blog-listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  column-gap: 30px;     /* Horizontal gap between columns */
+  row-gap: 80px;        /* Vertical gap between rows */
+  margin-bottom: 80px;  /* Space between the grid and pagination */
+}
+
+/* Blog Listing Card */
+.blog-listing-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-listing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+}
+
+.blog-listing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.blog-listing-card i {
+  font-size: 2rem;
+  color: var(--jamaican-green);
+  margin-bottom: 15px;
+}
+
+.blog-listing-card:nth-child(even) i {
+  color: var(--jamaican-yellow);
+}
+
+.blog-listing-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--jamaican-black);
+}
+
+.blog-listing-card p {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  color: #333;
+}
+
+/* Keep the blog-btn class for consistent styling across the site */
+.blog-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--jamaican-green);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border: none;
+  align-self: flex-start;
+}
+
+.blog-listing-card:nth-child(even) .blog-btn {
+  background-color: var(--jamaican-yellow);
+  color: var(--jamaican-black);
+}
+
+.blog-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  background-color: var(--dark-green);
+  color: white;
+}
+
+.blog-listing-card:nth-child(even) .blog-btn:hover {
+  background-color: #e6bc00;
+  color: var(--jamaican-black);
+}
+
+/* Pagination */
+.blog-listing-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.blog-listing-pagination button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: white;
+  color: var(--jamaican-black);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.blog-listing-pagination button:hover:not([disabled]) {
+  background-color: var(--jamaican-yellow);
+  color: var(--jamaican-black);
+}
+
+.blog-listing-pagination button.active {
+  background-color: var(--jamaican-yellow);
+  color: var(--jamaican-black);
+}
+
+.blog-listing-pagination button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-listing-content {
+    margin: 30px auto;
+  }
+  
+  .blog-listing-grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}

@@ -1,0 +1,104 @@
+/* global-hero.css - Include this file on all pages */
+
+/* Global Hero Styles */
+.site-hero {
+  position: relative;
+  background: url('../assets/banner.png') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.site-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(10,10,10,0.9));
+  z-index: 1;
+}
+
+.site-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.site-hero h1 {
+  position: relative;
+  z-index: 2;
+  color: #FED100; /* Can be overridden in page-specific CSS */
+  opacity: 0;
+  animation: fadeInDown 1.2s ease forwards;
+  font-size: 4em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.site-hero p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4em;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.site-hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a0a0a, transparent);
+  z-index: 2;
+}
+
+/* Global Keyframe Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-hero h1 {
+    font-size: 3em;
+  }
+  
+  .site-hero p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-hero h1 {
+    font-size: 2.5em;
+  }
+  
+  .site-hero {
+    height: 50vh;
+  }
+}

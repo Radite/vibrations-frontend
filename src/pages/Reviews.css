@@ -1,0 +1,171 @@
+/* Reviews Page Specific Styles */
+.reviews-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  background-color: #FFFFF0;
+}
+
+/* Page Header */
+.reviews-page .page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/image1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reviews-page .page-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reviews-page .page-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Reviews Section */
+/* Reviews Section - Updated for Better Review Cards & 2 per Row Layout */
+.reviews-page .reviews-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 60px auto 80px;  /* 60px top margin adds space below the hero section */
+  padding: 0 20px;
+}
+
+.reviews-page .review {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviews-page .review::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #009B3A, #FED100);
+}
+
+.reviews-page .review:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Change to single column on smaller screens */
+@media (max-width: 768px) {
+  .reviews-page .reviews-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.reviews-page .review p {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.reviews-page .review .author {
+  text-align: right;
+  font-weight: 500;
+  color: #009B3A;
+  font-size: 1.1rem;
+}
+
+.reviews-page .quotation-mark {
+  color: #FED100;
+  font-size: 4rem;
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 0;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Call-to-Action */
+.reviews-page .cta-section {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+
+.reviews-page .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #FED100;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.reviews-page .btn:hover {
+  background-color: #009B3A;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .reviews-page .page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .reviews-page .review {
+    padding: 25px;
+  }
+  
+  .reviews-page .review p {
+    font-size: 1rem;
+  }
+  
+  .reviews-page .quotation-mark {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-page .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .reviews-page .page-header p {
+    font-size: 0.9rem;
+  }
+  
+  .reviews-page .review {
+    padding: 20px;
+  }
+  
+  .reviews-page .btn {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+  }
+  
+  .reviews-page .author {
+    font-size: 0.9rem;
+  }
+}

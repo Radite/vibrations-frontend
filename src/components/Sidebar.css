@@ -1,0 +1,147 @@
+/* CSS for Sidebar Component */
+:root {
+  --jamaican-green: #009B3A;
+  --jamaican-yellow: #FED100;
+  --jamaican-black: #000000;
+  --cream: #FFFFF0;
+  --light-yellow: #FFF5CC;
+  --dark-green: #006B28;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: var(--cream);
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: 3px 0 20px rgba(0, 0, 0, 0.15);
+  padding-top: 70px;
+  border-right: 1px solid rgba(0, 155, 58, 0.2);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar.open {
+  width: 280px;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.sidebar-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.6em;
+  color: var(--jamaican-black);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.sidebar-header p {
+  font-size: 0.8em;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--jamaican-yellow), var(--jamaican-green), transparent);
+  margin: 10px 20px 20px;
+}
+
+.sidebar nav {
+  padding: 0 10px;
+}
+
+.sidebar a {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  color: var(--jamaican-black);
+  display: block;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(254, 209, 0, 0.1) 50%, 
+    transparent 100%);
+  transition: left 0.6s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-left: 3px solid var(--jamaican-yellow);
+  padding-left: 30px;
+}
+
+.sidebar a:hover::before {
+  left: 100%;
+}
+
+.sidebar a.active {
+  background-color: rgba(0, 155, 58, 0.05);
+  border-left: 3px solid var(--jamaican-green);
+  font-weight: 500;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--jamaican-black);
+  transition: color 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.closebtn:hover {
+  color: var(--jamaican-green);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+  padding: 0 20px;
+}
+
+/* Gold bookmark decoration */
+.bookmark {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 30px;
+  height: 60px;
+  background-color: var(--jamaican-yellow);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  z-index: -1;
+}

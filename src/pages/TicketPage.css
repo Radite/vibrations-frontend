@@ -1,0 +1,233 @@
+/* Ticket Purchase Page Styles */
+
+/* Ticket Selection */
+.tickets-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .ticket-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+  }
+  
+  .ticket-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .ticket-info {
+    flex: 1;
+    margin-bottom: 15px;
+  }
+  
+  .ticket-info h3 {
+    color: #006400; /* var(--jamaican-green) */
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+  }
+  
+  .ticket-info p {
+    color: #555;
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+  }
+  
+  .ticket-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+  }
+  
+  .current-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #006400; /* var(--jamaican-green) */
+  }
+  
+  .original-price {
+    font-size: 1.1rem;
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  .ticket-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .quantity-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .quantity-btn:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
+  
+  .quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .quantity-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  /* Customer Information Form */
+  .customer-info {
+    margin: 40px 0;
+  }
+  
+  .customer-info h2, .ticket-selection h2, .order-summary h2 {
+    color: #006400; /* var(--jamaican-green) */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .customer-info h2::after, .ticket-selection h2::after, .order-summary h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #fed100; /* var(--jamaican-yellow) */
+  }
+  
+  .info-form {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #006400; /* var(--jamaican-green) */
+    outline: none;
+  }
+  
+  /* Order Summary */
+  .order-summary {
+    margin: 40px 0;
+  }
+  
+  .summary-details {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .summary-row.total {
+    border-bottom: none;
+    padding-top: 20px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #006400; /* var(--jamaican-green) */
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .payment-info {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .payment-info a {
+    color: #006400; /* var(--jamaican-green) */
+    text-decoration: none;
+  }
+  
+  .payment-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .tickets-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .ticket-quantity {
+      margin-top: 15px;
+    }
+  }

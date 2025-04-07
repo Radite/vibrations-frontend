@@ -1,0 +1,584 @@
+/* WinnerDetail.css - Styled to match PoetryCompetitions theme */
+
+.winner-detail-container {
+  font-family: 'Roboto', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
+}
+
+.winner-detail-container h1, 
+.winner-detail-container h2, 
+.winner-detail-container h3, 
+.winner-detail-container h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+.winner-detail-hero {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('../assets/image1.jpg');
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.winner-detail-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(10,10,10,0.9));
+  z-index: 1;
+}
+
+.winner-detail-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.winner-detail-hero h1 {
+  position: relative;
+  z-index: 2;
+  color: #FED100;
+  opacity: 0;
+  animation: competitionsFadeInDown 1.2s ease forwards;
+  font-size: 4em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.winner-detail-hero h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 1.8em;
+  color: #fff;
+  opacity: 0;
+  animation: competitionsFadeInUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.winner-detail-hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a0a0a, transparent);
+  z-index: 2;
+}
+
+/* Content Section */
+.winner-detail-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  position: relative;
+}
+
+.winner-detail-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, #00843D, #FED100);
+}
+
+/* Navigation */
+.winner-navigation {
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: competitionsFadeIn 1s ease forwards;
+}
+
+.back-link {
+  color: #FED100;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.back-link:hover {
+  transform: translateX(-5px);
+}
+
+.back-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FED100;
+  transition: width 0.3s ease;
+}
+
+.back-link:hover::after {
+  width: 100%;
+}
+
+/* Poem Container */
+.poem-container {
+  background: #151515;
+  padding: 50px;
+  border-radius: 8px;
+  border-left: 5px solid #FED100;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: competitionsFadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.poem-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at top right, rgba(254, 209, 0, 0.1), transparent 70%);
+}
+
+.poem-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #FED100;
+  letter-spacing: 1px;
+}
+
+.poem-text {
+  font-size: 1.2rem;
+  line-height: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.poem-text p {
+  margin-bottom: 30px;
+}
+
+.poem-footer {
+  text-align: right;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 40px;
+}
+
+/* Poet Bio */
+.poet-bio {
+  background: #151515;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 5px solid #00843D;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: competitionsFadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.poet-bio::before {
+  content: """;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 8em;
+  color: rgba(0, 132, 61, 0.1);
+  line-height: 0.6;
+}
+
+.poet-bio h3 {
+  font-size: 2rem;
+  color: #00843D;
+  margin-bottom: 20px;
+}
+
+.poet-image {
+  border-radius: 8px;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border: 3px solid #151515;
+  transition: transform 0.5s ease;
+}
+
+.poet-image:hover {
+  transform: scale(1.03);
+}
+
+.poet-bio p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.poet-links {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.poet-links h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #FED100;
+}
+
+.poet-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.poet-links li {
+  margin-bottom: 12px;
+}
+
+.external-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.external-link::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #FED100;
+  transition: transform 0.3s ease;
+}
+
+.external-link:hover {
+  color: #FED100;
+}
+
+.external-link:hover::before {
+  transform: translateX(5px);
+}
+
+/* Judges' Comments */
+.judges-comments {
+  background: #151515;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 5px solid #FED100;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: competitionsFadeInUp 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.judges-comments h3 {
+  font-size: 2rem;
+  color: #FED100;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 3px solid #FED100;
+  padding-left: 20px;
+  color: #e0e0e0;
+  line-height: 1.8;
+  position: relative;
+  font-size: 1.1em;
+}
+
+blockquote::before {
+  content: """;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: rgba(254, 209, 0, 0.2);
+  position: absolute;
+  left: -10px;
+  top: -20px;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: normal;
+  color: #00843D;
+}
+
+/* Related Winners */
+.related-winners {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: competitionsFadeIn 1.2s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.related-winners h3 {
+  font-size: 2.2rem;
+  color: #FED100;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.winner-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.related-winner-card {
+  background: #151515;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 5px solid #00843D;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.related-winner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.related-winner-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #FED100;
+}
+
+.related-winner-card p {
+  color: #a0a0a0;
+  margin-bottom: 20px;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00843D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid #00843D;
+  box-shadow: 0 5px 15px rgba(0, 132, 61, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.4s ease;
+}
+
+.view-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 132, 61, 0.4);
+}
+
+.view-btn:hover::before {
+  left: 100%;
+}
+
+/* CTA Section */
+.winner-detail-cta {
+  background: linear-gradient(135deg, #151515, #0a0a0a);
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 60px 0;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #FED100;
+}
+
+.winner-detail-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('../assets/image1.jpg');
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.winner-detail-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FED100;
+  position: relative;
+  z-index: 2;
+}
+
+.winner-detail-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-btn {
+  background: #FED100;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1em;
+  border: 2px solid #FED100;
+  box-shadow: 0 5px 15px rgba(254, 209, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(254, 209, 0, 0.4);
+}
+
+.cta-btn:hover::before {
+  left: 100%;
+}
+
+.cta-btn-highlight {
+  background: #00843D;
+  color: #fff;
+  border-color: #00843D;
+  box-shadow: 0 5px 15px rgba(0, 132, 61, 0.3);
+}
+
+.cta-btn-highlight:hover {
+  box-shadow: 0 8px 20px rgba(0, 132, 61, 0.4);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .poet-bio {
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .poet-image {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .winner-detail-hero h1 {
+    font-size: 3em;
+  }
+  
+  .winner-detail-hero h2 {
+    font-size: 1.4em;
+  }
+  
+  .poem-title {
+    font-size: 2rem;
+  }
+  
+  .poem-text {
+    font-size: 1.1rem;
+  }
+  
+  .poem-container,
+  .poet-bio,
+  .judges-comments {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .winner-detail-hero h1 {
+    font-size: 2.5em;
+  }
+  
+  .winner-detail-hero {
+    height: 50vh;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-btn {
+    width: 100%;
+  }
+  
+  .poem-title {
+    font-size: 1.6rem;
+  }
+}
