@@ -252,7 +252,7 @@ const FestivalPage = () => {
               {/* Schedule Tab - Updated for one-day event */}
               <div className={`tab-pane ${activeTab === 'schedule' ? 'active' : ''}`} id="schedule">
                 <h3>Festival Schedule</h3>
-                <p>Join us for a full day of poetry, performance, and cultural celebration on August 9, 2025.</p>
+                <p>Join us for an evening of poetry, performance, and cultural celebration on August 9, 2025.</p>
                 
                 <div className="schedule-announcement">
                   <h4>Schedule TBA</h4>
