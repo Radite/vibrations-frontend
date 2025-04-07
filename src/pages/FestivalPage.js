@@ -136,7 +136,7 @@ const FestivalPage = () => {
               {/* Presenters Tab - Keeping this unchanged as requested */}
               <div className={`tab-pane ${activeTab === 'presenters' ? 'active' : ''}`} id="presenters">
                 <h3>Festival Presenters & Founders</h3>
-                <p>Meet the accomplished poets and artists who will be presenting at the Vibrations Poetry Festival 2025.</p>
+                <p>Meet the accomplished poets, emerging and aspiring artists who will be presenting at the Vibrations Poetry Festival 2025.</p>
                 
                 
                 <div className="presenters-section">
