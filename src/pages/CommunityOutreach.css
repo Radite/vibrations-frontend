@@ -1,17 +1,14 @@
+/* CommunityOutreach.css */
+/* Use Jamaican flag-inspired color palette from global CSS */
 
-  /* Global Styles */
-  .community-outreach-page {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: var(--off-white);
+.community-outreach-page {
+    font-family: 'Open Sans', sans-serif;
   }
   
-  /* Hero Section with Jamaican-Inspired Styling */
+  /* Using global hero styles as requested */
   .hero {
     position: relative;
-    background: url('../assets/banner.png') no-repeat center center/cover;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,93 +18,82 @@
     overflow: hidden;
   }
   
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(10,10,10,0.9));
-    z-index: 1;
-  }
-  
   .hero-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
     background-position: center;
-    z-index: 0;
-    opacity: 1;
-    transition: opacity 1.5s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
   
-  .hero h1, .hero p {
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .hero h1,
+  .hero p {
     position: relative;
     z-index: 2;
-    max-width: 90%;
+    letter-spacing: 1px;
   }
   
   .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2em;
+    margin-bottom: 15px;
+    color: var(--jamaican-yellow);
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3em;
+    color: #fff;
     max-width: 700px;
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
   }
   
-  /* Button Styling */
-  .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--jamaican-yellow);
-    color: var(--jamaican-black);
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    z-index: 2;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: var(--jamaican-green);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Content Section */
+  /* Content Sections */
   .content-section {
-    padding: 60px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
   }
   
   .section-header {
+    margin-bottom: 30px;
     text-align: center;
-    margin-bottom: 40px;
   }
   
   .section-header h2 {
-    font-size: 2.5rem;
-    color: var(--jamaican-black);
-    position: relative;
+    font-size: 2.2em;
+    color: var(--jamaican-green);
     display: inline-block;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
   }
   
   .section-header h2::after {
@@ -118,32 +104,15 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+    background-color: var(--jamaican-yellow);
   }
   
-  /* Featured Event */
+  /* Featured Event Styles */
   .featured-event {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 60px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    position: relative;
-  }
-  
-  .featured-event::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 8px 8px 0 0;
-    background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-yellow));
+    gap: 40px;
+    margin-top: 30px;
   }
   
   .event-image {
@@ -153,97 +122,62 @@
   
   .event-image img {
     width: 100%;
-    max-width: 100%;
     height: auto;
-    display: block;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .event-image img:hover {
+    transform: scale(1.02);
   }
   
   .event-details {
-    flex: 1;
+    flex: 2;
     min-width: 300px;
   }
   
   .event-details h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.8em;
     color: var(--jamaican-black);
+    margin-bottom: 20px;
+    line-height: 1.3;
   }
   
   .event-details p {
     margin-bottom: 20px;
-    line-height: 1.7;
+    font-size: 1.05em;
+    line-height: 1.8;
   }
   
   .sponsor-note {
-    font-style: italic;
-    font-weight: 500;
-    color: var(--dark-green);
+    background-color: var(--light-yellow);
     padding: 15px;
-    background-color: rgba(0, 155, 58, 0.05);
-    border-left: 3px solid var(--jamaican-green);
-    margin-bottom: 25px;
+    border-left: 4px solid var(--jamaican-yellow);
+    font-style: italic;
   }
   
   /* Responsive Adjustments */
-  @media (max-width: 992px) {
-    .content-section {
-      padding: 40px 20px;
-    }
-    
-    .featured-event {
-      padding: 25px;
-    }
-  }
-  
   @media (max-width: 768px) {
-    .hero {
-      height: 50vh;
-    }
-    
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.5em;
     }
     
     .hero p {
-      font-size: 1rem;
-    }
-    
-    .section-header h2 {
-      font-size: 2rem;
-    }
-    
-    .event-image, .event-details {
-      min-width: 100%;
-    }
-    
-    .event-details h3 {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero {
-      height: 40vh;
-      padding: 0 15px;
-    }
-    
-    .hero h1 {
-      font-size: 2rem;
-    }
-    
-    .section-header h2 {
-      font-size: 1.8rem;
+      font-size: 1.1em;
     }
     
     .featured-event {
-      padding: 20px 15px;
-      gap: 20px;
+      flex-direction: column;
     }
     
-    .btn {
-      padding: 10px 20px;
-      font-size: 0.8rem;
+    .event-details h3 {
+      font-size: 1.6em;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .featured-event {
+      gap: 30px;
     }
   }

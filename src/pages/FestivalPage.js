@@ -231,8 +231,18 @@ const FestivalPage = () => {
                         <h4>Abigale Reynolds</h4>
                         <p className="presenter-title">Poet</p>
                         <div className="presenter-bio">
-                          <p>Abigale Reynolds explores themes of diaspora, belonging, and return in her evocative poetry. Her work has received recognition for its lyrical quality and thoughtful examination of Caribbean identity in a global context.</p>
-                        </div>
+  <p>
+    Abigail Reynolds is a seventeen-year-old student of Lower-sixth form at St. Andrew High School for Girls.
+    She is the 1st Place winner of the Jamaica Book Festival Young Writer's Prize for the Poetry category (announced January 20th, 2025).
+  </p>
+  <p>
+    Her entry focuses on themes of nature while documenting the feeling of growing up. Her three winning poems are titled <em>"One Thousand and Thirteen Millibars"</em>, <em>"Vindication"</em>, and <em>"A Seedling's Slumber."</em>
+  </p>
+  <p>
+    She began writing as a way to express things that she didn’t feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.
+  </p>
+</div>
+
                       </div>
                     </div>
                   </div>
