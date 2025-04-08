@@ -66,7 +66,7 @@ const AboutPage = () => {
               <div className="founder-info">
                 <h3>Marguerite C. Anderson</h3>
                 <p>
-                  Marguerite C. Anderson is an international-award winning poet, educator, actress and advocate for the arts. Born in Kingston, she has spent over three decades teaching in Jamaica and the Turks &amp; Caicos Islands, and has authored several books which include three poetry collections - <em>Echoes From The Naked Soul</em> (2020), <em>I Exist On This Page</em> (2024), and <em>Proclamations</em> (2025). Her poignant ballad <em>In Memory's Absence</em> gained global recognition after winning 1st-Place prize on Poetry.com.
+                  Marguerite C. Anderson is an international-award winning poet, educator, actress and advocate for the arts. Born in Kingston, she has spent over three decades teaching in Jamaica and the Turks &amp; Caicos Islands, and has authored several books which include three poetry collections - <em>Echoes From The Naked Soul</em> (2020), <em>I Exist On This Page</em> (2024), and <em>Proclamations</em> (2025). She is also the author of several educational children's books that have enriched young minds throughout the Caribbean. Her poignant ballad <em>In Memory's Absence</em> gained global recognition after winning 1st-Place prize on Poetry.com.
                 </p>
               </div>
             </div>
