@@ -148,7 +148,7 @@ const FestivalPage = () => {
                         <h4>Marguerite C. Anderson</h4>
                         <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
-                          <p>Marguerite C. Anderson is an internationally acclaimed poet, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as a language and literature teacher in Jamaica and the Turks & Caicos Islands. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
+                          <p>Marguerite C. Anderson is an international-award winning poet, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as a language and literature teacher in Jamaica and the Turks & Caicos Islands. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
                         </div>
                       </div>
                     </div>
@@ -159,7 +159,7 @@ const FestivalPage = () => {
                         <h4>Canute Lawrence</h4>
                         <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
-                          <p>Canute Lawrence is an award-winning author, educator, and actor. His book "Pathology of a Pandemic" won the International Book Award in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives.</p>
+                          <p>Canute Lawrence is an award-winning author, educator, and poet. His book "Pathology of a Pandemic" won the International Book Award in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives.</p>
                         </div>
                       </div>
                     </div>
