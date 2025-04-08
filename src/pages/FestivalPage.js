@@ -220,7 +220,7 @@ const FestivalPage = () => {
                         <h4>Andre Smith</h4>
                         <p className="presenter-title">Poet</p>
                         <div className="presenter-bio">
-                          <p>2024-25 Head Boy of Calabar High School.</p>
+                          <p>Andre Smith is the Head Boy for the academic year 2024–2025 and a passionate 19-year-old poet. Inspired by his high school literature teachers—most notably Ms. Margurite Anderson, one of the organizers of this very event—Andre began writing poetry as a way to deepen his appreciation for literature. For him, poetry is more than just art; it is a powerful tool for self-expression and reflection, as well as a medium for critiquing personal thoughts and the world at large. Through his writing, Andre continues to explore the transformative power of words and their ability to open minds and spark meaningful conversations.</p>
                         </div>
                       </div>
                     </div>
