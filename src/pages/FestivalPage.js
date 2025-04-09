@@ -11,6 +11,7 @@ import andreImage from '../assets/Andre.jpeg';
 import canuteImage from '../assets/Canute.png';
 import abigaleImage from '../assets/Abigale.jpeg';
 import EdnaManley from '../assets/Edna.jpg';
+import anselImage from '../assets/Ansel.jpeg';
 
 const FestivalPage = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -194,6 +195,17 @@ const FestivalPage = () => {
                 
                 <div className="presenters-section">
                   <h4>Additional Presenters</h4>
+
+                  <div className="presenter-card">
+  <img src={anselImage} alt="Ansel Brown" className="presenter-image" />
+  <div className="presenter-info">
+    <h4>Ansel Brown</h4>
+    <p className="presenter-title">Poet</p>
+    <div className="presenter-bio">
+      <p></p>
+    </div>
+  </div>
+</div>
                                       
                   <div className="presenter-card">
                       <img src={kevinImage} alt="Kevin Cooper" className="presenter-image" />
