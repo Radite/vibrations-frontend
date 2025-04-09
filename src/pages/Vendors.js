@@ -108,7 +108,7 @@ const Vendors = () => {
             <h2>Become a Vendor</h2>
           </div>
           <div className="vendors-section-content">
-            <p>The Vibrations Poetry Festival Cultural Marketplace is a celebration of Caribbean craftsmanship, artistry, and entrepreneurship. We invite vendors who embody the spirit of the islands to showcase their unique offerings to our diverse audience of art enthusiasts, cultural connoisseurs, and poetry lovers.</p>
+            <p>Vibrations Poetry Festival Cultural Marketplace is a celebration of Caribbean craftsmanship, artistry, and entrepreneurship. We invite vendors who embody the spirit of the islands to showcase their unique offerings to our diverse audience of art enthusiasts, cultural connoisseurs, and poetry lovers.</p>
             <p>Selected vendors will benefit from high visibility at our premium event space, promotional opportunities through our festival marketing channels, and direct access to a targeted audience passionate about authentic cultural experiences.</p>
           </div>
         </section> 

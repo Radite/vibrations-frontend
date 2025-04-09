@@ -6,7 +6,6 @@ import image1 from '../assets/Gallery/Gallery (1).jpeg';
 import image2 from '../assets/Gallery/Gallery (2).jpeg';
 import image3 from '../assets/Gallery/Gallery (3).jpeg';
 import image4 from '../assets/Gallery/Gallery (4).jpeg';
-import image5 from '../assets/Gallery/Gallery (5).jpeg';
 import image6 from '../assets/Gallery/Gallery (6).jpeg';
 import image7 from '../assets/Gallery/Gallery (7).jpeg';
 import image8 from '../assets/Gallery/Gallery (8).jpeg';
@@ -55,16 +54,15 @@ const Gallery = () => {
 
   // Gallery images data with captions using the alt text
   const galleryImages = [
-    { id: 1, src: image1, alt: 'Poet performing on stage with dramatic lighting' },
-    { id: 2, src: image2, alt: 'Audience engaged in a poetry reading' },
-    { id: 3, src: image3, alt: 'Workshop session with poets collaborating' },
-    { id: 4, src: image4, alt: 'Evening gala event with festival participants' },
-    { id: 5, src: image5, alt: 'Outdoor poetry reading in festival venue' },
-    { id: 6, src: image6, alt: 'Close-up of poet during emotional performance' },
-    { id: 7, src: image7, alt: 'Panel discussion featuring renowned poets' },
-    { id: 8, src: image8, alt: 'Young poets showcasing their work at the youth stage' },
-    { id: 9, src: image9, alt: 'Festival attendees mingling during intermission' },
-    { id: 10, src: image10, alt: 'Award ceremony celebrating poetry excellence' },
+    { id: 1, src: image1, alt: '' },
+    { id: 2, src: image2, alt: '' },
+    { id: 3, src: image3, alt: '' },
+    { id: 4, src: image4, alt: 'Canute Lawrence receives his International Impact Book Awards trophy from Nim Stant, Founder & CEO – International Impact Book Awards' },
+    { id: 6, src: image6, alt: '' },
+    { id: 7, src: image7, alt: '' },
+    { id: 8, src: image8, alt: 'Marguerite C. Anderson captivates audiences at the 2nd Jamaica Brew Festival'    },
+    { id: 9, src: image9, alt: '' },
+    { id: 10, src: image10, alt: '' },
   ];
 
   return (
@@ -87,9 +85,11 @@ const Gallery = () => {
               className="gallery-item"
               style={{ animationDelay: `${0.3 * (index + 1)}s` }}
             >
-              <img src={image.src} alt={image.alt} />
-              {/* Caption below the image */}
-              <p className="gallery-caption">{image.alt}</p>
+              <div className="image-container">
+                <img src={image.src} alt={image.alt} />
+                {/* Caption with white text */}
+                <p className="gallery-caption white-text">{image.alt}</p>
+              </div>
             </div>
           ))}
         </div>

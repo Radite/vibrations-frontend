@@ -5,7 +5,6 @@
   line-height: 1.6;
   overflow-x: hidden;
   background-color: #000; /* Set Background to Black */
-
 }
 
 /* Page Content */
@@ -71,6 +70,7 @@
   padding: 0 20px;
 }
 
+/* Updated gallery item styles for uniform sizing */
 .gallery-page .gallery-item {
   position: relative;
   overflow: hidden;
@@ -79,7 +79,6 @@
   transform: translateY(40px);
   opacity: 0;
   transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 1s ease;
-  aspect-ratio: 3 / 4; /* Portrait feel */
 }
 
 .gallery-page .gallery-item.in-view {
@@ -93,12 +92,24 @@
   z-index: 10;
 }
 
+/* Image container for consistent sizing */
+.gallery-page .image-container {
+  width: 100%;
+  position: relative;
+}
+
 .gallery-page .gallery-item img {
   width: 100%;
-  height: 100%;
+  height: 550px; /* Fixed height for all images */
   object-fit: cover;
   display: block;
   transition: transform 0.7s ease;
+  border-radius: 8px 8px 0 0; /* Rounded corners only on top */
+}
+
+/* Hover effects */
+.gallery-page .gallery-item:hover img {
+  transform: scale(1.1);
 }
 
 .gallery-page .gallery-item::before {
@@ -107,17 +118,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px); /* Adjusted to not cover caption */
   background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8));
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
+  border-radius: 8px 8px 0 0;
 }
 
 .gallery-page .gallery-item::after {
-  content: "View";
   position: absolute;
-  bottom: 20px;
+  bottom: 80px; /* Adjusted to appear above caption */
   left: 20px;
   color: #FED100;
   font-family: 'Playfair Display', serif;
@@ -137,8 +148,27 @@
   transform: translateY(0);
 }
 
-.gallery-page .gallery-item:hover img {
-  transform: scale(1.1);
+/* Updated caption styling */
+.gallery-page .gallery-caption {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  height: 60px; /* Fixed height for captions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-page .gallery-item:hover .gallery-caption {
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 /* Video Section */
@@ -233,6 +263,10 @@
   .gallery-page .video-section iframe {
     height: 400px;
   }
+  
+  .gallery-page .gallery-item img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -247,23 +281,13 @@
   .gallery-page .video-section iframe {
     height: 300px;
   }
+  
+  .gallery-page .gallery-item img {
+    height: 250px;
+  }
 }
 
-.gallery-item {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-/* Caption styling */
-.gallery-caption {
-  margin-top: 8px;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-  font-style: italic;
-}
-
-/* Optional: Additional styles for visibility animations */
+/* Animation classes */
 .gallery-item.in-view,
 .video-section.in-view,
 .gallery-intro.visible,
@@ -273,7 +297,7 @@ h1.visible {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Example for hidden state before animation */
+/* Hidden state before animation */
 .gallery-item,
 .video-section,
 .gallery-intro,

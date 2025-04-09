@@ -81,7 +81,7 @@ const Home = () => {
           <h2>Join Us</h2>
           <p>
             Whether you're a poet, poetry lover, or someone interested in the transformative power of words, 
-            the Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 
+            Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 
             2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and 
             witness firsthand how poetry can spark change.
           </p>

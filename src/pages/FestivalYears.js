@@ -55,7 +55,7 @@ const FestivalYears = () => {
           {/* Since 2025 is the first year, we display a Coming Soon message */}
           <div className="year-card">
             <h2>2025</h2>
-            <p>Join us for our inaugural festival – a celebration of Caribbean poetry, music, and culture. The Vibrations Poetry Festival will debut in 2025 with renowned poets and artists from across the region.</p>
+            <p>Join us for our inaugural festival – a celebration of Caribbean poetry, music, and culture. Vibrations Poetry Festival will debut in 2025 with renowned poets and artists from across the region.</p>
             <Link to="/festival-page" className="btn">Learn More</Link>
           </div>
         </div>

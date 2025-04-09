@@ -148,7 +148,7 @@ const FestivalPage = () => {
                         <h4>Marguerite C. Anderson</h4>
                         <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
-                          <p>Marguerite C. Anderson is an international-award winning poet, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as a language and literature teacher in Jamaica and the Turks & Caicos Islands. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
+                          <p>Marguerite C. Anderson is an international-award winning poet, author of children's books, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as an English and Literature teacher in Jamaica and the Turks & Caicos Islands. Marguerite is the founder and CEO of Brain Edibles Collection. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
                         </div>
                       </div>
                     </div>
@@ -159,11 +159,23 @@ const FestivalPage = () => {
                         <h4>Canute Lawrence</h4>
                         <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
-                          <p>Canute Lawrence is an award-winning author, educator, and poet. His book "Pathology of a Pandemic" won the International Book Award in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives.</p>
+                          <p>Canute Lawrence is an award-winning author, educator, and poet. His book "Pathology of a Pandemic" won the <strong>International Impact Book Awards </strong> in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives.</p>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div className="presenter-card">
+                      <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Joan-Andrea Hutchinson</h4>
+                        <p className="presenter-title">Featured Poet</p>
+                        <div className="presenter-bio">
+                          <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet. 
+                          </p>
+                          <p>  Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
+                        </div>
+                      </div>
+                    </div>
                   <div className="presenters-grid">
                     <div className="presenter-card">
                       <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
@@ -176,34 +188,14 @@ const FestivalPage = () => {
                       </div>
                     </div>
                     
-                    <div className="presenter-card">
-                      <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Joan-Andrea Hutchinson</h4>
-                        <p className="presenter-title">Featured Poet</p>
-                        <div className="presenter-bio">
-                          <p>Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
-                        </div>
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
                 
                 <div className="presenters-section">
                   <h4>Additional Presenters</h4>
-                  <div className="presenters-grid">
-                    <div className="presenter-card">
-                      <img src={brittonImage} alt="Britton Wright" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Britton Wright</h4>
-                        <p className="presenter-title">Poet</p>
-                        <div className="presenter-bio">
-                          <p>Britton Wright is a poet from Stony Hill, now based in Manchester. Deeply inspired by music and Jamaican culture, his poetry explores themes like love of country, the Divine Feminine, sensuality, nature, and mental health. For Britton, poetry is a therapeutic and expressive journey that fosters connection and cultural pride. In 2024, he was shortlisted for the Louise Bennett Coverly Prize and received multiple JCDC awards. Most recently, he won the 2025 CariCon Poetry Slam on March 21.</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="presenter-card">
+                                      
+                  <div className="presenter-card">
                       <img src={kevinImage} alt="Kevin Cooper" className="presenter-image" />
                       <div className="presenter-info">
                         <h4>Kevin Cooper</h4>
@@ -211,6 +203,29 @@ const FestivalPage = () => {
                         <div className="presenter-bio">
                           <p>Kevin Cooper, also known as Blind Vizionary, is a poet and artist born with cataracts and later diagnosed with glaucoma, ultimately losing his sight. Despite these challenges, he's always seen the world through a visionary lens. Deeply influenced by hip-hop and cultural icons like George Carlin, Louise Bennett, and Nas, Kevin uses his gift for language to explore the human experience. His work blends vulnerability, wisdom, and inspiration, aiming to uplift, educate, and connect. Through poetry and music, he continues to be a voice for authenticity, resilience, and purpose.</p>
                         </div>
+                      </div>
+                  </div>  
+                    
+                  <div className="presenters-grid">
+
+                  <div className="presenter-card">
+                      <img src={abigaleImage} alt="Abigale Reynolds" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Abigail Reynolds</h4>
+                        <p className="presenter-title">Poet</p>
+                        <div className="presenter-bio">
+  <p>
+    Abigail Reynolds is a seventeen-year-old student of Lower-sixth form at St. Andrew High School for Girls.
+    She is the 1st Place winner of the Jamaica Book Festival Young Writer's Prize for the Poetry category (announced January 20th, 2025).
+  </p>
+  <p>
+    Her entry focuses on themes of nature while documenting the feeling of growing up.
+  </p>
+  <p>
+    She began writing as a way to express things that she didn’t feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.
+  </p>
+</div>
+
                       </div>
                     </div>
                     
@@ -225,24 +240,15 @@ const FestivalPage = () => {
                       </div>
                     </div>
                     
+
                     <div className="presenter-card">
-                      <img src={abigaleImage} alt="Abigale Reynolds" className="presenter-image" />
+                      <img src={brittonImage} alt="Britton Wright" className="presenter-image" />
                       <div className="presenter-info">
-                        <h4>Abigale Reynolds</h4>
+                        <h4>Britton Wright</h4>
                         <p className="presenter-title">Poet</p>
                         <div className="presenter-bio">
-  <p>
-    Abigail Reynolds is a seventeen-year-old student of Lower-sixth form at St. Andrew High School for Girls.
-    She is the 1st Place winner of the Jamaica Book Festival Young Writer's Prize for the Poetry category (announced January 20th, 2025).
-  </p>
-  <p>
-    Her entry focuses on themes of nature while documenting the feeling of growing up. Her three winning poems are titled <em>"One Thousand and Thirteen Millibars"</em>, <em>"Vindication"</em>, and <em>"A Seedling's Slumber."</em>
-  </p>
-  <p>
-    She began writing as a way to express things that she didn’t feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.
-  </p>
-</div>
-
+                          <p>Britton Wright is a poet from Stony Hill, now based in Manchester. Deeply inspired by music and Jamaican culture, his poetry explores themes like love of country, the Divine Feminine, sensuality, nature, and mental health. For Britton, poetry is a therapeutic and expressive journey that fosters connection and cultural pride. In 2024, he was shortlisted for the Louise Bennett Coverly Prize and received multiple JCDC awards. Most recently, he won the 2025 CariCon Poetry Slam on March 21.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -292,7 +298,7 @@ const FestivalPage = () => {
                 <div className="venue-info">
                   <h4>Venue Facilities</h4>
                   <ul>
-                    <li>Auditorium for main performances</li>
+                    <li>Amphitheater for main performances</li>
                     <li>Workshop spaces</li>
                     <li>Exhibition areas</li>
                     <li>Outdoor performance space</li>
