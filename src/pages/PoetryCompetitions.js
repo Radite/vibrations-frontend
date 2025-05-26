@@ -78,55 +78,28 @@ const PoetryCompetitions = () => {
         </div>
         */}
 
-        {/* New Vibrations Poetry Competition */}
+        {/* Poetry Competition Update */}
         <div className="competition-item">
-          <h2 className="text-center mb-4">Info for <strong>Vibrations Poetry Competition</strong>:</h2>
+          <h2 className="text-center mb-4"><strong>Poetry Competition Update – Thank You for Submitting!</strong></h2>
           
-          <div className="text-center mb-4">
-            <h3>🎤✨ <strong>VIBRATIONS POETRY COMPETITION</strong> ✨🎤</h3>
-            <em>Where Young Voices Echo Loudest</em>
-            <p><em>...invites young and aspiring poets to submit their poetry!</em></p>
-          </div>
+          <p className="mb-4">The submission window for the <strong>Vibrations Poetry Festival Competition</strong> officially closed on <strong>May 17, 2025</strong>. We extend heartfelt thanks to all entrants for sharing your poetic voice and creative energy with us. Your words moved, challenged, and inspired us.</p>
           
-          <p className="mb-4">Are you between the ages of <strong>14 and 35</strong> with a passion for poetry? Step into the spotlight and let your words <em>vibrate</em> with meaning, rhythm, and power!</p>
+          <p className="mb-4">We are now in the review phase, and are excited to announce that the <strong>shortlist of the Top 5 entries</strong> will be revealed on <strong>July 9, 2025</strong>. Shortlisted poets will receive an official email notification.</p>
           
-          <div className="competition-details mb-4">
-            <div className="detail-item">
-              <strong>💰 Entry Fee:</strong>
-              <p>JA $1,000.00 per poem 📝 Multiple entries allowed!</p>
-            </div>
-            <div className="detail-item">
-              <strong>📅 Deadline:</strong>
-              <p>May 17, 2025</p>
-            </div>
-          </div>
+          <p className="mb-4">The <strong>grand prize winner</strong> of <strong>JA$70,000.00 (Seventy Thousand Jamaican Dollars)</strong> along with the <strong>second and third place winners</strong> will be <strong>announced live at the inaugural Vibrations Poetry Festival</strong> on <strong>Saturday, August 9, 2025</strong>, at the <strong>Edna Manley College of the Visual & Performing Arts</strong> in Kingston.</p>
           
-          <div className="text-center mb-4">
-            <h4>🔥 Prizes | Performances | Prestige 🔥</h4>
-            <p>Whether you're a spoken word warrior or a page poet with quiet fire, this is your stage!</p>
-          </div>
+          <p className="mb-4">All shortlisted entrants are expected to attend the festival and will receive a <strong>complimentary pass</strong> to the event. Friends, family, and other guests are warmly welcomed; however, <strong>guest admission will be ticketed</strong>.</p>
           
-          <div className="text-center mb-4">
-            <h3><strong>SUBMIT. COMPETE. INSPIRE.</strong></h3>
-            <p>You could be the winner of <strong>1st Place cash award of JA $70,000.00,</strong> a chance to be featured on our website and in our inaugural newsletter. Free mentorship for two years, publishing of your poetry.</p>
-            <p>2nd Place cash award of <strong>JA $40,000.00</strong></p>
-            <p>3rd Place cash award of <strong>JA $25,000.00</strong></p>
-          </div>
+          <p className="mb-4">We look forward to celebrating your talent and lifting your words on one of Jamaica's most vibrant literary stages.</p>
           
-          <p className="mb-4">Enter now and let your poetry make waves at the <strong>Vibrations Poetry Festival</strong>.</p>
-          
-          <div className="text-center mb-4">
-            <p>Send entries to <strong>vibrationspoetryfestival@gmail.com</strong></p>
-          </div>
+          <p className="mb-4">Stay tuned for more updates and continue to let your poetry rise!</p>
           
           <div className="competition-details">
             <div className="detail-item">
-              <strong>For more information and submission guidelines, contact:</strong>
-              <p>Marguerite Anderson OR Canute Lawrence at vibrationspoetryfestival@gmail.com</p>
-            </div>
-            <div className="detail-item">
-              <strong>Follow on Social Media:</strong>
-              <p><a href="https://www.instagram.com/vibrationspoetryfestival" target="_blank" rel="noopener noreferrer">https://www.instagram.com/vibrationspoetryfestival</a></p>
+              <strong>— Vibrations Poetry Festival Team</strong>
+              <p>Kingston, Jamaica<br/>
+              <a href="http://www.vibrationspoetryfestival.com" target="_blank" rel="noopener noreferrer">www.vibrationspoetryfestival.com</a><br/>
+              <a href="mailto:vibrationspoetryfestival@gmail.com">vibrationspoetryfestival@gmail.com</a></p>
             </div>
           </div>
         </div>
