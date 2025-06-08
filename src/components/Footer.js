@@ -76,13 +76,47 @@ const Footer = () => {
         <div className="social-media">
           <h3>Connect With Us</h3>
           <div className="social-icons">
-            <a href="https://www.instagram.com/vibrationspoetryfestival" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="24" height="24" />
-            </a>
-            <a href="https://youtube.com/@vibrationspoetryfestival?si=T_OuORVhBIuZzYml" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" width="24" height="24" />
-            </a>
-          </div>
+  <a
+    href="https://www.instagram.com/vibrationspoetryfestival"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+      alt="Instagram"
+      width="24"
+      height="24"
+    />
+  </a>
+  <a
+    href="https://youtube.com/@vibrationspoetryfestival?si=T_OuORVhBIuZzYml"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+      alt="YouTube"
+      width="24"
+      height="24"
+    />
+  </a>
+  <a
+    href="https://www.facebook.com/vibrationspoetryfestival/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+      alt="Facebook"
+      width="24"
+      height="24"
+    />
+  </a>
+</div>
+
         </div>
       </div>
       <p className="copyright">&copy; 2025 <span>Vibrations Poetry Festival</span>. All rights reserved.</p>

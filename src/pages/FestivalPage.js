@@ -13,6 +13,9 @@ import abigaleImage from '../assets/Abigale.jpeg';
 import EdnaManley from '../assets/Edna.jpg';
 import anselImage from '../assets/Ansel.jpeg';
 
+// Import video
+import video3 from '../assets/Gallery/Video3.mp4';
+
 const FestivalPage = () => {
   const [activeTab, setActiveTab] = useState('about');
   const [isLoaded, setIsLoaded] = useState(false);
@@ -234,7 +237,7 @@ const FestivalPage = () => {
     Her entry focuses on themes of nature while documenting the feeling of growing up.
   </p>
   <p>
-    She began writing as a way to express things that she didn’t feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.
+    She began writing as a way to express things that she didn't feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.
   </p>
 </div>
 
@@ -257,9 +260,22 @@ const FestivalPage = () => {
                       <img src={brittonImage} alt="Britton Wright" className="presenter-image" />
                       <div className="presenter-info">
                         <h4>Britton Wright</h4>
-                        <p className="presenter-title">Poet</p>
+                        <p className="presenter-title">Poet & 2025 CariCon Poetry Slam Champion</p>
                         <div className="presenter-bio">
-                          <p>Britton Wright is a poet from Stony Hill, now based in Manchester. Deeply inspired by music and Jamaican culture, his poetry explores themes like love of country, the Divine Feminine, sensuality, nature, and mental health. For Britton, poetry is a therapeutic and expressive journey that fosters connection and cultural pride. In 2024, he was shortlisted for the Louise Bennett Coverly Prize and received multiple JCDC awards. Most recently, he won the 2025 CariCon Poetry Slam on March 21.</p>
+                          <p>Britton Wright is a dynamic poet from Stony Hill, now based in Manchester, who brings pure vibes to every performance. Deeply inspired by music and Jamaican culture, his poetry explores themes like love of country, the Divine Feminine, sensuality, nature, and mental health - particularly men's mental health awareness. For Britton, poetry is a therapeutic and expressive journey that fosters connection and cultural pride.</p>
+                          <p>In 2024, he was shortlisted for the Louise Bennett Coverly Prize and received multiple JCDC awards. Most recently, he won the <strong>2025 CariCon Poetry Slam Championship</strong>, cementing his place as one of Jamaica's rising poetry stars. His performances blend culture, truth, and island pride, making him a powerful voice for authentic Caribbean expression.</p>
+                          <p>As an advocate for mental health through poetry, Britton uses his platform to address important social issues while celebrating Jamaican identity and the transformative power of spoken word.</p>
+                          <div className="presenter-video">
+                            <video 
+                              controls
+                              preload="metadata"
+                              width="400"
+                              height="300"
+                            >
+                              <source src={video3} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -305,3 +305,36 @@ h1 {
   opacity: 0;
   transform: translateY(20px);
 }
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.video-item {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' if you want full visibility */
+  border-radius: 8px;
+}

@@ -46,7 +46,7 @@ const Vendors = () => {
       phone: formData.phone,
       description: formData.description,
       special_requests: formData.special_requests || 'None',
-      to_email: 'joshuameghoo2@gmail.com',
+      to_email: 'vibrationspoetryfestival@gmail.com',
       subject: 'Vendor Application: Vibrations Poetry Festival'
     };
     

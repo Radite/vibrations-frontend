@@ -12,6 +12,11 @@ import image8 from '../assets/Gallery/Gallery (8).jpeg';
 import image9 from '../assets/Gallery/Gallery (9).jpeg';
 import image10 from '../assets/Gallery/Gallery (10).jpeg';
 
+// Import the video files from the assets folder
+import video2 from '../assets/Gallery/Video2.mp4';
+import video3 from '../assets/Gallery/Video3.mp4';
+import video1 from '../assets/Gallery/Video1.mp4';
+
 const Gallery = () => {
   // State to control animation delays when components are in view
   const [isVisible, setIsVisible] = useState(false);
@@ -46,6 +51,11 @@ const Gallery = () => {
       observer.observe(videoSection);
     }
 
+    // Observe video items
+    document.querySelectorAll('.video-item').forEach((item) => {
+      observer.observe(item);
+    });
+
     return () => {
       // Clean up observer on component unmount
       observer.disconnect();
@@ -60,9 +70,31 @@ const Gallery = () => {
     { id: 4, src: image4, alt: 'Canute Lawrence receives his International Impact Book Awards trophy from Nim Stant, Founder & CEO – International Impact Book Awards' },
     { id: 6, src: image6, alt: '' },
     { id: 7, src: image7, alt: '' },
-    { id: 8, src: image8, alt: 'Marguerite C. Anderson captivates audiences at the 2nd Jamaica Brew Festival'    },
+    { id: 8, src: image8, alt: 'Marguerite C. Anderson captivates audiences at the 2nd Jamaica Brew Festival' },
     { id: 9, src: image9, alt: '' },
     { id: 10, src: image10, alt: '' },
+  ];
+
+  // Video data - local video files
+  const festivalVideos = [
+    {
+      id: 1,
+      src: video1,
+      title: "Festival Opening Ceremony 2024",
+      description: "Experience the energy and excitement of our festival's grand opening"
+    },
+    {
+      id: 2,
+      src: video2,
+      title: "Featured Poet Performances",
+      description: "Witness powerful performances from our headline poets"
+    },
+    {
+      id: 3,
+      src: video3,
+      title: "Community Poetry Slam",
+      description: "Local voices sharing their stories through spoken word"
+    }
   ];
 
   return (
@@ -78,36 +110,53 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="gallery-grid">
-          {galleryImages.map((image, index) => (
-            <div 
-              key={image.id} 
-              className="gallery-item"
-              style={{ animationDelay: `${0.3 * (index + 1)}s` }}
-            >
-              <div className="image-container">
-                <img src={image.src} alt={image.alt} />
-                {/* Caption with white text */}
-                <p className="gallery-caption white-text">{image.alt}</p>
+        {/* Images Section */}
+        <div className="gallery-section">
+          <h2 className={isVisible ? 'visible' : ''}>Festival Moments</h2>
+          <div className="gallery-grid">
+            {galleryImages.map((image, index) => (
+              <div 
+                key={image.id} 
+                className="gallery-item"
+                style={{ animationDelay: `${0.3 * (index + 1)}s` }}
+              >
+                <div className="image-container">
+                  <img src={image.src} alt={image.alt} />
+                  {image.alt && (
+                    <p className="gallery-caption white-text">{image.alt}</p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* <div className={`video-section ${isVisible ? 'visible' : ''}`}>
-          <h2>Festival Highlights</h2>
-          <p>
-            Experience the passion and artistry of Vibrations Poetry Festival through our curated video highlights.
-            Feel the energy of live performances and the intimate moments that make our festival unique.
-          </p>
-          <div className="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/VIDEO_ID" 
-              title="Festival Highlights Video"
-              allowFullScreen
-            ></iframe>
+        {/* Videos Section */}
+        <div className="gallery-section">
+          <h1 className={isVisible ? 'visible' : ''}>Videos</h1>
+          <div className="video-grid">
+            {festivalVideos.map((video, index) => (
+              <div 
+                key={video.id} 
+                className="video-item"
+                style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+              >
+                <div className="video-container">
+                  <div className="video-wrapper">
+                    <video 
+                      controls
+                      preload="metadata"
+                      poster="" // Add a poster image path if you have thumbnails
+                    >
+                      <source src={video.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div> */}
+        </div>
       </section>
     </div>
   );
