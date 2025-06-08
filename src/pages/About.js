@@ -42,8 +42,14 @@ const AboutPage = () => {
           <div className="founders-video-container">
             <h3>Meet Our Founders</h3>
             <p>Get to know the passionate minds behind Vibrations Poetry Festival.</p>
-            <div className="video-wrapper">
-              <video controls className="founders-video">
+            <div className="video-container">
+              <video 
+                controls 
+                className="founders-video"
+                width="600"
+                height="400"
+                preload="metadata"
+              >
                 <source src={foundersVideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -56,7 +62,7 @@ const AboutPage = () => {
               <div className="founder-info">
                 <h3>Canute Lawrence</h3>
                 <p>
-                Canute Lawrence is an award-winning author, educator, actor, and poet. His book "Pathology of a Pandemic" won the <strong>International Impact Book Awards</strong> in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives. Canute grew up in Olympic Gardens, and his success is a testament to his determination and grit along life’s journey.
+                Canute Lawrence is an award-winning author, educator, actor, and poet. His book "Pathology of a Pandemic" won the <strong>International Impact Book Awards</strong> in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives. Canute grew up in Olympic Gardens, and his success is a testament to his determination and grit along life's journey.
                 </p>
               </div>
             </div>
