@@ -45,6 +45,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <Link to="/reviews" className={location.pathname === '/reviews' ? 'active' : ''}>
           Festival Reviews
         </Link>
+        <Link to="/communityoutreach" className={location.pathname === '/communityoutreach' ? 'active' : ''}>
+          Community Outreach
+        </Link>
         <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>
           About Us
         </Link>

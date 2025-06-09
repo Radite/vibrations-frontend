@@ -21,6 +21,7 @@ import EntryForm from './pages/EntryForm'
 import VendorGuidelines from './pages/VendorGuidelines'
 import TicketPurchasePage from './pages/TicketPurchasePage'
 import WinnerDetailJane from './pages/WinnerDetailJane'
+import CommunityOutreach from './pages/CommunityOutreach'
 
 import ScrollToTop from './ScrollToTop';
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/ticket-page" element={<TicketPurchasePage />} />
 
         <Route path="/submit-review" element={<SubmitReview />} />
+        <Route path="/communityoutreach" element={<CommunityOutreach />} />
 
         <Route path="/contact" element={<Contact />} />
       </Route>

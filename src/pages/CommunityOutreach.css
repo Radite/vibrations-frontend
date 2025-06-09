@@ -1,0 +1,474 @@
+/* Community Outreach Page Specific Styles */
+.community-outreach {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background: #f8f9fa;
+  }
+  
+  .community-outreach h1, 
+  .community-outreach h2, 
+  .community-outreach h3,
+  .community-outreach h4 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/image2.jfif');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.9;
+  }
+  
+  /* Main Content */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  
+  /* Section Headers */
+  .intro-section,
+  .get-involved-section {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .intro-section h2,
+  .get-involved-content h2 {
+    font-size: 2.8rem;
+    color: #006400;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+  }
+  
+  .intro-section h2::after,
+  .get-involved-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #fed100;
+  }
+  
+  .intro-section p,
+  .get-involved-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  /* Timeline Decoration */
+  .timeline-decoration {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .timeline-decoration span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fed100;
+    margin: 0 5px;
+  }
+  
+  .timeline-decoration span:nth-child(even) {
+    background: #006400;
+  }
+  
+  /* Community Involvement Section */
+  .involvement-section {
+    margin-bottom: 60px;
+  }
+  
+  .involvement-section h2 {
+    font-size: 2.8rem;
+    color: #006400;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .involvement-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #fed100;
+  }
+  
+  /* Featured Event Card */
+  .involvement-item {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  
+  .involvement-item.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #006400, #fed100);
+  }
+  
+  .involvement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  }
+  
+  .involvement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .involvement-header h3 {
+    font-size: 2.2rem;
+    color: #006400;
+    margin: 0;
+  }
+  
+  .event-date {
+    background: #006400;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .event-date:hover {
+    background: #005200;
+    transform: translateY(-2px);
+  }
+  
+  .involvement-content p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  /* Highlight Box */
+  .highlight-box {
+    background: rgba(254, 209, 0, 0.1);
+    border-left: 4px solid #fed100;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .highlight-box p {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  /* Event Gallery */
+  .event-gallery {
+    margin-top: 40px;
+  }
+  
+  .event-gallery h4 {
+    font-size: 1.8rem;
+    color: #006400;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .event-gallery h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #fed100;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Initiatives Section */
+  .initiatives-section {
+    margin-bottom: 60px;
+  }
+  
+  .initiatives-section h2 {
+    font-size: 2.8rem;
+    color: #006400;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .initiatives-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #fed100;
+  }
+  
+  .initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .initiative-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .initiative-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #006400, #fed100);
+  }
+  
+  .initiative-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  }
+  
+  .initiative-card h3 {
+    font-size: 1.6rem;
+    color: #006400;
+    margin-bottom: 15px;
+  }
+  
+  .initiative-card p {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Get Involved Section */
+  .get-involved-section {
+    background: rgba(254, 209, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 40px;
+  }
+  
+  .contact-info {
+    margin-top: 25px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Button Styles */
+  .cta-button,
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #006400;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  .cta-button:hover,
+  .btn:hover {
+    background: #005200;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .intro-section h2,
+    .involvement-section h2,
+    .initiatives-section h2,
+    .get-involved-content h2 {
+      font-size: 2.2rem;
+    }
+    
+    .container {
+      padding: 40px 15px;
+    }
+    
+    .involvement-item,
+    .initiative-card,
+    .get-involved-section {
+      padding: 20px;
+    }
+    
+    .involvement-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    
+    .gallery-item img {
+      height: 150px;
+    }
+    
+    .initiatives-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      height: 200px;
+    }
+    
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    .container {
+      padding: 30px 10px;
+    }
+    
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-button,
+    .btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    border: 3px solid var(--jamaican-yellow);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  
