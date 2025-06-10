@@ -168,53 +168,59 @@ const FestivalPage = () => {
                       </div>
                     </div>
                   </div>
+                  
                   <div className="presenter-card">
-                      <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Joan-Andrea Hutchinson</h4>
-                        <p className="presenter-title">Featured Poet</p>
-                        <div className="presenter-bio">
-                          <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet. 
-                          </p>
-                          <p>  Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
-                        </div>
+                    <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
+                    <div className="presenter-info">
+                      <h4>Joan-Andrea Hutchinson</h4>
+                      <p className="presenter-title">Featured Poet</p>
+                      <div className="presenter-bio">
+                        <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet.</p>
+                        <p>Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
                       </div>
                     </div>
-                  <div className="presenters-grid">
-                    <div className="presenter-card">
-                      <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Angela Jarrett</h4>
-                        <p className="presenter-title">Featured Poet</p>
-                        <div className="presenter-bio">
-                          <p>Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, "IT'S NOT MY FAULT, BABY." Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'</p>
-                          <p>Angela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.</p>
-                        </div>
+                  </div>
+                  
+                  <div className="presenter-card">
+                    <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
+                    <div className="presenter-info">
+                      <h4>Angela Jarrett</h4>
+                      <p className="presenter-title">Featured Poet</p>
+                      <div className="presenter-bio">
+                        <p>Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, "IT'S NOT MY FAULT, BABY." Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'</p>
+                        <p>Angela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.</p>
                       </div>
                     </div>
-                    
-                    
                   </div>
                 </div>
                 
                 <div className="presenters-section">
                   <h4>Additional Presenters</h4>
-
-                  <div className="presenter-card">
-  <img src={anselImage} alt="Ansel Brown" className="presenter-image" />
-  <div className="presenter-info">
-    <h4>Ansel Brown</h4>
-    <p className="presenter-title">Poet</p>
-    <div className="presenter-bio">
-      <p>Ansel Brown is a life-long lover of words and writer of poems. He grew up in the small quiet picturesque community of Lluidas Vale in St. Catherine with mother, father and four siblings. He took an early interest in debating and public speaking and excelled at these disciplines while he was a student at Dinthill Technical High School.</p>
-      <p>After graduating, he taught briefly at the local all-age school before migrating to The United Kingdom where he studied advanced English Language and Psychology at City College in Birmingham while self-publishing his initial collections of poems: 'The Wind Blows and It Stops' and 'Birthwrite.' After returning to Jamaica he published six additional anthologies: 'Where Poetry Meets Girl,' 'Life Cycle,' 'The Gate,' 'The Sanity of Ink,' 'Aim at a Star' and 'Train Ride.'</p>
-      <p>He has sought to have his poetry used as an instrument for better understanding and appreciation of figurative language in some primary and high schools; delighting in the performance of his life's work and conducting workshops. Towards this end he has been in dialogue with the Ministry of Education's core curriculum unit, already attaining a positive review on two of the seven books of poems submitted and awaiting outcome of the others.</p>
-      <p>Ever since he discovered his innate ability to compose poems while still an adolescent, he nurtured that delicate plant and remained committed to its purpose. He considers poetry one of the purest forms of human expression and regards his ability to write poems as an honest measurement of his mental health. He currently resides in Lluidas Vale of St. Catherine Jamaica where he teaches private classes in English Language, sells his own books of poems and continues to be inspired.</p>
-    </div>
-  </div>
-</div>
-                                      
-                  <div className="presenter-card">
+                  <div className="presenters-grid">
+                    <div className="presenter-card">
+                      <img src={anselImage} alt="Ansel Brown" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Ansel Brown</h4>
+                        <p className="presenter-title">Poet</p>
+                        <div className="presenter-bio">
+                          <p>Ansel Brown is a life-long lover of words and writer of poems from Lluidas Vale, St. Catherine. He excelled in debating and public speaking at Dinthill Technical High School before studying English Language and Psychology in Birmingham, UK.</p>
+                          <p>Ansel has published eight poetry collections including 'The Wind Blows and It Stops,' 'Birthwrite,' and 'The Sanity of Ink.' He works with schools to use poetry as an educational tool and has received positive reviews from the Ministry of Education for his work. He considers poetry one of the purest forms of human expression and currently teaches private English classes while continuing to write and perform.</p>
+                          <div className="presenter-video">
+                            <iframe
+                              width="400"
+                              height="300"
+                              src="https://www.youtube.com/embed/254EBjFgSeo"
+                              title="Ansel Brown Poetry Performance"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                                        
+                    <div className="presenter-card">
                       <img src={kevinImage} alt="Kevin Cooper" className="presenter-image" />
                       <div className="presenter-info">
                         <h4>Kevin Cooper</h4>
@@ -223,28 +229,20 @@ const FestivalPage = () => {
                           <p>Kevin Cooper, also known as Blind Vizionary, is a poet and artist born with cataracts and later diagnosed with glaucoma, ultimately losing his sight. Despite these challenges, he's always seen the world through a visionary lens. Deeply influenced by hip-hop and cultural icons like George Carlin, Louise Bennett, and Nas, Kevin uses his gift for language to explore the human experience. His work blends vulnerability, wisdom, and inspiration, aiming to uplift, educate, and connect. Through poetry and music, he continues to be a voice for authenticity, resilience, and purpose.</p>
                         </div>
                       </div>
-                  </div>  
+                    </div>
+                  </div>
                     
                   <div className="presenters-grid">
-
-                  <div className="presenter-card">
+                    <div className="presenter-card">
                       <img src={abigaleImage} alt="Abigale Reynolds" className="presenter-image" />
                       <div className="presenter-info">
                         <h4>Abigail Reynolds</h4>
                         <p className="presenter-title">Poet</p>
                         <div className="presenter-bio">
-  <p>
-    Abigail Reynolds is a seventeen-year-old student of Lower-sixth form at St. Andrew High School for Girls.
-    She is the 1st Place winner of the Jamaica Book Festival Young Writer's Prize for the Poetry category (announced January 20th, 2025).
-  </p>
-  <p>
-    Her entry focuses on themes of nature while documenting the feeling of growing up.
-  </p>
-  <p>
-    She began writing as a way to express things that she didn't feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.
-  </p>
-</div>
-
+                          <p>Abigail Reynolds is a seventeen-year-old student of Lower-sixth form at St. Andrew High School for Girls. She is the 1st Place winner of the Jamaica Book Festival Young Writer's Prize for the Poetry category (announced January 20th, 2025).</p>
+                          <p>Her entry focuses on themes of nature while documenting the feeling of growing up.</p>
+                          <p>She began writing as a way to express things that she didn't feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.</p>
+                        </div>
                       </div>
                     </div>
                     
@@ -259,7 +257,6 @@ const FestivalPage = () => {
                       </div>
                     </div>
                     
-
                     <div className="presenter-card">
                       <img src={brittonImage} alt="Britton Wright" className="presenter-image" />
                       <div className="presenter-info">
@@ -317,8 +314,8 @@ const FestivalPage = () => {
                 
                 <div className="venues-list">
                   <div className="venue-item">
-                  <img src={EdnaManley} alt="Edna Manley" className="venue-image" />
-                  <div className="venue-details">
+                    <img src={EdnaManley} alt="Edna Manley" className="venue-image" />
+                    <div className="venue-details">
                       <h4>Edna Manley College of the Visual & Performing Arts</h4>
                       <p>Our venue for all performances, workshops, and activities, celebrating the intersection of poetry and other art forms.</p>
                       <p><strong>Address:</strong> 1 Arthur Wint Drive, Kingston, Jamaica</p>
@@ -341,8 +338,6 @@ const FestivalPage = () => {
               </div>
             </div>
           </div>
-          
-
         </div>
       </section>
     </div>

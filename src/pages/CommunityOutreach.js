@@ -5,7 +5,6 @@ import './CommunityOutreach.css';
 import spring2 from '../assets/Gallery/Spring (2).jpg';
 import spring3 from '../assets/Gallery/Spring (3).jpg';
 import spring4 from '../assets/Gallery/Spring (4).jpg';
-import spring8 from '../assets/Gallery/Spring (8).jpg';
 import banner from '../assets/banner.png';
 
 const CommunityOutreach = () => {
