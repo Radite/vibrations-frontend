@@ -187,7 +187,8 @@ const FestivalPage = () => {
                         <h4>Angela Jarrett</h4>
                         <p className="presenter-title">Featured Poet</p>
                         <div className="presenter-bio">
-                          <p>Actress, Playwright, Poet, Producer, Judge - JCDC Speech Competitions.</p>
+                          <p>Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, "IT'S NOT MY FAULT, BABY." Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'</p>
+                          <p>Angela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.</p>
                         </div>
                       </div>
                     </div>
@@ -205,7 +206,10 @@ const FestivalPage = () => {
     <h4>Ansel Brown</h4>
     <p className="presenter-title">Poet</p>
     <div className="presenter-bio">
-      <p></p>
+      <p>Ansel Brown is a life-long lover of words and writer of poems. He grew up in the small quiet picturesque community of Lluidas Vale in St. Catherine with mother, father and four siblings. He took an early interest in debating and public speaking and excelled at these disciplines while he was a student at Dinthill Technical High School.</p>
+      <p>After graduating, he taught briefly at the local all-age school before migrating to The United Kingdom where he studied advanced English Language and Psychology at City College in Birmingham while self-publishing his initial collections of poems: 'The Wind Blows and It Stops' and 'Birthwrite.' After returning to Jamaica he published six additional anthologies: 'Where Poetry Meets Girl,' 'Life Cycle,' 'The Gate,' 'The Sanity of Ink,' 'Aim at a Star' and 'Train Ride.'</p>
+      <p>He has sought to have his poetry used as an instrument for better understanding and appreciation of figurative language in some primary and high schools; delighting in the performance of his life's work and conducting workshops. Towards this end he has been in dialogue with the Ministry of Education's core curriculum unit, already attaining a positive review on two of the seven books of poems submitted and awaiting outcome of the others.</p>
+      <p>Ever since he discovered his innate ability to compose poems while still an adolescent, he nurtured that delicate plant and remained committed to its purpose. He considers poetry one of the purest forms of human expression and regards his ability to write poems as an honest measurement of his mental health. He currently resides in Lluidas Vale of St. Catherine Jamaica where he teaches private classes in English Language, sells his own books of poems and continues to be inspired.</p>
     </div>
   </div>
 </div>
