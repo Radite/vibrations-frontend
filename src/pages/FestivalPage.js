@@ -169,26 +169,28 @@ const FestivalPage = () => {
                     </div>
                   </div>
                   
-                  <div className="presenter-card">
-                    <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
-                    <div className="presenter-info">
-                      <h4>Joan-Andrea Hutchinson</h4>
-                      <p className="presenter-title">Featured Poet</p>
-                      <div className="presenter-bio">
-                        <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet.</p>
-                        <p>Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
+                  <div className="presenters-grid">
+                    <div className="presenter-card">
+                      <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Joan-Andrea Hutchinson</h4>
+                        <p className="presenter-title">Featured Poet</p>
+                        <div className="presenter-bio">
+                          <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet.</p>
+                          <p>Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="presenter-card">
-                    <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
-                    <div className="presenter-info">
-                      <h4>Angela Jarrett</h4>
-                      <p className="presenter-title">Featured Poet</p>
-                      <div className="presenter-bio">
-                        <p>Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, "IT'S NOT MY FAULT, BABY." Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'</p>
-                        <p>Angela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.</p>
+                    
+                    <div className="presenter-card">
+                      <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Angela Jarrett</h4>
+                        <p className="presenter-title">Featured Poet</p>
+                        <div className="presenter-bio">
+                          <p>Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, "IT'S NOT MY FAULT, BABY." Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'</p>
+                          <p>Angela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
