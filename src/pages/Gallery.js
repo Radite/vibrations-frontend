@@ -169,14 +169,15 @@ const Gallery = () => {
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
                 <div className="video-container">
-                  <iframe
-                    width="100%"
-                    height="315"
-                    src={video.src}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                <iframe
+                width="100%"
+                height="315"
+                src={video.src}
+                title={video.title || `Gallery Video ${index + 1}`} // Add this line
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
                 </div>
               </div>
             ))}
