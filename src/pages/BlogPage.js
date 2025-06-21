@@ -27,7 +27,7 @@ const BlogPage = () => {
             <div className="post-meta">
               <span className="category">Book Review</span>
               <span className="author">By Vivienne Grant</span>
-              <span className="date">January 20, 2025</span>
+              <span className="date">June 21, 2025</span>
             </div>
             <Link to="/blog/proclamations-review" className="read-review-btn">
               Read Full Review
