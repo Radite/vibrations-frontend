@@ -16,6 +16,7 @@ import image10 from '../assets/Gallery/Gallery (10).jpeg';
 import video1 from '../assets/Gallery/Video1.mp4';
 import video2 from '../assets/Gallery/Video2.mp4';
 import video3 from '../assets/Gallery/Video3.mp4';
+import video4 from '../assets/Gallery/Video4.mp4';
 
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -83,6 +84,10 @@ const Gallery = () => {
     {
       id: 3,
       src: video3,
+    },
+    {
+      id: 4,
+      src: video4,
     },
   ];
 

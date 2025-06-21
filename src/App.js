@@ -22,6 +22,7 @@ import VendorGuidelines from './pages/VendorGuidelines'
 import TicketPurchasePage from './pages/TicketPurchasePage'
 import WinnerDetailJane from './pages/WinnerDetailJane'
 import CommunityOutreach from './pages/CommunityOutreach'
+import ProclamationsBlog from './pages/ProclamationsBlog';
 
 import ScrollToTop from './ScrollToTop';
 
@@ -51,6 +52,8 @@ function App() {
 
         <Route path="/submit-review" element={<SubmitReview />} />
         <Route path="/communityoutreach" element={<CommunityOutreach />} />
+        <Route path="/blog/proclamations-review" element={<ProclamationsBlog />} />
+
 
         <Route path="/contact" element={<Contact />} />
       </Route>

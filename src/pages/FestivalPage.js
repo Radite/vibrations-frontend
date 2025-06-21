@@ -12,6 +12,9 @@ import canuteImage from '../assets/Canute.png';
 import abigaleImage from '../assets/Abigale.jpeg';
 import EdnaManley from '../assets/Edna.jpg';
 import anselImage from '../assets/Ansel.jpeg';
+import quickoreImage from '../assets/Quickore.jpg'
+import sponsorsImage from '../assets/SponsorsofVPF.jpg'; // or whatever your image file is named
+
 
 // Import video
 import video3 from '../assets/Gallery/Video3.mp4';
@@ -135,6 +138,30 @@ const FestivalPage = () => {
                 <h4>Join Us</h4>
                 <p>Whether you're a poet, poetry lover, or someone interested in the transformative power of words, the Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and witness firsthand how poetry can spark change.</p>
                 <p>Let the vibrations of the festival inspire you—because poetry is not just a form of art, it is a force for change.</p>
+              {/* Sponsors & Partners Section */}
+<div className="sponsors-section">
+  <h4>Our Sponsors & Partners</h4>
+  <p>We are proud to partner with organizations that share our commitment to celebrating Caribbean poetry and culture. Their support makes the Vibrations Poetry Festival possible.</p>
+  
+  <div className="sponsors-image-container">
+    <img src={sponsorsImage} alt="Vibrations Poetry Festival Sponsors and Partners" className="sponsors-image" />
+  </div>
+  
+  <div className="sponsors-list">
+    <h5>Thank you to our valued sponsors:</h5>
+    <ul>
+      <li><strong>PBC Jamaica</strong> - Supporting Caribbean media and cultural initiatives</li>
+      <li><strong>Marnei Trading</strong> - Committed to community development and arts</li>
+      <li><strong>EMCVP (Edna Manley College of the Visual and Performing Arts)</strong> - Our venue partner and champion of the arts</li>
+      <li><strong>Dr. ABC Teachable Moments</strong> - Promoting education and learning through creative expression</li>
+      <li><strong>Brain Edibles Collection</strong> - Founded by our co-founder Marguerite C. Anderson, supporting literary excellence</li>
+    </ul>
+    
+    <p className="partnership-note">
+      <em>Interested in becoming a sponsor or partner? Contact us to learn about opportunities to support Caribbean poetry and cultural arts.</em>
+    </p>
+  </div>
+</div>
               </div>
               
               {/* Presenters Tab - Keeping this unchanged as requested */}
@@ -282,7 +309,20 @@ const FestivalPage = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                    <div className="presenter-card">
+                      <img src={quickoreImage} alt="Quickore Bennett" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Quickore' Bennett</h4>
+                        <p className="presenter-title">Poet, Performer & Operations Manager</p>
+                        <div className="presenter-bio">
+                          <p>Quickore' Bennett is a Jamaican creative whose voice is deeply rooted in poetry, performance, and personal truth. She began writing at the age of 10, turning to short poems as a way to express herself and make sense of a world where her father was absent and adolescence was anything but simple. Poetry became both a refuge and a release—helping her navigate the emotional challenges of growing up while shaping her into the artist she is today.</p>
+                          <p>Her work often appeared in The Jamaica Gleaner, where her early writings gained public recognition. She continues to write in traditional rhyme schemes such as ABABB, CDCDD, and ABAB BCDC EFEF, using rhythm and structure to reflect the layered nature of her emotions and experiences. Her writing is honest, reflective, and deeply resonant—built on a foundation of lived experience and heartfelt introspection.</p>
+                          <p>As a performer, Quickore has taken on impactful roles in several Jamaican productions. She portrayed "Big K" in Nesta's Rock, Nia in "Skoolaz 2.0" (The Pantomime Company 2023-24), and starred in BEAM Jungle of Treasures. She was also named 2nd runner-up in the 2014 staging of Miss Jamaica Talented Teen, where her dramatic abilities and expressive storytelling stood out. Her most recent lead role was as Mama CeeCee in The Pantomime Company's 2024-25 production "Channel 876" - a powerful performance that further affirmed her command of character and stage presence.</p>
+                          <p>Professionally, Quickore' is currently an Operations Manager, where her leadership reflects the same passion and precision she brings to her creative work. She balances her professional and artistic lives with grace, never losing sight of her ultimate goal: to become a published writer. She dreams of releasing a collection of poetry and reflections that speak to young people navigating pain, identity, and healing—just as she once did through her earliest poems. Quickore' Bennett is a woman of voice, vision, and vulnerability—and she continues to write, perform, and lead with authenticity.</p>
+                        </div>
+                      </div>
+                    </div>
+                                      </div>
                 </div>
               </div>
               

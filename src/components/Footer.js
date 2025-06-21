@@ -103,7 +103,7 @@ const Footer = () => {
     />
   </a>
   <a
-    href="https://www.facebook.com/vibrationspoetryfestival/"
+    href="https://www.facebook.com/share/14DMJ7zEpBU/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Facebook"
