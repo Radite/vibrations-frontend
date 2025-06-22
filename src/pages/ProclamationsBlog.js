@@ -151,12 +151,7 @@ const ProclamationsBlog = () => {
                 <span>Poetry Collection</span>
               </div>
               
-              <div className="share-links">
-                <span>Share this review:</span>
-                <button className="share-button">Twitter</button>
-                <button className="share-button">Facebook</button>
-                <button className="share-button">Email</button>
-              </div>
+
             </div>
           </article>
           
