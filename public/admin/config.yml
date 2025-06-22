@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main  # or master, depending on your repo
+
+media_folder: "public/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "festival"
+    label: "Festival Info"
+    files:
+      - label: "Festival Details"
+        name: "festival"
+        file: "src/data/festival.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date", name: "date", widget: "string"}
+          - {label: "Venue", name: "venue", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+
+  - name: "presenters"
+    label: "Presenters"
+    folder: "src/data/presenters"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Bio", name: "bio", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/data/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Book Review", "Culture", "Interview", "History"]}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Published", name: "published", widget: "boolean", default: false}
+
+  - name: "sponsors"
+    label: "Sponsors"
+    folder: "src/data/sponsors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Website", name: "website", widget: "string", required: false}

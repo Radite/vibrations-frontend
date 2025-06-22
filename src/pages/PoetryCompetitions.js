@@ -82,7 +82,7 @@ const PoetryCompetitions = () => {
         <div className="competition-item">
           <h2 className="text-center mb-4"><strong>Poetry Competition Update – Thank You for Submitting!</strong></h2>
           
-          <p className="mb-4">The submission window for the <strong>Vibrations Poetry Festival Competition</strong> officially closed on <strong>May 17, 2025</strong>. We extend heartfelt thanks to all entrants for sharing your poetic voice and creative energy with us. Your words moved, challenged, and inspired us.</p>
+          <p className="mb-4">The submission window for <strong>Vibrations Poetry Festival Competition</strong> officially closed on <strong>May 17, 2025</strong>. We extend heartfelt thanks to all entrants for sharing your poetic voice and creative energy with us. Your words moved, challenged, and inspired us.</p>
           
           <p className="mb-4">We are now in the review phase, and are excited to announce that the <strong>shortlist of the Top 5 entries</strong> will be revealed on <strong>July 9, 2025</strong>. Shortlisted poets will receive an official email notification.</p>
           

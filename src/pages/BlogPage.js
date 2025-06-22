@@ -22,7 +22,7 @@ const BlogPage = () => {
         <div className="featured-post-preview">
           <h2>Latest Review Available</h2>
           <div className="post-card">
-            <h3>A Voice That Refuses Silence: Reviewing "Proclamations"</h3>
+            <h3>Lyrical Truths & Social Reckonings: A Scholarly Reflection on "Proclamations</h3>
             <p>Vivienne Grant reviews Marguerite C. Anderson's latest poetry collection, exploring themes of memory, identity, and the pursuit of dignity amid silence and struggle.</p>
             <div className="post-meta">
               <span className="category">Book Review</span>
