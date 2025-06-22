@@ -161,29 +161,7 @@ const ProclamationsBlog = () => {
           </article>
           
           {/* Related Posts */}
-          <div className="related-posts">
-            <h3>Related Articles</h3>
-            <div className="related-grid">
-              <div className="related-post">
-                <div className="related-image placeholder"></div>
-                <h4>The Rhythm of Jamaican Dub Poetry</h4>
-                <p>Exploring the revolutionary fusion of spoken word and reggae rhythms</p>
-                <Link to="/blog/dub-poetry" className="read-more">Read More</Link>
-              </div>
-              <div className="related-post">
-                <div className="related-image placeholder"></div>
-                <h4>Meet Our Co-Founders</h4>
-                <p>Learn about the visionaries behind Vibrations Poetry Festival</p>
-                <Link to="/about" className="read-more">Read More</Link>
-              </div>
-              <div className="related-post">
-                <div className="related-image placeholder"></div>
-                <h4>Caribbean Women's Voices in Poetry</h4>
-                <p>Celebrating the rich tradition of female poets in the Caribbean</p>
-                <Link to="/blog/caribbean-women-poetry" className="read-more">Read More</Link>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
     </div>
