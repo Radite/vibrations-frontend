@@ -18,6 +18,7 @@ import sponsorsImage from '../assets/SponsorsofVPF.jpg'; // or whatever your ima
 
 // Import video
 import video3 from '../assets/Gallery/Video3.mp4';
+import video5 from '../assets/Gallery/Video5.mp4'
 
 const FestivalPage = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -218,6 +219,17 @@ const FestivalPage = () => {
                           <p>Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, "IT'S NOT MY FAULT, BABY." Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'</p>
                           <p>Angela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.</p>
                         </div>
+                        <div className="presenter-video">
+                            <video 
+                              controls
+                              preload="metadata"
+                              width="400"
+                              height="300"
+                            >
+                              <source src={video5} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
                       </div>
                     </div>
                   </div>

@@ -5,6 +5,10 @@ import './CommunityOutreach.css';
 import spring2 from '../assets/Gallery/Spring (2).jpg';
 import spring3 from '../assets/Gallery/Spring (3).jpg';
 import spring4 from '../assets/Gallery/Spring (4).jpg';
+import metGala1 from '../assets/Gallery/MetGala1.jpg';
+import metGala2 from '../assets/Gallery/MetGala2.jpg';
+import metGala3 from '../assets/Gallery/MetGala3.jpg';
+import metGala4 from '../assets/Gallery/MetGala4.jpg';
 import banner from '../assets/banner.png';
 
 const CommunityOutreach = () => {
@@ -159,7 +163,7 @@ const CommunityOutreach = () => {
             alignItems: 'center',
             width: '100%'
           }}>
-            {[spring2, spring3, spring4].map((img, idx) => (
+            {[spring2, spring3, spring4, metGala1, metGala2, metGala3, metGala4].map((img, idx) => (
               <div
                 key={idx}
                 style={{
@@ -183,7 +187,7 @@ const CommunityOutreach = () => {
               >
                 <img
                   src={img}
-                  alt={`Spring into Fashion Gala ${idx + 1}`}
+                  alt={`Event Gallery Image ${idx + 1}`}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   loading="lazy"
                 />
