@@ -1,1 +1,4 @@
-/*    /index.html   200
+# Force HTTPS and add www
+https://vibrationspoetryfestival.com/* https://www.vibrationspoetryfestival.com/:splat 301!
+http://vibrationspoetryfestival.com/* https://www.vibrationspoetryfestival.com/:splat 301!
+http://www.vibrationspoetryfestival.com/* https://www.vibrationspoetryfestival.com/:splat 301!
