@@ -187,7 +187,7 @@ const CommunityOutreach = () => {
               >
                 <img
                   src={img}
-                  alt={`Event Gallery Image ${idx + 1}`}
+                  alt={`Fashion gala moment ${idx + 1}`}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   loading="lazy"
                 />
