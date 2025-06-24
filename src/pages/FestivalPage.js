@@ -74,7 +74,7 @@ const FestivalPage = () => {
             </div>
             <div className="overview-stats">
               <div className="stat-item">
-                <span className="stat-number">8</span>
+                <span className="stat-number">10</span>
                 <span className="stat-label">Poets & Artists</span>
               </div>
 
@@ -137,12 +137,12 @@ const FestivalPage = () => {
                 <p>VPF's mission is to educate and sensitize both Jamaican society and the world-at-large to the transformative power of poetry. We believe in poetry's ability to create positive change by shifting mindsets, attitudes, and actions—addressing issues that range from local concerns to global challenges. The festival is grounded in the backdrop of Jamaica's rich cultural heritage, which serves as both inspiration and a call to action for poets to use their voices as agents of change.</p>
                 
                 <h4>Join Us</h4>
-                <p>Whether you're a poet, poetry lover, or someone interested in the transformative power of words, the Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and witness firsthand how poetry can spark change.</p>
-                <p>Let the vibrations of the festival inspire you—because poetry is not just a form of art, it is a force for change.</p>
+                <p>Whether you're a poet, poetry lover, or someone interested in the transformative power of words, Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and witness firsthand how poetry can spark change.</p>
+                <p>Let Vibrations of the festival inspire you—because poetry is not just a form of art, it is a force for change.</p>
               {/* Sponsors & Partners Section */}
 <div className="sponsors-section">
   <h4>Our Sponsors & Partners</h4>
-  <p>We are proud to partner with organizations that share our commitment to celebrating Caribbean poetry and culture. Their support makes the Vibrations Poetry Festival possible.</p>
+  <p>We are proud to partner with organizations that share our commitment to celebrating Caribbean poetry and culture. Their support makes Vibrations Poetry Festival possible.</p>
   
   <div className="sponsors-image-container">
     <img src={sponsorsImage} alt="Vibrations Poetry Festival Sponsors and Partners" className="sponsors-image" />
@@ -345,7 +345,7 @@ const FestivalPage = () => {
                 
                 <div className="schedule-announcement">
                   <h4>Schedule TBA</h4>
-                  <p>The full schedule for the Vibrations Poetry Festival 2025 will be announced closer to the event date. Please check back for updates or join our mailing list to be notified when the schedule is released.</p>
+                  <p>The full schedule for Vibrations Poetry Festival 2025 will be announced closer to the event date. Please check back for updates or join our mailing list to be notified when the schedule is released.</p>
                 </div>
                 
                 <div className="schedule-highlights">
@@ -364,7 +364,7 @@ const FestivalPage = () => {
               {/* Venues Tab - Updated for single venue */}
               <div className={`tab-pane ${activeTab === 'venues' ? 'active' : ''}`} id="venues">
                 <h3>Festival Venue</h3>
-                <p>The Vibrations Poetry Festival takes place at Kingston's premier arts institution.</p>
+                <p>Vibrations Poetry Festival takes place at Kingston's premier arts institution.</p>
                 
                 <div className="venues-list">
                   <div className="venue-item">

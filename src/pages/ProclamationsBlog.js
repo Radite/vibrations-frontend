@@ -101,7 +101,7 @@ const ProclamationsBlog = () => {
             <h2>Confronting Intergenerational Trauma</h2>
             <p>Anderson's poetic voice is perhaps most powerful when it interrogates intergenerational trauma and the silencing of women's experiences. In poems such as "Providence Penanced Him" and "For My Mother Who Fell from the Cliff," she centers women who are wounded by patriarchal abandonment and social stigma, yet who endure. These are not passive characters. They are complex, emotionally rich figures whose stories critique the cultural and gender-based structures that often criminalize vulnerability while glorifying silence.</p>
             
-            <p>The poet exposes how emotional labor, motherhood, and sacrifice are often invisibilized in Caribbean communities and beyond.</p>
+            <p>The poet exposes how emotional labour, motherhood, and sacrifice are often invisibilized in Caribbean communities and beyond.</p>
             
             <blockquote>
               "Anderson's poems often document what is at risk of being forgotten—those whose stories rarely occupy center stage: the poor, the elderly, the faithful, the abused, the emotionally scarred."
@@ -119,7 +119,7 @@ const ProclamationsBlog = () => {
             </div>
             
             <h2>The Lyrical Meets the Testimonial</h2>
-            <p>Throughout the collection, Anderson demonstrates a gift for balancing the lyrical with the testimonial. In "Dog a Bawl, Dog a Cry", the neglected voice of a loyal street dog becomes a symbol of overlooked labor and worth—an allegory that evokes empathy and social critique. Similarly, "They Just Come" draws attention to environmental vulnerability and the impact of climate disasters on rural life in the Caribbean.</p>
+            <p>Throughout the collection, Anderson demonstrates a gift for balancing the lyrical with the testimonial. In "Dog a Bawl, Dog a Cry", the neglected voice of a loyal dog becomes a symbol of overlooked labour and worth—an allegory that evokes empathy and social critique. Similarly, "They Just Come" draws attention to environmental vulnerability and the impact of climate disasters on rural life in the Caribbean.</p>
             
             <h2>A Teacher's Eye, A Mother's Heart</h2>
             <p>Anderson's personal and professional background as a Jamaican educator, woman of faith, and mother permeates the collection. Having taught English and Literature in both Jamaica and the Turks and Caicos Islands for over three decades, Anderson brings to her work a teacher's eye for detail and a pastoral sensitivity.</p>
