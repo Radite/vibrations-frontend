@@ -2,3 +2,6 @@
 https://vibrationspoetryfestival.com/* https://www.vibrationspoetryfestival.com/:splat 301!
 http://vibrationspoetryfestival.com/* https://www.vibrationspoetryfestival.com/:splat 301!
 http://www.vibrationspoetryfestival.com/* https://www.vibrationspoetryfestival.com/:splat 301!
+
+# SPA fallback - handles all React routes
+/* /index.html 200
