@@ -78,6 +78,45 @@ const PoetryCompetitions = () => {
         </div>
         */}
 
+        {/* Poetry Competition Details */}
+        <div className="competition-item">
+          <h2>Vibrations Poetry Festival Competition (Emerging Voices)</h2>
+          <div className="competition-details">
+            <div className="detail-item">
+              <strong>Entry Requirements</strong>
+              <p>Open to Jamaican nationals who are aspiring or emerging poets, ages 14 to 35.</p>
+            </div>
+            <div className="detail-item">
+              <strong>Contest Frequency</strong>
+              <p>Annually</p>
+            </div>
+            <div className="detail-item">
+              <strong>Closing Date</strong>
+              <p>May (annually)</p>
+            </div>
+            <div className="detail-item">
+              <strong>Entry Fee</strong>
+              <p>JA$1,000 per poem</p>
+            </div>
+            <div className="detail-item">
+              <strong>Word/Line Limit</strong>
+              <p>None</p>
+            </div>
+            <div className="detail-item">
+              <strong>Top Prize</strong>
+              <p>JA$70,000, publication, and featured performance at the Vibrations Poetry Festival</p>
+            </div>
+            <div className="detail-item">
+              <strong>Winners Announced</strong>
+              <p>August (annually at the live event/festival)</p>
+            </div>
+          </div>
+          <p>Vibrations Poetry Festival is a celebration of literary expression and Caribbean identity, hosted at the Edna Manley College of the Visual & Performing Arts. The Emerging Voices Poetry Competition is open to poets ages 14 to 35. Shortlisted poems are published in a commemorative chapbook, and winners are invited to perform their work before a live audience of writers, educators, and cultural stakeholders.</p>
+          <p>Submissions are evaluated on originality, craft, and thematic resonance. While there are no restrictions on theme or style, we especially welcome poems that reflect boldness, authenticity, and the lived Caribbean experience.</p>
+        </div>
+
+        <div className="competitions-decorative-line"></div>
+
         {/* Poetry Competition Update */}
         <div className="competition-item">
           <h2 className="text-center mb-4"><strong>Poetry Competition Update – Thank You for Submitting!</strong></h2>
