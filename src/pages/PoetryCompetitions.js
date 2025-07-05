@@ -78,7 +78,7 @@ const PoetryCompetitions = () => {
         </div>
         */}
 
-        {/* Poetry Competition Details */}
+        {/* Poetry Competition Details and Update */}
         <div className="competition-item">
           <h2>Vibrations Poetry Festival Competition (Emerging Voices)</h2>
           <div className="competition-details">
@@ -113,13 +113,10 @@ const PoetryCompetitions = () => {
           </div>
           <p>Vibrations Poetry Festival is a celebration of literary expression and Caribbean identity, hosted at the Edna Manley College of the Visual & Performing Arts. The Emerging Voices Poetry Competition is open to poets ages 14 to 35. Shortlisted poems are published in a commemorative chapbook, and winners are invited to perform their work before a live audience of writers, educators, and cultural stakeholders.</p>
           <p>Submissions are evaluated on originality, craft, and thematic resonance. While there are no restrictions on theme or style, we especially welcome poems that reflect boldness, authenticity, and the lived Caribbean experience.</p>
-        </div>
-
-        <div className="competitions-decorative-line"></div>
-
-        {/* Poetry Competition Update */}
-        <div className="competition-item">
-          <h2 className="text-center mb-4"><strong>Poetry Competition Update – Thank You for Submitting!</strong></h2>
+          
+          <div className="competitions-decorative-line"></div>
+          
+          <h3 className="text-center mb-4"><strong>Poetry Competition Update – Thank You for Submitting!</strong></h3>
           
           <p className="mb-4">The submission window for <strong>Vibrations Poetry Festival Competition</strong> officially closed on <strong>May 17, 2025</strong>. We extend heartfelt thanks to all entrants for sharing your poetic voice and creative energy with us. Your words moved, challenged, and inspired us.</p>
           
