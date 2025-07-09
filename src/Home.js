@@ -46,7 +46,7 @@ const Home = () => {
           <p className="announcement-date">July 9, 2025</p>
           <p className="announcement-summary">
             We are thrilled to announce the shortlist of finalists in our inaugural Poetry Competition! 
-            Five outstanding young poets are now competing for the <strong>grand prize of JA $70,000.00 </strong> 
+            The poets for the five outstanding pieces are now competing for the <strong>grand prize of JA $70,000.00 </strong> 
             and the honor of performing at our festival on <strong>August 9, 2025</strong>.
           </p>
           

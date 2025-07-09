@@ -25,7 +25,7 @@ const PoetryCompetitions = () => {
           </div>
           
           <div className="announcement-content">
-            <h3>Vibrations Poetry Festival Youth Competition 2025</h3>
+            <h3>Vibrations Poetry Festival Competition 2025</h3>
             <p>We are proud to announce the <strong>shortlist of finalists</strong> in our inaugural <strong>Poetry Competition</strong>, launched in April 2025.</p>
             
             <p>After carefully reviewing an inspiring range of entries from young and aspiring poets across Jamaica, our judges have selected <strong>five powerful voices</strong> whose work has resonated with depth, authenticity, and lyrical brilliance.</p>
