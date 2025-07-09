@@ -35,6 +35,53 @@ const Home = () => {
           <Link to="/festival-page" className="btn">Experience the Festival</Link>
         </div>
       </section>
+
+      {/* FINALISTS ANNOUNCEMENT BANNER */}
+      <section className="finalists-banner">
+        <div className="finalists-banner-content">
+          <div className="announcement-badge">
+            <span className="badge-text">BREAKING NEWS</span>
+          </div>
+          <h2>🎉 Top 5 Finalists Announced!</h2>
+          <p className="announcement-date">July 9, 2025</p>
+          <p className="announcement-summary">
+            We are thrilled to announce the shortlist of finalists in our inaugural Poetry Competition! 
+            Five outstanding young poets are now competing for the <strong>grand prize of JA $70,000.00 </strong> 
+            and the honor of performing at our festival on <strong>August 9, 2025</strong>.
+          </p>
+          
+          <div className="finalists-preview">
+            <h3>Congratulations to our shortlisted poets:</h3>
+            <div className="finalists-list-compact">
+              <div className="finalist-item">
+                <span className="poet-name">Keya (penname)</span>
+                <span className="poem-title">"In Silence"</span>
+              </div>
+              <div className="finalist-item">
+                <span className="poet-name">Jaheal Lettford</span>
+                <span className="poem-title">"Why Me"</span>
+              </div>
+              <div className="finalist-item">
+                <span className="poet-name">Abigail Clayton</span>
+                <span class="poem-title">"The Shift"</span>
+              </div>
+              <div className="finalist-item">
+                <span className="poet-name">Abigail Clayton</span>
+                <span className="poem-title">"The Little Flower"</span>
+              </div>
+              <div className="finalist-item">
+                <span className="poet-name">Andre Smith</span>
+                <span className="poem-title">"Figure Hate Cycle"</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="announcement-actions">
+            <Link to="/poetry-competitions" className="btn btn-primary">View Full Announcement</Link>
+            <Link to="/festival-page" className="btn btn-secondary">Learn About the Festival</Link>
+          </div>
+        </div>
+      </section>
       
       {/* Highlights Section */}
       <section className="highlights">

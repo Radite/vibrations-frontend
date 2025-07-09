@@ -100,6 +100,215 @@
   background: linear-gradient(90deg, #00843D, #FED100);
 }
 
+/* FINALISTS ANNOUNCEMENT STYLES */
+.finalists-announcement {
+  background: linear-gradient(135deg, #FED100 0%, #FFE55C 100%);
+  color: #0a0a0a;
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(254, 209, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #00843D;
+}
+
+.finalists-announcement::before {
+  content: "🎉";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  opacity: 0.3;
+}
+
+.announcement-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.announcement-header h2 {
+  font-size: 2.5em;
+  color: #00843D;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-date {
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.announcement-content h3 {
+  font-size: 1.8em;
+  color: #00843D;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.announcement-content p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.finalists-section {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 0;
+  border-left: 5px solid #00843D;
+}
+
+.finalists-section h4 {
+  font-size: 1.5em;
+  color: #00843D;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.finalists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finalists-grid .finalist-card:nth-child(4),
+.finalists-grid .finalist-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+.finalists-grid .finalist-card:nth-child(4) {
+  grid-column: 1 / 2;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.finalists-grid .finalist-card:nth-child(5) {
+  grid-column: 3 / 4;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+/* Alternative approach using flexbox for better centering */
+.finalists-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.finalist-card {
+  flex: 0 1 250px;
+  min-width: 250px;
+  max-width: 280px;
+}
+
+/* First row: 3 cards */
+.finalist-card:nth-child(1),
+.finalist-card:nth-child(2),
+.finalist-card:nth-child(3) {
+  flex-basis: calc(33.333% - 14px);
+}
+
+/* Second row: 2 cards centered */
+.finalist-card:nth-child(4),
+.finalist-card:nth-child(5) {
+  flex-basis: calc(33.333% - 14px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* For screens where we need the 3-2 layout specifically */
+@media (min-width: 769px) {
+  .finalists-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .finalist-card {
+    flex: none;
+    margin: 0;
+  }
+  
+  /* First row: 3 cards evenly spaced */
+  .finalist-card:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+  
+  .finalist-card:nth-child(2) {
+    grid-column: 3 / 5;
+  }
+  
+  .finalist-card:nth-child(3) {
+    grid-column: 5 / 7;
+  }
+  
+  /* Second row: 2 cards centered under the middle */
+  .finalist-card:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+  
+  .finalist-card:nth-child(5) {
+    grid-column: 4 / 6;
+    grid-row: 2;
+  }
+}
+
+.finalist-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 3px solid #FED100;
+}
+
+.finalist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.poet-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #00843D;
+  margin-bottom: 8px;
+}
+
+.poem-title {
+  font-size: 1em;
+  font-style: italic;
+  color: #666;
+  padding: 5px 0;
+}
+
+.closing-message {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #00843D;
+  text-align: center;
+  margin: 30px 0;
+}
+
 /* Competition Items */
 .competition-item {
   background: #151515;
@@ -177,6 +386,7 @@
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 25px;
+  justify-content: center;
 }
 
 .competitions-btn {
@@ -193,6 +403,7 @@
   box-shadow: 0 5px 15px rgba(254, 209, 0, 0.3);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .competitions-btn-outline {
@@ -222,6 +433,20 @@
 
 .competitions-btn-outline:hover {
   background: rgba(254, 209, 0, 0.1);
+}
+
+/* Finalists announcement button specific styling */
+.finalists-announcement .competitions-btn {
+  background: #00843D;
+  color: white;
+  border: 2px solid #00843D;
+  font-size: 1.2em;
+  padding: 15px 35px;
+}
+
+.finalists-announcement .competitions-btn:hover {
+  background: #006B28;
+  border-color: #006B28;
 }
 
 /* Winners Section */
@@ -337,6 +562,18 @@
     font-size: 1.2em;
   }
   
+  .finalists-announcement {
+    padding: 25px;
+  }
+  
+  .announcement-header h2 {
+    font-size: 2em;
+  }
+  
+  .finalists-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .competition-item {
     padding: 30px;
   }
@@ -354,6 +591,48 @@
   }
 }
 
+/* Desktop 3-2 centered layout */
+@media (min-width: 769px) {
+  .finalists-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .finalist-card {
+    flex: none;
+    margin: 0;
+  }
+  
+  /* First row: 3 cards */
+  .finalist-card:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+  
+  .finalist-card:nth-child(2) {
+    grid-column: 2 / 3;
+  }
+  
+  .finalist-card:nth-child(3) {
+    grid-column: 3 / 4;
+  }
+  
+  /* Second row: 2 cards centered */
+  .finalist-card:nth-child(4) {
+    grid-column: 1.5 / 2.5;
+    grid-row: 2;
+  }
+  
+  .finalist-card:nth-child(5) {
+    grid-column: 2.5 / 3.5;
+    grid-row: 2;
+  }
+}
+
 @media (max-width: 480px) {
   .competitions-hero h1 {
     font-size: 2.5em;
@@ -361,6 +640,18 @@
   
   .competitions-hero {
     height: 50vh;
+  }
+  
+  .finalists-announcement {
+    padding: 20px;
+  }
+  
+  .announcement-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .announcement-content p {
+    font-size: 1em;
   }
   
   .button-container {
