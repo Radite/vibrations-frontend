@@ -155,11 +155,11 @@ const FestivalPage = () => {
   <li><strong>Marnei Trading</strong> - Committed to community development and arts</li>
   <li><strong>EMCVP (Edna Manley College of the Visual and Performing Arts)</strong> - Our venue partner and champion of the arts</li>
   <li><strong>Dr. ABC Teachable Moments</strong> - Promoting education and learning through creative expression</li>
-  <li><strong>Brain Edibles Collection</strong> - Founded by our co‑founder Marguerite C. Anderson, supporting literary excellence</li>
-  <li><strong>Emkay Sports & Trophies</strong> – One of Jamaica’s leading suppliers of trophies, plaques, sporting goods and engraving services, serving schools, clubs and businesses since the mid‑1990s :contentReference[oaicite:1]{index=1}</li>
-  <li><strong>WholesalePhoto Lab Studio & Docu‑Centre</strong> – A full‑service photo studio and document centre in Kingston offering passport photos, large‑format printing, laminating, graphic design and internet café services :contentReference[oaicite:2]{index=2}</li>
-  <li><strong>T & T Fashions</strong> – A home‑grown Jamaican fashion brand featured in high‑profile events such as "Spring Into Fashion" showcasing local designers and accessories :contentReference[oaicite:3]{index=3}</li>
-  <li><strong>Aviola Accessories</strong> – Eco‑friendly, hand‑crafted jewellery and home accents made in Jamaica from upcycled/recycled materials, led by founder Melissa Preddie, celebrating sustainable design and cultural heritage :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Brain Edibles Collection</strong> - Founded by our co-founder Marguerite C. Anderson, supporting literary excellence</li>
+  <li><strong>Emkay Sports & Trophies</strong> - Providing awards, medals, and sporting supplies across Jamaica</li>
+  <li><strong>WholesalePhoto Lab Studio & Docu-Centre</strong> - Offering photo, print, and document services in Kingston</li>
+  <li><strong>T & T Fashions</strong> - Showcasing Jamaican fashion through locally designed apparel</li>
+  <li><strong>aviola accessories</strong> - Handcrafted eco-friendly accessories celebrating Caribbean culture</li>
 </ul>
 
     
