@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './FestivalYears.css';
 import './global-hero.css'; // Import global hero CSS
 import { initializeYearsPageAnimations } from './utils/festivalYearsAnimations';
-import Poster from '../assets/Poster.jpg'; // Import the poster image
+import Poster from '../assets/UpdatedFlyer.png'; // Import the poster image
 
 const FestivalYears = () => {
   useEffect(() => {

@@ -13,7 +13,7 @@ import abigaleImage from '../assets/Abigale.jpeg';
 import EdnaManley from '../assets/Edna.jpg';
 import anselImage from '../assets/Ansel.jpeg';
 import quickoreImage from '../assets/Quickore.jpg'
-import sponsorsImage from '../assets/SponsorsofVPF.jpg'; // or whatever your image file is named
+import sponsorsImage from '../assets/VPFSponsors.png'; // or whatever your image file is named
 
 
 // Import video
