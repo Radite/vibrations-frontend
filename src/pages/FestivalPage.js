@@ -139,35 +139,70 @@ const FestivalPage = () => {
                 <h4>Join Us</h4>
                 <p>Whether you're a poet, poetry lover, or someone interested in the transformative power of words, Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and witness firsthand how poetry can spark change.</p>
                 <p>Let Vibrations of the festival inspire you—because poetry is not just a form of art, it is a force for change.</p>
+              
               {/* Sponsors & Partners Section */}
-<div className="sponsors-section">
-  <h4>Our Sponsors & Partners</h4>
-  <p>We are proud to partner with organizations that share our commitment to celebrating Caribbean poetry and culture. Their support makes Vibrations Poetry Festival possible.</p>
-  
-  <div className="sponsors-image-container">
-    <img src={sponsorsImage} alt="Vibrations Poetry Festival Sponsors and Partners" className="sponsors-image" />
-  </div>
-  
-  <div className="sponsors-list">
-    <h5>Thank you to our valued sponsors:</h5>
-<ul>
-  <li><strong>PBC Jamaica</strong> - Supporting Caribbean media and cultural initiatives</li>
-  <li><strong>Marnei Trading</strong> - Committed to community development and arts</li>
-  <li><strong>EMCVP (Edna Manley College of the Visual and Performing Arts)</strong> - Our venue partner and champion of the arts</li>
-  <li><strong>Dr. ABC Teachable Moments</strong> - Promoting education and learning through creative expression</li>
-  <li><strong>Brain Edibles Collection</strong> - Founded by our co-founder Marguerite C. Anderson, supporting literary excellence</li>
-  <li><strong>Emkay Sports & Trophies</strong> - Providing awards, medals, and sporting supplies across Jamaica</li>
-  <li><strong>WholesalePhoto Lab Studio & Docu-Centre</strong> - Offering photo, print, and document services in Kingston</li>
-  <li><strong>T & T Fashions</strong> - Showcasing Jamaican fashion through locally designed apparel</li>
-  <li><strong>aviola accessories</strong> - Handcrafted eco-friendly accessories celebrating Caribbean culture</li>
-</ul>
+              <div className="sponsors-section">
+                <h4>Our Sponsors & Partners</h4>
+                <div className="sponsors-social-caption">
+                  <p><em>A heartfelt THANK YOU to our amazing sponsors- individuals as well as partnering organizations!</em></p>
+                  <p><em>Your support helps Vibration Poetry Festival celebrate creativity and build a stage where "Voices Rise and Metaphors Dance"</em></p>
+                  <p><em>We couldn't do it without you! 💛✨</em></p>
+                </div>
+                
+                <div className="sponsors-image-container">
+                  <img src={sponsorsImage} alt="Vibrations Poetry Festival Sponsors and Partners" className="sponsors-image" />
+                </div>
+                
+                <div className="sponsors-list">
+                  <h5>Thank you to our valued sponsors:</h5>
+                  <ul>
+                    <li><strong>PBC Jamaica</strong> - Supporting Caribbean media and cultural initiatives</li>
+                    <li><strong>Marnei Trading</strong> - Committed to community development and arts</li>
+                    <li><strong>EMCVP (Edna Manley College of the Visual and Performing Arts)</strong> - Our venue partner and champion of the arts</li>
+                    <li><strong>Dr. ABC Teachable Moments</strong> - Promoting education and learning through creative expression</li>
+                    <li><strong>ECON Enterprise Jamaica</strong> – Delivering high-quality promotional products with passion and pride for over 20 years</li>
+                    <li><strong>Brain Edibles Collection</strong> - Founded by our co-founder Marguerite C. Anderson, supporting literary excellence</li>
+                    <li><strong>Emkay Sports & Trophies</strong> - Providing awards, medals, and sporting supplies across Jamaica</li>
+                    <li><strong>WholesalePhoto Lab Studio & Docu-Centre</strong> - Offering photo, print, and document services in Kingston</li>
+                    <li><strong>T & T Fashions</strong> - Showcasing Jamaican fashion through locally designed apparel</li>
+                    <li><strong>aviola accessories</strong> - Handcrafted eco-friendly accessories celebrating Caribbean culture</li>
+                  </ul>
+                </div>
 
-    
-    <p className="partnership-note">
-      <em>Interested in becoming a sponsor or partner? Contact us to learn about opportunities to support Caribbean poetry and cultural arts.</em>
-    </p>
-  </div>
-</div>
+                {/* Individual Contributors Section */}
+                <div className="contributors-section">
+                  <h5>Individual Contributors</h5>
+                  <p>We extend our heartfelt gratitude to these individual contributors who have supported Vibrations Poetry Festival:</p>
+                  <div className="contributors-grid">
+                    <ul className="contributors-list">
+                      <li>Sheila Bryan</li>
+                      <li>Dr. Andrew Campbell</li>
+                      <li>Dr. Derwin Campbell</li>
+                      <li>Janice Clarke</li>
+                      <li>Ichelle Cole-Creed</li>
+                      <li>Shelly-Ann Dyer</li>
+                      <li>Lorraina Forrest</li>
+                      <li>Dr. Juanita Gilliam</li>
+                      <li>Sheila Hall</li>
+                    </ul>
+                    <ul className="contributors-list">
+                      <li>Dr. Denise Jarrett</li>
+                      <li>Tanitia Munroe</li>
+                      <li>Christine Reynolds</li>
+                      <li>Bev Edwards-Stewart</li>
+                      <li>Dr. Pauline Sawyer</li>
+                      <li>Dr. Maygon Smythe-Thompson</li>
+                      <li>Audrey Thomas</li>
+                      <li>Peaches Joy Williams</li>
+                      <li>Luke Williams</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <p className="partnership-note">
+                  <em>Interested in becoming a sponsor or partner? Contact us to learn about opportunities to support Caribbean poetry and cultural arts.</em>
+                </p>
+              </div>
               </div>
               
               {/* Presenters Tab - Keeping this unchanged as requested */}
