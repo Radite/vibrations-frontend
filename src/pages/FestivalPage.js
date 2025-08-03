@@ -144,9 +144,8 @@ const FestivalPage = () => {
               <div className="sponsors-section">
                 <h4>Our Sponsors & Partners</h4>
                 <div className="sponsors-social-caption">
-                  <p><em>A heartfelt THANK YOU to our amazing sponsors- individuals as well as partnering organizations!</em></p>
-                  <p><em>Your support helps Vibration Poetry Festival celebrate creativity and build a stage where "Voices Rise and Metaphors Dance"</em></p>
-                  <p><em>We couldn't do it without you! 💛✨</em></p>
+                  <p><em>A heartfelt THANK YOU to our amazing sponsors- individuals as well as partnering organizations! Your support helps Vibration Poetry Festival celebrate creativity and build a stage where "Voices Rise and Metaphors Dance" We couldn't do it without you!</em></p>
+                  <p><em>#Gratitude #VibrationsPoetryFestival #oursponsorsrock</em></p>
                 </div>
                 
                 <div className="sponsors-image-container">
