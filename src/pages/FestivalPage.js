@@ -377,26 +377,52 @@ const FestivalPage = () => {
                 </div>
               </div>
               
-              {/* Schedule Tab - Updated for one-day event */}
+{/* Schedule Tab - Updated for one-day event */}
               <div className={`tab-pane ${activeTab === 'schedule' ? 'active' : ''}`} id="schedule">
                 <h3>Festival Schedule</h3>
                 <p>Join us for an evening of poetry, performance, and cultural celebration on August 9, 2025.</p>
                 
-                <div className="schedule-announcement">
-                  <h4>Schedule TBA</h4>
-                  <p>The full schedule for Vibrations Poetry Festival 2025 will be announced closer to the event date. Please check back for updates or join our mailing list to be notified when the schedule is released.</p>
+                <div className="running-order">
+                  <h4>Running Order</h4>
+                  <div className="schedule-section">
+                    <h5>Opening & Presentations</h5>
+                    <ol className="schedule-list">
+                      <li>Founders Welcome</li>
+                      <li>Dorrett Campbell - Welcome</li>
+                      <li>Dr. Denise Jarrett</li>
+                      <li>Angela Jarrett</li>
+                      <li>Britton Wright</li>
+                      <li>Abigail Reynolds</li>
+                      <li>Kevin Cooper</li>
+                      <li>Quickore Bennett</li>
+                      <li>Anniel Rodgers - Saxophone</li>
+                      <li>Andre Smith</li>
+                      <li>Ansel Brown</li>
+                      <li>Angela Jarrett</li>
+                      <li>Joan Andrea Hutchinson</li>
+                    </ol>
+                  </div>
+                  
+                  <div className="intermission">
+                    <h5>INTERMISSION</h5>
+                  </div>
+                  
+                  <div className="schedule-section">
+                    <h5>Competition & Closing</h5>
+                    <ol className="schedule-list">
+                      <li>VPF Competition - Founders</li>
+                      <li>Finalists and their pieces</li>
+                      <li>Introduction of the judges</li>
+                      <li>Awards</li>
+                      <li>Marguerite C Anderson (PERFORMANCE)</li>
+                      <li>Canute Lawrence (PERFORMANCE)</li>
+                    </ol>
+                    <p className="schedule-end"><strong>THE END</strong></p>
+                  </div>
                 </div>
                 
-                <div className="schedule-highlights">
-                  <h4>Festival Highlights</h4>
-                  <ul>
-                    <li>Opening ceremony</li>
-                    <li>Poetry readings and performances</li>
-                    <li>Writing workshops</li>
-                    <li>Panel discussions</li>
-                    <li>Youth poetry showcase</li>
-                    <li>Closing performances with music and spoken word</li>
-                  </ul>
+                <div className="schedule-note">
+                  <p><em>Join us for this exciting celebration of Jamaican poetry and culture. All performances and activities take place at Edna Manley College of the Visual & Performing Arts.</em></p>
                 </div>
               </div>
               

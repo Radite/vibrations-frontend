@@ -585,3 +585,166 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
+/* Schedule-specific styles - Add these to your FestivalPage.css */
+
+.running-order {
+  margin-top: 30px;
+}
+
+.running-order h4 {
+  color: #006400;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.schedule-section {
+  margin-bottom: 30px;
+  background-color: rgba(0, 100, 0, 0.03);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #006400;
+}
+
+.schedule-section h5 {
+  color: #006400;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.schedule-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: schedule-counter;
+}
+
+.schedule-list li {
+  counter-increment: schedule-counter;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 100, 0, 0.1);
+  position: relative;
+  padding-left: 40px;
+  font-size: 1rem;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.schedule-list li:before {
+  content: counter(schedule-counter);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #006400;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.schedule-list li:hover {
+  color: #006400;
+}
+
+.intermission {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fed100, #ffc107);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intermission h5 {
+  color: #333;
+  font-size: 1.4rem;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.schedule-end {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(254, 209, 0, 0.1);
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.schedule-note {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(254, 209, 0, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #fed100;
+  text-align: center;
+}
+
+.schedule-note p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Responsive styles for schedule */
+@media (max-width: 768px) {
+  .schedule-section {
+    padding: 20px 15px;
+  }
+  
+  .schedule-list li {
+    padding-left: 35px;
+    font-size: 0.95rem;
+  }
+  
+  .schedule-list li:before {
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+  }
+  
+  .intermission {
+    margin: 30px 0;
+    padding: 15px;
+  }
+  
+  .intermission h5 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .running-order h4 {
+    font-size: 1.5rem;
+  }
+  
+  .schedule-section h5 {
+    font-size: 1.1rem;
+  }
+  
+  .schedule-list li {
+    padding: 8px 0;
+    padding-left: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .schedule-list li:before {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+}
