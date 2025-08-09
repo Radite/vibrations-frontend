@@ -40,7 +40,7 @@ const PoetryCompetitions = () => {
                   <div className="poem-title">"In Silence"</div>
                 </div>
                 <div className="finalist-card">
-                  <div className="poet-name">Jaheal Lettford</div>
+                  <div className="poet-name">Jaheal Letford</div>
                   <div className="poem-title">"Why Me"</div>
                 </div>
                 <div className="finalist-card">

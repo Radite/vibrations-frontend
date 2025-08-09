@@ -14,7 +14,7 @@ import EdnaManley from '../assets/Edna.jpg';
 import anselImage from '../assets/Ansel.jpeg';
 import quickoreImage from '../assets/Quickore.jpg'
 import sponsorsImage from '../assets/VPFSponsors.png'; // or whatever your image file is named
-
+import annielImage from '../assets/Anniel.jpeg'
 
 // Import video
 import video3 from '../assets/Gallery/Video3.mp4';
@@ -74,7 +74,7 @@ const FestivalPage = () => {
             </div>
             <div className="overview-stats">
               <div className="stat-item">
-                <span className="stat-number">10</span>
+                <span className="stat-number">11</span>
                 <span className="stat-label">Poets & Artists</span>
               </div>
 
@@ -204,7 +204,7 @@ const FestivalPage = () => {
               </div>
               </div>
               
-              {/* Presenters Tab - Keeping this unchanged as requested */}
+              {/* Presenters Tab - Reordered as requested */}
               <div className={`tab-pane ${activeTab === 'presenters' ? 'active' : ''}`} id="presenters">
                 <h3>Festival Presenters & Founders</h3>
                 <p>Meet the accomplished poets, emerging and aspiring artists who will be presenting at Vibrations Poetry Festival 2025.</p>
@@ -213,17 +213,6 @@ const FestivalPage = () => {
                 <div className="presenters-section">
                   <h4>Featured Presenters</h4>
                   <div className="presenters-grid">
-                    <div className="presenter-card">
-                      <img src={margueriteImage} alt="Marguerite Anderson" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Marguerite C. Anderson</h4>
-                        <p className="presenter-title">Co-Founder & Featured Poet</p>
-                        <div className="presenter-bio">
-                          <p>Marguerite C. Anderson is an international-award winning poet, author of children's books, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as an English and Literature teacher in Jamaica and the Turks & Caicos Islands. Marguerite is the founder and CEO of Brain Edibles Collection. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
-                        </div>
-                      </div>
-                    </div>
-                    
                     <div className="presenter-card">
                       <img src={canuteImage} alt="Canute Lawrence" className="presenter-image" />
                       <div className="presenter-info">
@@ -234,21 +223,20 @@ const FestivalPage = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="presenters-grid">
+                    
                     <div className="presenter-card">
-                      <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
+                      <img src={margueriteImage} alt="Marguerite Anderson" className="presenter-image" />
                       <div className="presenter-info">
-                        <h4>Joan-Andrea Hutchinson</h4>
-                        <p className="presenter-title">Featured Poet</p>
+                        <h4>Marguerite C. Anderson</h4>
+                        <p className="presenter-title">Co-Founder & Featured Poet</p>
                         <div className="presenter-bio">
-                          <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet.</p>
-                          <p>Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
+                          <p>Marguerite C. Anderson is an international-award winning poet, author of children's books, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as an English and Literature teacher in Jamaica and the Turks & Caicos Islands. Marguerite is the founder and CEO of Brain Edibles Collection. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 "Trash & Hype" and 2023-24 "SKoolaz 3.0" as well as in David Tulloch's 2024 theatre production "Pit To Pulpit".</p>
                         </div>
                       </div>
                     </div>
-                    
+                  </div>
+                  
+                  <div className="presenters-grid">
                     <div className="presenter-card">
                       <img src={angelaImage} alt="Angela Jarrett" className="presenter-image" />
                       <div className="presenter-info">
@@ -271,47 +259,23 @@ const FestivalPage = () => {
                           </div>
                       </div>
                     </div>
+                    
+                    <div className="presenter-card">
+                      <img src={joanAndreaImage} alt="Joan-Andrea Hutchinson" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Joan-Andrea Hutchinson</h4>
+                        <p className="presenter-title">Featured Poet</p>
+                        <div className="presenter-bio">
+                          <p>Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet.</p>
+                          <p>Joan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="presenters-section">
                   <h4>Additional Presenters</h4>
-                  <div className="presenters-grid">
-                    <div className="presenter-card">
-                      <img src={anselImage} alt="Ansel Brown" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Ansel Brown</h4>
-                        <p className="presenter-title">Poet</p>
-                        <div className="presenter-bio">
-                          <p>Ansel Brown is a life-long lover of words and writer of poems from Lluidas Vale, St. Catherine. He excelled in debating and public speaking at Dinthill Technical High School before studying English Language and Psychology in Birmingham, UK.</p>
-                          <p>Ansel has published eight poetry collections including 'The Wind Blows and It Stops,' 'Birthwrite,' and 'The Sanity of Ink.' He works with schools to use poetry as an educational tool and has received positive reviews from the Ministry of Education for his work. He considers poetry one of the purest forms of human expression and currently teaches private English classes while continuing to write and perform.</p>
-                          <div className="presenter-video">
-                            <iframe
-                              width="400"
-                              height="300"
-                              src="https://www.youtube.com/embed/254EBjFgSeo"
-                              title="Ansel Brown Poetry Performance"
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            ></iframe>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                                        
-                    <div className="presenter-card">
-                      <img src={kevinImage} alt="Kevin Cooper" className="presenter-image" />
-                      <div className="presenter-info">
-                        <h4>Kevin Cooper</h4>
-                        <p className="presenter-title">Poet</p>
-                        <div className="presenter-bio">
-                          <p>Kevin Cooper, also known as Blind Vizionary, is a poet and artist born with cataracts and later diagnosed with glaucoma, ultimately losing his sight. Despite these challenges, he's always seen the world through a visionary lens. Deeply influenced by hip-hop and cultural icons like George Carlin, Louise Bennett, and Nas, Kevin uses his gift for language to explore the human experience. His work blends vulnerability, wisdom, and inspiration, aiming to uplift, educate, and connect. Through poetry and music, he continues to be a voice for authenticity, resilience, and purpose.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                    
                   <div className="presenters-grid">
                     <div className="presenter-card">
                       <img src={abigaleImage} alt="Abigale Reynolds" className="presenter-image" />
@@ -336,7 +300,47 @@ const FestivalPage = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
                     
+                  <div className="presenters-grid">
+                    <div className="presenter-card">
+                      <img src={annielImage} alt="Anniel Rodgers" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Anniel Rodgers</h4>
+                        <p className="presenter-title">Saxophonist</p>
+                        <div className="presenter-bio">
+                          <p>Anniel Rodgers is one of the talented performers who will be showcased at the festival - not as a poet but as a musician! She is seventeen years old and a gifted saxophonist and Sixth-form student at St Andrew High School.</p>
+                          <p>Her deep passion for music was discovered through her involvement at church, where she was taught to play the saxophone. For Anniel, the saxophone is now more than an instrument! It is her source of joy and her voice for authentic expression.</p>
+                          <p>She adds that she has seen her music move people to tears and bring smiles to numerous faces. As she continues to blossom, she aims to always sharpen her craft so that her passion for music is not only seen and heard but felt. Her desire is that her music will leave a lasting impact wherever it is shared.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="presenter-card">
+                      <img src={anselImage} alt="Ansel Brown" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Ansel Brown</h4>
+                        <p className="presenter-title">Poet</p>
+                        <div className="presenter-bio">
+                          <p>Ansel Brown is a life-long lover of words and writer of poems from Lluidas Vale, St. Catherine. He excelled in debating and public speaking at Dinthill Technical High School before studying English Language and Psychology in Birmingham, UK.</p>
+                          <p>Ansel has published eight poetry collections including 'The Wind Blows and It Stops,' 'Birthwrite,' and 'The Sanity of Ink.' He works with schools to use poetry as an educational tool and has received positive reviews from the Ministry of Education for his work. He considers poetry one of the purest forms of human expression and currently teaches private English classes while continuing to write and perform.</p>
+                          <div className="presenter-video">
+                            <iframe
+                              width="400"
+                              height="300"
+                              src="https://www.youtube.com/embed/254EBjFgSeo"
+                              title="Ansel Brown Poetry Performance"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  <div className="presenters-grid">
                     <div className="presenter-card">
                       <img src={brittonImage} alt="Britton Wright" className="presenter-image" />
                       <div className="presenter-info">
@@ -360,6 +364,18 @@ const FestivalPage = () => {
                         </div>
                       </div>
                     </div>
+                    
+                    <div className="presenter-card">
+                      <img src={kevinImage} alt="Kevin Cooper" className="presenter-image" />
+                      <div className="presenter-info">
+                        <h4>Kevin Cooper</h4>
+                        <p className="presenter-title">Poet</p>
+                        <div className="presenter-bio">
+                          <p>Kevin Cooper, also known as Blind Vizionary, is a poet and artist born with cataracts and later diagnosed with glaucoma, ultimately losing his sight. Despite these challenges, he's always seen the world through a visionary lens. Deeply influenced by hip-hop and cultural icons like George Carlin, Louise Bennett, and Nas, Kevin uses his gift for language to explore the human experience. His work blends vulnerability, wisdom, and inspiration, aiming to uplift, educate, and connect. Through poetry and music, he continues to be a voice for authenticity, resilience, and purpose.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <div className="presenter-card">
                       <img src={quickoreImage} alt="Quickore Bennett" className="presenter-image" />
                       <div className="presenter-info">
@@ -373,7 +389,7 @@ const FestivalPage = () => {
                         </div>
                       </div>
                     </div>
-                                      </div>
+                  </div>
                 </div>
               </div>
               
