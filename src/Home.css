@@ -1,3 +1,5 @@
+
+/*Home.css
 /* Jamaican Flag-Inspired Color Palette */
 :root {
   --jamaican-green: #009B3A;
@@ -495,4 +497,249 @@ h1, h2, h3, h4 {
 
 .join-us .btn:hover {
   background-color: #522f79;
+}
+
+/* WINNERS ANNOUNCEMENT BANNER - Replace existing finalists-banner styles with this */
+.winners-banner {
+  background: linear-gradient(135deg, #00843D 0%, #006B28 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid #FED100;
+  box-shadow: 0 10px 30px rgba(0, 132, 61, 0.3);
+}
+
+.winners-banner::before {
+  content: "🏆";
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 5rem;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.winners-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(254, 209, 0, 0.1) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.winners-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.winners-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+  color: #FED100;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+/* Winners Preview Section */
+.winners-preview {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border: 2px solid rgba(254, 209, 0, 0.3);
+}
+
+.winners-preview h3 {
+  font-size: 2rem;
+  color: #FED100;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.winners-list-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.winner-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.winner-item.first-place {
+  border-color: #FFD700;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.winner-item.second-place {
+  border-color: #C0C0C0;
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.winner-item.third-place {
+  border-color: #CD7F32;
+  background: rgba(205, 127, 50, 0.1);
+}
+
+.winner-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.place-indicator {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.winner-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.place-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #FED100;
+  margin-bottom: 5px;
+}
+
+.winner-info .poet-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.winner-info .poem-title {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.prize {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFD700;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Celebration Message */
+.celebration-message {
+  margin: 30px 0;
+}
+
+.celebration-message p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hashtags-home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hashtags-home span {
+  background: rgba(254, 209, 0, 0.15);
+  color: #FED100;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(254, 209, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hashtags-home span:hover {
+  background: rgba(254, 209, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for winners banner */
+@media (max-width: 768px) {
+  .winners-banner {
+    padding: 40px 15px;
+  }
+
+  .winners-banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .winners-preview {
+    padding: 25px;
+  }
+
+  .winner-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .place-indicator {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .winner-info {
+    text-align: center;
+  }
+
+  .hashtags-home {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hashtags-home span {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .winners-banner h2 {
+    font-size: 2rem;
+  }
+
+  .winners-preview h3 {
+    font-size: 1.6rem;
+  }
+
+  .winner-info .poet-name {
+    font-size: 1.1rem;
+  }
+
+  .place-indicator {
+    font-size: 2rem;
+  }
 }

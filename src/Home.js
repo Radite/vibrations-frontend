@@ -36,49 +36,66 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FINALISTS ANNOUNCEMENT BANNER */}
-      <section className="finalists-banner">
-        <div className="finalists-banner-content">
+      {/* WINNERS ANNOUNCEMENT BANNER */}
+      <section className="winners-banner">
+        <div className="winners-banner-content">
           <div className="announcement-badge">
-            <span className="badge-text">BREAKING NEWS</span>
+            <span className="badge-text">HISTORIC MOMENT</span>
           </div>
-          <h2>🎉 Top 5 Finalists Announced!</h2>
-          <p className="announcement-date">July 9, 2025</p>
+          <h2>🏆 And the Winners Are…!!!! 🏆</h2>
+          <p className="announcement-date">August 9, 2025</p>
           <p className="announcement-summary">
-            We are thrilled to announce the shortlist of finalists in our inaugural Poetry Competition! 
-            The poets for the five outstanding pieces are now competing for the <strong>grand prize of JA $70,000.00 </strong> 
-            and the honor of performing at our festival on <strong>August 9, 2025</strong>.
+            On Saturday, August 9, 2025, <strong>history was made</strong> at the inaugural Vibrations Poetry Festival! 
+            We are thrilled to announce the <strong>top 3 winners</strong> of the Vibrations Poetry Festival Competition.
           </p>
           
-          <div className="finalists-preview">
-            <h3>Congratulations to our shortlisted poets:</h3>
-            <div className="finalists-list-compact">
-              <div className="finalist-item">
-                <span className="poet-name">Keya (penname)</span>
-                <span className="poem-title">"In Silence"</span>
+          <div className="winners-preview">
+            <h3>🎉 Our Champions 🎉</h3>
+            <div className="winners-list-compact">
+              <div className="winner-item first-place">
+                <div className="place-indicator">🥇</div>
+                <div className="winner-info">
+                  <span className="place-text">1st Place</span>
+                  <span className="poet-name">Keya (pen name)</span>
+                  <span className="poem-title">"In Silence"</span>
+                  <span className="prize">Winner: JA $70,000</span>
+                </div>
               </div>
-              <div className="finalist-item">
-                <span className="poet-name">Jaheal Lettford</span>
-                <span className="poem-title">"Why Me"</span>
+              <div className="winner-item second-place">
+                <div className="place-indicator">🥈</div>
+                <div className="winner-info">
+                  <span className="place-text">2nd Place</span>
+                  <span className="poet-name">Jaheal Letford</span>
+                  <span className="poem-title">"Why Me"</span>
+                </div>
               </div>
-              <div className="finalist-item">
-                <span className="poet-name">Abigail Clayton</span>
-                <span class="poem-title">"The Shift"</span>
-              </div>
-              <div className="finalist-item">
-                <span className="poet-name">Abigail Clayton</span>
-                <span className="poem-title">"The Little Flower"</span>
-              </div>
-              <div className="finalist-item">
-                <span className="poet-name">Andre Smith</span>
-                <span className="poem-title">"Figure Hate Cycle"</span>
+              <div className="winner-item third-place">
+                <div className="place-indicator">🥉</div>
+                <div className="winner-info">
+                  <span className="place-text">3rd Place</span>
+                  <span className="poet-name">Abigail Clayton</span>
+                  <span className="poem-title">"The Shift"</span>
+                </div>
               </div>
             </div>
           </div>
           
+          <div className="celebration-message">
+            <p>A huge congratulations to our winners — and heartfelt thanks to all who entered, supported, and celebrated with us. <strong>You are the heartbeat of Vibrations!</strong></p>
+            
+            <div className="hashtags-home">
+              <span>#VibrationsPoetryFestival</span>
+              <span>#PoetryCompetition</span>
+              <span>#PoetryInMotion</span>
+              <span>#Vibrations2025</span>
+              <span>#PoetryJamaica</span>
+              <span>#PoetryWinners</span>
+            </div>
+          </div>
+          
           <div className="announcement-actions">
-            <Link to="/poetry-competitions" className="btn btn-primary">View Full Announcement</Link>
-            <Link to="/festival-page" className="btn btn-secondary">Learn About the Festival</Link>
+            <Link to="/poetry-competitions" className="btn btn-primary">View Full Results</Link>
+            <Link to="/gallery" className="btn btn-secondary">Festival Gallery</Link>
           </div>
         </div>
       </section>
@@ -95,46 +112,46 @@ const Home = () => {
         </div>
         
         <div className="highlight">
-          <i className="fas fa-microphone"></i>
-          <h2>Poetry Competitions</h2>
+          <i className="fas fa-trophy"></i>
+          <h2>Competition Results</h2>
           <p>
-            Submit your poetry and spoken word pieces for a chance to gain recognition in our prestigious competitions.
+            Celebrate our inaugural competition winners and discover the incredible poetry that made history at our festival.
           </p>
-          <Link to="/poetry-competitions">Submit Your Work</Link>
+          <Link to="/poetry-competitions">See the Winners</Link>
         </div>
         
         <div className="highlight">
-          <i className="fas fa-history"></i>
+          <i className="fas fa-calendar-alt"></i>
           <h2>Festival Years</h2>
           <p>
-            Journey through the vibrant history of our festivals and experience the evolution of our cultural celebrations.
+            Journey through our inaugural 2025 festival and experience the birth of a new cultural celebration tradition.
           </p>
-          <Link to="/festival-years">Explore Our Roots</Link>
+          <Link to="/festival-years">Explore Our Journey</Link>
         </div>
         
         <div className="highlight">
-          <i className="fas fa-store"></i>
-          <h2>Call for Vendors</h2>
+          <i className="fas fa-images"></i>
+          <h2>Festival Gallery</h2>
           <p>
-            Showcase your artistry and crafts by securing a vendor space at our vibrant cultural marketplace.
+            Relive the magic of our inaugural festival through photos and videos from this historic celebration.
           </p>
-          <Link to="/vendors">Join the Vendors</Link>
+          <Link to="/gallery">View Gallery</Link>
         </div>
       </section>
       
       {/* Join Us Section */}
       <section className="join-us">
         <div className="join-us-content">
-          <h2>Join Us</h2>
+          <h2>Thank You for Making History!</h2>
           <p>
-            Whether you're a poet, poetry lover, or someone interested in the transformative power of words, 
-            Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 
-            2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and 
-            witness firsthand how poetry can spark change.
+            Our inaugural Vibrations Poetry Festival on August 9, 2025, was a tremendous success! We witnessed 
+            incredible poetry, celebrated amazing talent, and created lasting memories. Whether you were a poet, 
+            poetry lover, or someone discovering the transformative power of words, you helped make this festival 
+            a historic moment in Jamaican cultural history.
           </p>
           <p>
-            Let the <em>vibrations</em> of the festival inspire you—because poetry is not just a form of art, 
-            it is a force for change.
+            The <em>vibrations</em> of our inaugural festival continue to inspire—proving that poetry is not just 
+            a form of art, it is a force for change. Stay tuned for future festivals and competitions!
           </p>
         </div>
       </section>

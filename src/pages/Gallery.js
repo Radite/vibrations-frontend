@@ -18,6 +18,28 @@ import video2 from '../assets/Gallery/Video2.mp4';
 import video3 from '../assets/Gallery/Video3.mp4';
 import video4 from '../assets/Gallery/Video4.mp4';
 
+// Import 2025 Festival Images
+import festival2025_001 from './assets/2025/IMG-20250812-WA0001.jpg';
+import festival2025_002 from './assets/2025/IMG-20250812-WA0002.jpg';
+import festival2025_003 from './assets/2025/IMG-20250812-WA0003.jpg';
+import festival2025_004 from './assets/2025/IMG-20250812-WA0004.jpg';
+import festival2025_005 from './assets/2025/IMG-20250812-WA0005.jpg';
+import festival2025_006 from './assets/2025/IMG-20250812-WA0006.jpg';
+import festival2025_007 from './assets/2025/IMG-20250812-WA0007.jpg';
+import festival2025_008 from './assets/2025/IMG-20250812-WA0008.jpg';
+import festival2025_009 from './assets/2025/IMG-20250812-WA0009.jpg';
+import festival2025_010 from './assets/2025/IMG-20250812-WA0010.jpg';
+import festival2025_011 from './assets/2025/IMG-20250812-WA0011.jpg';
+import festival2025_012 from './assets/2025/IMG-20250812-WA0012.jpg';
+import festival2025_014 from './assets/2025/IMG-20250812-WA0014.jpg';
+import festival2025_015 from './assets/2025/IMG-20250812-WA0015.jpg';
+import festival2025_016 from './assets/2025/IMG-20250812-WA0016.jpg';
+import festival2025_017 from './assets/2025/IMG-20250812-WA0017.jpg';
+import festival2025_whatsapp from './assets/2025/WhatsApp Image 2025-08-12 at 02.51.28_3a6e59c7.jpg';
+
+// Import 2025 Festival Video
+import festival2025Video from './assets/2025/WhatsApp Video 2025-08-12 at 02.54.02_8fa64b25.mp4';
+
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -52,58 +74,56 @@ const Gallery = () => {
     return () => observer.disconnect();
   }, []);
 
-  const galleryImages = [
-    { id: 1, src: image1, alt: '' },
-    { id: 2, src: image2, alt: '' },
-    { id: 3, src: image3, alt: '' },
-    {
-      id: 4,
-      src: image4,
-      alt: 'Canute Lawrence receives his International Impact Book Awards trophy from Nim Stant, Founder & CEO – International Impact Book Awards',
-    },
-    { id: 6, src: image6, alt: '' },
-    { id: 7, src: image7, alt: '' },
-    {
-      id: 8,
-      src: image8,
-      alt: 'Marguerite C. Anderson captivates audiences at the 2nd Jamaica Brew Festival',
-    },
-    { id: 9, src: image9, alt: '' },
-    { id: 10, src: image10, alt: '' },
+  // Pre-festival gallery images - NO ALT TEXT
+  const preFestivalImages = [
+    { id: 1, src: image1 },
+    { id: 2, src: image2 },
+    { id: 3, src: image3 },
+    { id: 4, src: image4 },
+    { id: 6, src: image6 },
+    { id: 7, src: image7 },
+    { id: 8, src: image8 },
+    { id: 9, src: image9 },
+    { id: 10, src: image10 },
+  ];
+
+  // 2025 Festival Images - NO ALT TEXT
+  const festival2025Images = [
+    { id: 1, src: festival2025_001 },
+    { id: 2, src: festival2025_002 },
+    { id: 3, src: festival2025_003 },
+    { id: 4, src: festival2025_004 },
+    { id: 5, src: festival2025_005 },
+    { id: 6, src: festival2025_006 },
+    { id: 7, src: festival2025_007 },
+    { id: 8, src: festival2025_008 },
+    { id: 9, src: festival2025_009 },
+    { id: 10, src: festival2025_010 },
+    { id: 11, src: festival2025_011 },
+    { id: 12, src: festival2025_012 },
+    { id: 14, src: festival2025_014 },
+    { id: 15, src: festival2025_015 },
+    { id: 16, src: festival2025_016 },
+    { id: 17, src: festival2025_017 },
+    { id: 18, src: festival2025_whatsapp },
   ];
 
   const localVideos = [
-    {
-      id: 1,
-      src: video1,
-    },
-    {
-      id: 2,
-      src: video2,
-    },
-    {
-      id: 3,
-      src: video3,
-    },
-    {
-      id: 4,
-      src: video4,
-    },
+    { id: 1, src: video1 },
+    { id: 2, src: video2 },
+    { id: 3, src: video3 },
+    { id: 4, src: video4 },
+  ];
+
+  // 2025 Festival Videos - NO ALT TEXT
+  const festival2025Videos = [
+    { id: 1, src: festival2025Video },
   ];
 
   const youtubeVideos = [
-    {
-      id: 4,
-      src: 'https://www.youtube.com/embed/RWwgCXX_Gqc',
-    },
-    {
-      id: 5,
-      src: 'https://www.youtube.com/embed/Q5XACeJgp28',
-    },
-    {
-      id: 6,
-      src: 'https://www.youtube.com/embed/G4N-GnGAwEQ',
-    },
+    { id: 4, src: 'https://www.youtube.com/embed/RWwgCXX_Gqc' },
+    { id: 5, src: 'https://www.youtube.com/embed/Q5XACeJgp28' },
+    { id: 6, src: 'https://www.youtube.com/embed/G4N-GnGAwEQ' },
   ];
 
   return (
@@ -119,22 +139,66 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Images Section */}
+        {/* 2025 Festival Section - SIMPLE, NO FANCY BACKGROUND */}
+        <div className="gallery-section festival-2025-section">
+          <h2 className={isVisible ? 'visible' : ''}>🏆 Vibrations Poetry Festival 2025 - The Inaugural Event! 🏆</h2>
+          <div className="festival-celebration-text">
+            <p>On Saturday, August 9, 2025, history was made! Our inaugural festival brought together poets, artists, and literature lovers for an unforgettable celebration of the spoken word. Relive the magic, the emotions, and the incredible talent showcased at this landmark event.</p>
+          </div>
+
+          {festival2025Images.length > 0 && (
+            <>
+              <h3 className="subsection-title">Festival Highlights</h3>
+              <div className="gallery-grid">
+                {festival2025Images.map((image, index) => (
+                  <div
+                    key={image.id}
+                    className="gallery-item"
+                    style={{ animationDelay: `${0.3 * (index + 1)}s` }}
+                  >
+                    <img src={image.src} alt="" />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          {festival2025Videos.length > 0 && (
+            <>
+              <h3 className="subsection-title">Festival Performance Videos</h3>
+              <div className="video-grid">
+                {festival2025Videos.map((video, index) => (
+                  <div
+                    key={video.id}
+                    className="video-item"
+                    style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+                  >
+                    <div className="video-container">
+                      <div className="video-wrapper">
+                        <video controls preload="metadata">
+                          <source src={video.src} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Pre-Festival Images Section */}
         <div className="gallery-section">
-          <h2 className={isVisible ? 'visible' : ''}>Festival Moments</h2>
+          <h2 className={isVisible ? 'visible' : ''}>Behind the Scenes & Preparation</h2>
           <div className="gallery-grid">
-            {galleryImages.map((image, index) => (
+            {preFestivalImages.map((image, index) => (
               <div
                 key={image.id}
                 className="gallery-item"
                 style={{ animationDelay: `${0.3 * (index + 1)}s` }}
               >
-                <div className="image-container">
-                  <img src={image.src} alt={image.alt} />
-                  {image.alt && (
-                    <p className="gallery-caption white-text">{image.alt}</p>
-                  )}
-                </div>
+                <img src={image.src} alt="" />
               </div>
             ))}
           </div>
@@ -142,7 +206,7 @@ const Gallery = () => {
 
         {/* Local Videos Section */}
         <div className="gallery-section video-section">
-          <h2 className={isVisible ? 'visible' : ''}>Videos</h2>
+          <h2 className={isVisible ? 'visible' : ''}>Poetry in Motion</h2>
           <div className="video-grid">
             {localVideos.map((video, index) => (
               <div
@@ -174,15 +238,15 @@ const Gallery = () => {
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
                 <div className="video-container">
-                <iframe
-                width="100%"
-                height="315"
-                src={video.src}
-                title={video.title || `Gallery Video ${index + 1}`} // Add this line
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src={video.src}
+                    title={`Gallery Video ${index + 1}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             ))}
