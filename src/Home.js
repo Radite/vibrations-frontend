@@ -67,6 +67,7 @@ const Home = () => {
                   <span className="place-text">2nd Place</span>
                   <span className="poet-name">Jaheal Letford</span>
                   <span className="poem-title">"Why Me"</span>
+                  <span className="prize">Winner: JA $40,000</span>
                 </div>
               </div>
               <div className="winner-item third-place">
@@ -75,6 +76,8 @@ const Home = () => {
                   <span className="place-text">3rd Place</span>
                   <span className="poet-name">Abigail Clayton</span>
                   <span className="poem-title">"The Shift"</span>
+                  <span className="prize">Winner: JA $25,000</span>
+
                 </div>
               </div>
             </div>

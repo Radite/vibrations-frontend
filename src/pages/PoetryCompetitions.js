@@ -43,12 +43,16 @@ const PoetryCompetitions = () => {
                   <div className="place-badge">2nd Place</div>
                   <div className="poet-name">Jaheal Letford</div>
                   <div className="poem-title">"Why Me"</div>
+                  <div className="prize-amount">Winner: JA $40,000</div>
+
                 </div>
                 <div className="winner-card third-place">
                   <div class="trophy-icon">🥉</div>
                   <div className="place-badge">3rd Place</div>
                   <div className="poet-name">Abigail Clayton</div>
                   <div className="poem-title">"The Shift"</div>
+                  <div className="prize-amount">Winner: JA $25,000</div>
+
                 </div>
               </div>
             </div>
