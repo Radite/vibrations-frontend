@@ -398,7 +398,7 @@ const FestivalPage = () => {
                 <h3>Festival Schedule</h3>
                 <p>Join us for an evening of poetry, performance, and cultural celebration on August 9, 2025.</p>
                 
-                <div className="running-order">
+ <div className="running-order">
                   <h4>Running Order</h4>
                   <div className="schedule-section">
                     <h5>Opening & Presentations</h5>
@@ -406,6 +406,12 @@ const FestivalPage = () => {
                       <li>Founders Welcome</li>
                       <li>Dorrett Campbell - Welcome</li>
                       <li>Dr. Denise Jarrett</li>
+                    </ol>
+                  </div>
+                  
+                  <div className="schedule-section">
+                    <h5>Performers</h5>
+                    <ol className="schedule-list" start="4">
                       <li>Angela Jarrett</li>
                       <li>Britton Wright</li>
                       <li>Abigail Reynolds</li>
@@ -418,7 +424,6 @@ const FestivalPage = () => {
                       <li>Joan Andrea Hutchinson</li>
                     </ol>
                   </div>
-                  
                   <div className="intermission">
                     <h5>INTERMISSION</h5>
                   </div>

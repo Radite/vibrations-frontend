@@ -83,6 +83,10 @@ const Reviews = () => {
       quote: "Happy to watch this showcase!",
       author: "Gabrielle Burgess",
       title: "SugaLifestyle"
+    },
+    {
+      quote: "I had a great time at the Vibration Poetry Festival. I had the impression that the poets' words transported me back in time. The poetry collection I was presented with was culturally rich and exquisitely varied. Their experiences, expressed in words, made me feel happy, proud, hurt, and sad. There was a mix of emotions pouring through me. I hope this project continues to develop because it was a great experience. Canute and Marguerite went above and beyond. I hope and pray that it spreads internationally and becomes an annual event. It was all worthwhile. It's also fantastic to see that there are still young people who are able to articulate their experiences and are so culturally aware. I'm thrilled that, as a nation, we continue to inspire our youth to compose and use poetry as a means of self-expression. I'm so glad I was able to see the greats up close and personal!",
+      author: "Rashema Simpson"
     }
   ];
 
@@ -141,7 +145,7 @@ const Reviews = () => {
               <span className="stat-label">Featured Poets</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">18</span>
+              <span className="stat-number">19</span>
               <span className="stat-label">Guestbook Reviews</span>
             </div>
             <div className="stat-item">

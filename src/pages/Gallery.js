@@ -18,7 +18,7 @@ import video2 from '../assets/Gallery/Video2.mp4';
 import video3 from '../assets/Gallery/Video3.mp4';
 import video4 from '../assets/Gallery/Video4.mp4';
 
-// Import 2025 Festival Images
+// Import 2025 Festival Images - August 12, 2025
 import festival2025_001 from './assets/2025/IMG-20250812-WA0001.jpg';
 import festival2025_002 from './assets/2025/IMG-20250812-WA0002.jpg';
 import festival2025_003 from './assets/2025/IMG-20250812-WA0003.jpg';
@@ -35,10 +35,29 @@ import festival2025_014 from './assets/2025/IMG-20250812-WA0014.jpg';
 import festival2025_015 from './assets/2025/IMG-20250812-WA0015.jpg';
 import festival2025_016 from './assets/2025/IMG-20250812-WA0016.jpg';
 import festival2025_017 from './assets/2025/IMG-20250812-WA0017.jpg';
-import festival2025_whatsapp from './assets/2025/WhatsApp Image 2025-08-12 at 02.51.28_3a6e59c7.jpg';
 
-// Import 2025 Festival Video
+// Import 2025 Festival Images - September 1, 2025
+import festival2025_0901_004 from './assets/2025/IMG-20250901-WA0004.jpg';
+import festival2025_0901_005 from './assets/2025/IMG-20250901-WA0005.jpg';
+import festival2025_0901_006 from './assets/2025/IMG-20250901-WA0006.jpg';
+import festival2025_0901_007 from './assets/2025/IMG-20250901-WA0007.jpg';
+import festival2025_0901_008 from './assets/2025/IMG-20250901-WA0008.jpg';
+import festival2025_0901_009 from './assets/2025/IMG-20250901-WA0009.jpg';
+import festival2025_0901_010 from './assets/2025/IMG-20250901-WA0010.jpg';
+import festival2025_0901_011 from './assets/2025/IMG-20250901-WA0011.jpg';
+import festival2025_0901_012 from './assets/2025/IMG-20250901-WA0012.jpg';
+import festival2025_0901_013 from './assets/2025/IMG-20250901-WA0013.jpg';
+import festival2025_0901_014 from './assets/2025/IMG-20250901-WA0014.jpg';
+
+// Import WhatsApp Images
+import festival2025_whatsapp from './assets/2025/WhatsApp Image 2025-08-12 at 02.51.28_3a6e59c7.jpg';
+import festival2025_whatsapp_0825 from './assets/2025/WhatsApp Image 2025-08-25 at 04.09.21_e8768019.jpg';
+
+// Import 2025 Festival Videos
 import festival2025Video from './assets/2025/WhatsApp Video 2025-08-12 at 02.54.02_8fa64b25.mp4';
+import festival2025Video_0825_1 from './assets/2025/WhatsApp Video 2025-08-25 at 04.02.25_fec2e3ac.mp4';
+import festival2025Video_0825_2 from './assets/2025/WhatsApp Video 2025-08-25 at 04.13.38_eaab353a.mp4';
+import festival2025Video_0825_3 from './assets/2025/WhatsApp Video 2025-08-25 at 15.02.04_d10301ac.mp4';
 
 const Gallery = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -87,8 +106,9 @@ const Gallery = () => {
     { id: 10, src: image10 },
   ];
 
-  // 2025 Festival Images - NO ALT TEXT
+  // 2025 Festival Images - ALL IMAGES INCLUDING NEW ONES
   const festival2025Images = [
+    // August 12, 2025 images
     { id: 1, src: festival2025_001 },
     { id: 2, src: festival2025_002 },
     { id: 3, src: festival2025_003 },
@@ -105,7 +125,21 @@ const Gallery = () => {
     { id: 15, src: festival2025_015 },
     { id: 16, src: festival2025_016 },
     { id: 17, src: festival2025_017 },
-    { id: 18, src: festival2025_whatsapp },
+    // September 1, 2025 images
+    { id: 18, src: festival2025_0901_004 },
+    { id: 19, src: festival2025_0901_005 },
+    { id: 20, src: festival2025_0901_006 },
+    { id: 21, src: festival2025_0901_007 },
+    { id: 22, src: festival2025_0901_008 },
+    { id: 23, src: festival2025_0901_009 },
+    { id: 24, src: festival2025_0901_010 },
+    { id: 25, src: festival2025_0901_011 },
+    { id: 26, src: festival2025_0901_012 },
+    { id: 27, src: festival2025_0901_013 },
+    { id: 28, src: festival2025_0901_014 },
+    // WhatsApp images
+    { id: 29, src: festival2025_whatsapp },
+    { id: 30, src: festival2025_whatsapp_0825 },
   ];
 
   const localVideos = [
@@ -115,9 +149,12 @@ const Gallery = () => {
     { id: 4, src: video4 },
   ];
 
-  // 2025 Festival Videos - NO ALT TEXT
+  // 2025 Festival Videos - ALL VIDEOS
   const festival2025Videos = [
     { id: 1, src: festival2025Video },
+    { id: 2, src: festival2025Video_0825_1 },
+    { id: 3, src: festival2025Video_0825_2 },
+    { id: 4, src: festival2025Video_0825_3 },
   ];
 
   const youtubeVideos = [
