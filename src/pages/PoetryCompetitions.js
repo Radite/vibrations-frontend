@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './PoetryCompetitions.css';
+import tanishaBentWinner from '../assets/tanisha-bent-winner.jpeg'; // Import the winner image
+import openMicNightImage from '../assets/vibrations-open-mic-night.jpeg'; // Import the open mic night image
 
 const PoetryCompetitions = () => {
   const [vpf2025Open, setVpf2025Open] = useState(false);
@@ -23,11 +25,110 @@ const PoetryCompetitions = () => {
       </section>
 
       <section className="competitions-content">
-        {/* HERITAGE MONTH CHALLENGE 2025 - NEW ACTIVE COMPETITION */}
+        {/* VIBRATIONS OPEN MIC NIGHT - VIRTUAL EDITION */}
+        <div className="open-mic-night-section">
+          <div className="open-mic-container">
+            <div className="open-mic-image">
+              <img 
+                src={openMicNightImage}
+                alt="Vibrations Open Mic Night - Virtual Edition - Nature's Fury" 
+                className="open-mic-poster"
+              />
+            </div>
+
+            <div className="open-mic-content">
+              <div className="open-mic-header">
+                <h2>VIBRATIONS OPEN MIC NIGHT – VIRTUAL EDITION!</h2>
+                <h3>🌀 Theme: Nature's Fury 🌀</h3>
+              </div>
+
+              <div className="open-mic-intro">
+                <p>After Hurricane Melissa, we know you have stories — old and new — to share!</p>
+                <p><strong>VPF is calling all poets, wordsmiths, and lovers of spoken word!</strong></p>
+                <p>We're bringing the stage to your screen with our first-ever Virtual Open Mic Night!</p>
+              </div>
+
+              <div className="open-mic-details">
+                <div className="detail-item">
+                  <span className="detail-icon">📅</span>
+                  <div className="detail-text">
+                    <strong>When:</strong> Friday, November 28, 2025 @ 6:00 PM (JA time)
+                  </div>
+                </div>
+
+                <div className="detail-item">
+                  <span className="detail-icon">🌐</span>
+                  <div className="detail-text">
+                    <strong>Where:</strong> Online via Zoom/Google Meet
+                  </div>
+                </div>
+
+                <div className="detail-item">
+                  <span className="detail-icon">💰</span>
+                  <div className="detail-text">
+                    <strong>Cost:</strong> FREE!
+                  </div>
+                </div>
+              </div>
+
+              <div className="open-mic-opportunities">
+                <h4>Whether you're an emerging poet or a seasoned wordsmith, this is your moment to:</h4>
+                <ul className="opportunity-list">
+                  <li>✅ Share your poem inspired by Nature's Fury</li>
+                  <li>✅ Discover fresh poetic voices</li>
+                  <li>✅ Connect with a vibrant creative community</li>
+                </ul>
+              </div>
+
+              <div className="performer-info">
+                <h4>🎤 Wanna Perform?</h4>
+                <p>Send an email to <a href="mailto:vibrationspoetryfestival@gmail.com" className="email-link">vibrationspoetryfestival@gmail.com</a></p>
+                <p>Include your full name and tel# + a short poem excerpt (max 2 minutes).</p>
+                <p><strong>Spots are limited — secure yours early!</strong></p>
+              </div>
+
+              <div className="open-mic-cta">
+                <p>Even if you're just tuning in, come for a night of:</p>
+                <div className="cta-highlights">
+                  <span>💥 Powerful words</span>
+                  <span>💥 Laughter</span>
+                  <span>💥 Inspiration</span>
+                </div>
+              </div>
+
+              <div className="open-mic-closing">
+                <h4>Let's keep the VIBRATIONS alive all year long!</h4>
+              </div>
+
+              <div className="open-mic-hashtags">
+                <span>#VibrationsPoetry</span>
+                <span>#OpenMicNight</span>
+                <span>#VirtualPoetry</span>
+                <span>#EmergingPoets</span>
+                <span>#SpokenWord</span>
+                <span>🌿🇯🇲</span>
+              </div>
+
+              <div className="button-container">
+                <a href="mailto:vibrationspoetryfestival@gmail.com?subject=Open%20Mic%20Night%20Performance%20Request&body=Full%20Name%3A%0ATel%20Number%3A%0A%0APoem%20Excerpt%20(max%202%20minutes)%3A" 
+                   className="competitions-btn competitions-btn-primary">
+                  Register to Perform 🎤
+                </a>
+                <a href="/contact" className="competitions-btn competitions-btn-outline">
+                  Have Questions?
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="competitions-decorative-line"></div>
+
+        {/* HERITAGE MONTH CHALLENGE 2025 - CLOSED WITH WINNER */}
         <div className="heritage-month-challenge">
           <div className="announcement-header">
             <h2>✊🏿 Heritage Month Poetry & Human Rights Challenge ✊🏿</h2>
-            <p className="announcement-date">NOW OPEN - Deadline: October 28, 2025</p>
+            <p className="announcement-date">COMPETITION CLOSED - Winner Announced</p>
           </div>
           
           <div className="announcement-content">
@@ -43,84 +144,61 @@ const PoetryCompetitions = () => {
               </div>
             </div>
 
-            <div className="challenge-flyer-section">
-              <img 
-                src={'/heritageMonthFlyer.jpg'} 
-                alt="Heritage Month Poetry & Human Rights Challenge Flyer" 
-                className="challenge-flyer"
-              />
-            </div>
-
             <div className="challenge-details">
-              <h3>Submit a Poem on Justice, Injustice, and the Pursuit of Peace</h3>
+              <h3>🏆 Heritage Month Challenge Winner</h3>
               
-              <div className="submission-guidelines-box">
-                <h4>📝 Submission Guidelines</h4>
-                <ul>
-                  <li><strong>Theme:</strong> Submit a poem based on any aspect of justice/injustice and the pursuit of peace</li>
-                  <li><strong>Email to:</strong> <a href="mailto:vibrationspoetryfestival@gmail.com" className="email-highlight">vibrationspoetryfestival@gmail.com</a></li>
-                  <li><strong>Deadline:</strong> <span className="deadline-highlight">Tuesday, October 28, 2025</span></li>
-                  <li><strong>Language:</strong> English only</li>
-                  <li><strong>Length:</strong> 50 lines or less</li>
-                  <li><strong>Format:</strong> Title and poem text only (no dates, no notes)</li>
-                  <li><strong>Originality:</strong> You must be the poem's author</li>
-                  <li><strong>Previously published works are allowed</strong></li>
-                  <li><strong>Rights:</strong> You retain all rights to your poem and can publish it elsewhere</li>
-                  <li><strong>Permission:</strong> By submitting, you grant permission for VPF and Brain Edibles Collection to publish your poetry to VPF's website and social media platforms for promotional purposes</li>
-                </ul>
+              <div className="winner-announcement-image">
+                <img 
+                  src={tanishaBentWinner}
+                  alt="Tanisha Bent - Heritage Month Poetry Challenge Winner" 
+                  className="winner-announcement-photo"
+                />
               </div>
-
-              <div className="benefits-section">
-                <h4>✨ Benefits of Taking the Challenge</h4>
-                <div className="benefits-grid">
-                  <div className="benefit-card">
-                    <div className="benefit-icon">🏆</div>
-                    <p>Writer's work gets featured, giving a sense of achievement</p>
-                  </div>
-                  <div className="benefit-card">
-                    <div className="benefit-icon">🌟</div>
-                    <p>Grants credibility</p>
-                  </div>
-                  <div className="benefit-card">
-                    <div className="benefit-icon">💎</div>
-                    <p>Showcases poet's skill and talent</p>
-                  </div>
-                  <div className="benefit-card">
-                    <div className="benefit-icon">🤝</div>
-                    <p>Introduces poet to a community of fellow like-minded individuals</p>
-                  </div>
-                  <div className="benefit-card">
-                    <div className="benefit-icon">📚</div>
-                    <p>An opportunity for mentorship to soar higher in one's writing career</p>
-                  </div>
-                  <div className="benefit-card">
-                    <div className="benefit-icon">🗣️</div>
-                    <p>Authors/Poets get to speak their minds to the world</p>
-                  </div>
+              
+              <div className="winner-announcement">
+                <p className="winner-intro">Congratulations to <strong>Tanisha Bent</strong> on winning the Vibrations Poetry Festival's Heritage Month Poetry & Human Rights Challenge with her powerful piece, <strong>"In Her Skin."</strong></p>
+                
+                <div className="winner-poem-card">
+                  <h4>Winning Poem: "In Her Skin"</h4>
+                  <p>Bent's poem is a fearless confrontation of the everyday injustices women face and a passionate call for respect, dignity, and autonomy. Her work perfectly captures the spirit of October's theme and embodies exactly what this challenge was about.</p>
                 </div>
-              </div>
 
-              <div className="hashtags">
-                <span>#HeritageMonth2025</span>
-                <span>#vibrationspoetryfestivalwrites</span>
-                <span>#brainediblescollection</span>
-                <span>#vibrationspoetryfestival</span>
-                <span>#poetrychallenge</span>
-                <span>#injustice</span>
-                <span>#justice</span>
-                <span>#pursuitofpeace</span>
-                <span>#poetrycommunity</span>
-                <span>#poetryisnotdead</span>
-              </div>
+                <div className="winner-details-box">
+                  <h4>What's Next for Tanisha?</h4>
+                  <p>As our winner, Tanisha Bent will have access to a number of exciting opportunities:</p>
+                  <ul>
+                    <li><strong>Feature in the Vibrations Poetry Festival Showcase 2025</strong> — A dedicated profile celebrating her work and artistry</li>
+                    <li><strong>Interview Spotlight</strong> — An in-depth conversation about her poetry, inspirations, and creative journey</li>
+                    <li><strong>Publication Across Digital Channels</strong> — Her winning poem will be shared on our website, social media, and promotional materials</li>
+                  </ul>
+                </div>
 
-              <div className="button-container">
-                <a href="mailto:vibrationspoetryfestival@gmail.com?subject=Heritage%20Month%20Poetry%20Challenge%20Submission" 
-                   className="competitions-btn competitions-btn-primary">
-                  Submit Your Poem ✉️
-                </a>
-                <a href="/contact" className="competitions-btn competitions-btn-outline">
-                  Questions? Contact Us
-                </a>
+                <div className="challenge-info-box">
+                  <h4>📋 Challenge Details</h4>
+                  <p><strong>Theme:</strong> Poetry on Justice, Injustice, and the Pursuit of Peace</p>
+                  <p><strong>Submission Deadline:</strong> October 28, 2025</p>
+                  <p><strong>Submission Period:</strong> September - October 2025</p>
+                  <p><strong>Collaboration:</strong> Vibrations Poetry Festival & Brain Edibles Collection</p>
+                </div>
+
+                <div className="hashtags">
+                  <span>#HeritageMonthPoetryChallenge</span>
+                  <span>#TanishaBent</span>
+                  <span>#InHerSkin</span>
+                  <span>#Winner</span>
+                  <span>#vibrationspoetryfestival</span>
+                  <span>#brainediblescollection</span>
+                  <span>#poetrycommunity</span>
+                </div>
+
+                <div className="button-container">
+                  <a href="/blog/tanisha-bent" className="competitions-btn competitions-btn-primary">
+                    Read Tanisha's Feature 📖
+                  </a>
+                  <a href="/contact" className="competitions-btn competitions-btn-outline">
+                    Learn About Next Challenge
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -311,7 +389,7 @@ const PoetryCompetitions = () => {
           
           <div className="announcement-content">
             <h3>Future Poetry Competitions</h3>
-            <p>The success of our inaugural competition has inspired us to make this an annual tradition. Stay tuned for announcements about the 2026 Vibrations Poetry Festival Competition!</p>
+            <p>The success of our inaugural competition and the Heritage Month Poetry & Human Rights Challenge has inspired us to make this an annual tradition. Stay tuned for announcements about the 2026 Vibrations Poetry Festival Competition!</p>
             
             <p>Want to be the first to know about upcoming competitions and festival news? <a href="/contact">Subscribe to our newsletter</a> and follow us on social media.</p>
             

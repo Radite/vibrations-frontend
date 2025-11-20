@@ -23,6 +23,7 @@ import TicketPurchasePage from './pages/TicketPurchasePage'
 import WinnerDetailJane from './pages/WinnerDetailJane'
 import CommunityOutreach from './pages/CommunityOutreach'
 import ProclamationsBlog from './pages/ProclamationsBlog';
+import TanishaBentBlog from './pages/TanishaBentBlog';
 
 import ScrollToTop from './ScrollToTop';
 
@@ -53,7 +54,7 @@ function App() {
         <Route path="/submit-review" element={<SubmitReview />} />
         <Route path="/communityoutreach" element={<CommunityOutreach />} />
         <Route path="/blog/proclamations-review" element={<ProclamationsBlog />} />
-
+        <Route path="/blog/tanisha-bent" element={<TanishaBentBlog />} />
 
         <Route path="/contact" element={<Contact />} />
       </Route>
@@ -63,8 +64,3 @@ function App() {
 }
 
 export default App;
-/*
-
-
-
-        */

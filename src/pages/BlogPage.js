@@ -18,9 +18,24 @@ const BlogPage = () => {
         </div>
       </section>
       
+      
       <section className="blog-preview-content">
         <div className="featured-post-preview">
-          <h2>Latest Review Available</h2>
+          <h2>Featured Content</h2>
+          
+          <div className="post-card">
+            <h3>Tanisha Bent: Siloah's Brawta Voice — founder, teacher, and slam-stage contender</h3>
+            <p>Marguerite C. Anderson profiles Tanisha Bent, a spoken-word poet and community arts leader from St. Elizabeth who has brought vibrant poetry programming to rural Jamaica through her Brawta Backyard Poetry project, and whose voice has resonated on the Caribbean slam circuit.</p>
+            <div className="post-meta">
+              <span className="category">Poet Feature</span>
+              <span className="author">By Marguerite C. Anderson</span>
+              <span className="date">November 20, 2025</span>
+            </div>
+            <Link to="/blog/tanisha-bent" className="read-review-btn">
+              Read Full Feature
+            </Link>
+          </div>
+          
           <div className="post-card">
             <h3>Lyrical Truths & Social Reckonings: A Scholarly Reflection on "Proclamations</h3>
             <p>Vivienne Grant reviews Marguerite C. Anderson's latest poetry collection, exploring themes of memory, identity, and the pursuit of dignity amid silence and struggle.</p>
@@ -37,7 +52,7 @@ const BlogPage = () => {
         
         <div className="coming-soon-section">
           <h2>More Content Coming Soon</h2>
-          <p>Stay tuned for exciting updates including poet interviews, cultural essays, and more literary reviews!</p>
+          <p>Stay tuned for exciting updates including cultural essays, literary reviews, and more poet features!</p>
         </div>
       </section>
     </div>

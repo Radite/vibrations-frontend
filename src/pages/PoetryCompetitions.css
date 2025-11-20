@@ -1,5 +1,21 @@
 /* Poetry Competitions Page - Scoped Styles */
 
+.winner-announcement-image {
+  text-align: center;
+  margin: 2rem auto 3rem auto;
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.winner-announcement-photo {
+  max-width: 250px;  /* Changed from 400px */
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(139, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 /* Base styles for competitions container */
 .competitions-container {
   font-family: 'Roboto', sans-serif;
@@ -1818,3 +1834,398 @@
 /* ========================================
    END OF PAST COMPETITIONS SECTION STYLES
    ======================================== */
+
+   /* ========================================
+   VIBRATIONS OPEN MIC NIGHT - VIRTUAL EDITION
+   ======================================== */
+
+.open-mic-night-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  color: #000;
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 2px solid #fed100;
+}
+
+.open-mic-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.open-mic-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-mic-poster {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.open-mic-poster:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.open-mic-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.open-mic-header {
+  animation: fadeInUp 0.8s ease-out;
+  text-align: center;
+}
+
+.open-mic-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.open-mic-header h3 {
+  font-size: 1.5rem;
+  color: #00843d;
+  margin: 0;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.open-mic-intro {
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+  text-align: center;
+}
+
+.open-mic-intro p {
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #000;
+  font-weight: 500;
+}
+
+.open-mic-intro p:first-child {
+  color: #00843d;
+  font-weight: 700;
+}
+
+.open-mic-intro p strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.open-mic-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(254, 209, 0, 0.15);
+  border-left: 4px solid #fed100;
+  border-radius: 8px;
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.detail-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+.detail-text strong {
+  color: #00843d;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.open-mic-opportunities {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+  text-align: center;
+}
+
+.open-mic-opportunities h4 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: #000;
+  font-weight: 700;
+}
+
+.opportunity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.opportunity-list li {
+  font-size: 1rem;
+  color: #000;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.performer-info {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  background: rgba(0, 132, 61, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #00843d;
+  text-align: center;
+}
+
+.performer-info h4 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: #000;
+  font-weight: 700;
+}
+
+.performer-info p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.performer-info p strong {
+  color: #00843d;
+  font-weight: 700;
+}
+
+.email-link {
+  color: #00843d;
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+
+.email-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.open-mic-cta {
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+  text-align: center;
+}
+
+.open-mic-cta p {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.cta-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.cta-highlights span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.open-mic-closing {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(254, 209, 0, 0.2);
+  border-radius: 8px;
+}
+
+.open-mic-closing h4 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #000;
+  font-weight: 700;
+}
+
+.open-mic-hashtags {
+  animation: fadeInUp 0.8s ease-out 0.7s both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.open-mic-hashtags span {
+  background: rgba(254, 209, 0, 0.25);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid #fed100;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.open-mic-hashtags span:hover {
+  background: rgba(254, 209, 0, 0.4);
+  border-color: #fed100;
+  transform: translateY(-2px);
+}
+
+.open-mic-night-section .button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+  margin-top: 1rem;
+}
+
+.open-mic-night-section .competitions-btn {
+  background: #00843d;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+}
+
+.open-mic-night-section .competitions-btn:hover {
+  background: #006830;
+  transform: translateY(-2px);
+}
+
+.open-mic-night-section .competitions-btn-outline {
+  background: transparent;
+  color: #00843d;
+  border: 2px solid #00843d;
+}
+
+.open-mic-night-section .competitions-btn-outline:hover {
+  background: #00843d;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .open-mic-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .open-mic-poster {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .open-mic-night-section {
+    padding: 2rem 1rem;
+  }
+
+  .open-mic-container {
+    gap: 1.5rem;
+  }
+
+  .open-mic-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .open-mic-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .open-mic-intro p {
+    font-size: 0.95rem;
+  }
+
+  .detail-item {
+    padding: 0.8rem;
+  }
+
+  .cta-highlights {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .open-mic-night-section .button-container {
+    flex-direction: column;
+  }
+
+  .open-mic-night-section .button-container a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .open-mic-night-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .open-mic-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .open-mic-header h3 {
+    font-size: 1rem;
+  }
+
+  .open-mic-intro p {
+    font-size: 0.9rem;
+  }
+
+  .opportunity-list li {
+    font-size: 0.9rem;
+  }
+
+  .cta-highlights {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .open-mic-hashtags {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
