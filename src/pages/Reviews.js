@@ -96,7 +96,7 @@ const Reviews = () => {
       <section className="site-hero">
         <div className="site-hero-content">
           <h1>Festival Reviews</h1>
-          <p>What our community is saying about the Vibrations Poetry Festival experience</p>
+          <p>What our community is saying about Vibrations Poetry Festival experience</p>
         </div>
       </section>
 
@@ -132,7 +132,7 @@ const Reviews = () => {
           <h3>Building Our Poetry Community</h3>
           <p>
             The overwhelming response to our inaugural festival demonstrates the hunger for authentic poetic expression 
-            in Jamaica. From seasoned poetry lovers to first-time attendees, the Vibrations Poetry Festival created 
+            in Jamaica. From seasoned poetry lovers to first-time attendees, Vibrations Poetry Festival created 
             connections, inspired creativity, and celebrated the power of the spoken word.
           </p>
           <div className="impact-stats">

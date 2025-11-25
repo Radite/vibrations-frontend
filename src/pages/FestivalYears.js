@@ -41,7 +41,7 @@ const FestivalYears = () => {
       <section className="years-content">
         <div className="years-header">
           <h1>Our Festival History</h1>
-          <p>Explore the evolution of the Vibrations Poetry Festival through the years, from our humble beginnings to our vision for the future.</p>
+          <p>Explore the evolution of Vibrations Poetry Festival through the years, from our humble beginnings to our vision for the future.</p>
         </div>
         
         <div className="timeline-decoration">

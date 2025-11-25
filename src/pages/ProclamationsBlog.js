@@ -135,7 +135,7 @@ const ProclamationsBlog = () => {
             
             <div className="highlighted-section">
               <h3>Experience Anderson at Vibrations Poetry Festival</h3>
-              <p>Marguerite C. Anderson, co-founder of the Vibrations Poetry Festival, will be performing selections from "Proclamations" at our inaugural festival on August 9, 2025. Join us to witness firsthand the power of her voice and the depth of her literary artistry.</p>
+              <p>Marguerite C. Anderson, co-founder of Vibrations Poetry Festival, will be performing selections from "Proclamations" at our inaugural festival on August 9, 2025. Join us to witness firsthand the power of her voice and the depth of her literary artistry.</p>
               <Link to="/festival-page" className="link-button">Learn More About the Festival</Link>
             </div>
             

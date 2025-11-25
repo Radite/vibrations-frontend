@@ -71,7 +71,7 @@ const SubmitReview = () => {
       <section className="site-hero">
         <div className="site-hero-content">
           <h1>Share Your Experience</h1>
-          <p>Tell us about your time at the Vibrations Poetry Festival</p>
+          <p>Tell us about your time at Vibrations Poetry Festival</p>
         </div>
       </section>
       
@@ -81,7 +81,7 @@ const SubmitReview = () => {
           <div className="success-message">
             <span className="success-icon">✓</span>
             <h3>Thank You for Your Review!</h3>
-            <p>Your feedback helps us improve the Vibrations Poetry Festival experience.</p>
+            <p>Your feedback helps us improve Vibrations Poetry Festival experience.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>

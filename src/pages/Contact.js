@@ -78,7 +78,7 @@ const Contact = () => {
       <section className="site-hero">
         <div className="site-hero-content">
           <h1>Contact Us</h1>
-          <p>Reach out and let's connect about the Vibrations Poetry Festival</p>
+          <p>Reach out and let's connect about Vibrations Poetry Festival</p>
         </div>
       </section>
 

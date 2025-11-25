@@ -156,7 +156,7 @@ const PoetryCompetitions = () => {
               </div>
               
               <div className="winner-announcement">
-                <p className="winner-intro">Congratulations to <strong>Tanisha Bent</strong> on winning the Vibrations Poetry Festival's Heritage Month Poetry & Human Rights Challenge with her powerful piece, <strong>"In Her Skin."</strong></p>
+                <p className="winner-intro">Congratulations to <strong>Tanisha Bent</strong> on winning Vibrations Poetry Festival's Heritage Month Poetry & Human Rights Challenge with her powerful piece, <strong>"In Her Skin."</strong></p>
                 
                 <div className="winner-poem-card">
                   <h4>Winning Poem: "In Her Skin"</h4>
@@ -167,7 +167,7 @@ const PoetryCompetitions = () => {
                   <h4>What's Next for Tanisha?</h4>
                   <p>As our winner, Tanisha Bent will have access to a number of exciting opportunities:</p>
                   <ul>
-                    <li><strong>Feature in the Vibrations Poetry Festival Showcase 2025</strong> — A dedicated profile celebrating her work and artistry</li>
+                    <li><strong>Feature in Vibrations Poetry Festival Showcase 2025</strong> — A dedicated profile celebrating her work and artistry</li>
                     <li><strong>Interview Spotlight</strong> — An in-depth conversation about her poetry, inspirations, and creative journey</li>
                     <li><strong>Publication Across Digital Channels</strong> — Her winning poem will be shared on our website, social media, and promotional materials</li>
                   </ul>

@@ -26,7 +26,7 @@ const VendorGuidelines = () => {
             <h2>Participation Guidelines</h2>
           </div>
           <div className="vendors-section-content">
-            <p>Thank you for your interest in joining the Vibrations Poetry Festival Cultural Marketplace. To ensure a successful and enriching experience for all vendors and attendees, we've established the following guidelines. Please review them carefully before submitting your application.</p>
+            <p>Thank you for your interest in joining Vibrations Poetry Festival Cultural Marketplace. To ensure a successful and enriching experience for all vendors and attendees, we've established the following guidelines. Please review them carefully before submitting your application.</p>
           </div>
           
           {/* Guidelines Content */}
@@ -35,7 +35,7 @@ const VendorGuidelines = () => {
               <h3>Eligibility Criteria</h3>
             </div>
             <div className="vendors-section-content">
-              <p>The Vibrations Poetry Festival Cultural Marketplace prioritizes vendors who:</p>
+              <p>Vibrations Poetry Festival Cultural Marketplace prioritizes vendors who:</p>
               <ul>
                 <li>Create handcrafted, original products with cultural significance to the Caribbean region</li>
                 <li>Source materials ethically and sustainably</li>
@@ -164,7 +164,7 @@ const VendorGuidelines = () => {
             </div>
             
             <div className="vendors-payment-section">
-              <p>Ready to showcase your cultural products at the Vibrations Poetry Festival?</p>
+              <p>Ready to showcase your cultural products at Vibrations Poetry Festival?</p>
               <a href="/vendors" className="vendors-btn">Apply Now</a>
             </div>
           </div>

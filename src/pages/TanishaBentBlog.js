@@ -173,7 +173,7 @@ const TanishaBentBlog = () => {
             
             <div className="highlighted-section">
               <h3>Experience Poetry at Vibrations Festival</h3>
-              <p>Discover more poets like Tanisha Bent at the Vibrations Poetry Festival, where voices from across the Caribbean gather to celebrate, challenge, and inspire. Join us for an unforgettable evening of spoken-word performance.</p>
+              <p>Discover more poets like Tanisha Bent at Vibrations Poetry Festival, where voices from across the Caribbean gather to celebrate, challenge, and inspire. Join us for an unforgettable evening of spoken-word performance.</p>
               <Link to="/festival-years" className="link-button">Learn About Upcoming Festivals</Link>
             </div>
           </article>
