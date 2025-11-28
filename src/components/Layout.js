@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import EventAlert from './EventAlert';
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -14,6 +15,9 @@ const Layout = () => {
 
   return (
     <div>
+      {/* Global Event Alert Banner - Visible on all pages */}
+      <EventAlert />
+
       {/* Sidebar Component */}
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 

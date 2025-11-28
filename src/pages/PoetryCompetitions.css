@@ -2229,3 +2229,360 @@
     transform: translateY(0);
   }
 }
+
+/* ========================================
+   POSTPONEMENT BANNER STYLES (ADD TO EXISTING PoetryCompetitions.css)
+   ======================================== */
+
+.postponement-banner {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+  border: 2px solid #D63C26;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 16px rgba(255, 107, 53, 0.2);
+  animation: slideInBanner 0.6s ease-out;
+}
+
+@keyframes slideInBanner {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.banner-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.banner-text {
+  flex: 1;
+}
+
+.banner-text strong {
+  display: block;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.banner-text p {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Postponed Overlay on Image */
+.postponed-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 107, 53, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.open-mic-image {
+  position: relative;
+}
+
+.open-mic-image:hover .postponed-overlay {
+  opacity: 1;
+}
+
+.postponed-label {
+  background: #D63C26;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Event Status Message */
+.event-status-message {
+  background: rgba(255, 107, 53, 0.15);
+  border-left: 5px solid #FF6B35;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.event-status-message h4 {
+  color: #FF6B35;
+  font-size: 1.2rem;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.event-status-message p {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Original Event Details Section */
+.original-event-details {
+  background: rgba(0, 132, 61, 0.08);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #00843D;
+  margin: 20px 0;
+}
+
+.original-event-details h4 {
+  color: #00843D;
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Disabled Performer Info State */
+.performer-info-disabled {
+  background: rgba(200, 200, 200, 0.1);
+  opacity: 0.9;
+}
+
+.performer-info-disabled h4 {
+  color: #666;
+}
+
+.performer-info-disabled p {
+  color: #555;
+}
+
+.performer-info-disabled .email-link {
+  color: #00843D;
+  text-decoration: underline;
+}
+
+/* Status Badge Styles */
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 12px;
+}
+
+.status-closed {
+  background: #E8E8E8;
+  color: #666;
+  border: 1px solid #CCCCCC;
+}
+
+.status-closed::before {
+  content: "✓ ";
+}
+
+/* Section Header with Badge */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .postponement-banner {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .banner-icon {
+    font-size: 28px;
+  }
+
+  .banner-text strong {
+    font-size: 1.1rem;
+  }
+
+  .banner-text p {
+    font-size: 0.95rem;
+  }
+
+  .event-status-message {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .event-status-message h4 {
+    font-size: 1.1rem;
+  }
+
+  .event-status-message p {
+    font-size: 0.95rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status-badge {
+    margin-left: 0;
+  }
+
+  .open-mic-night-section {
+    padding: 2rem 1rem;
+  }
+
+  .open-mic-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .open-mic-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .open-mic-header h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .postponement-banner {
+    padding: 12px;
+  }
+
+  .banner-icon {
+    font-size: 24px;
+    min-width: 32px;
+  }
+
+  .banner-text strong {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .banner-text p {
+    font-size: 0.9rem;
+  }
+
+  .event-status-message {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .event-status-message h4 {
+    font-size: 1rem;
+  }
+
+  .event-status-message p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .original-event-details h4 {
+    font-size: 1rem;
+  }
+
+  .open-mic-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .open-mic-header h3 {
+    font-size: 1rem;
+  }
+
+  .postponed-label {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .postponement-banner,
+  .event-status-message {
+    animation: none;
+  }
+
+  .banner-icon {
+    animation: none;
+  }
+
+  @keyframes pulse {
+    0%, 50%, 100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .postponement-banner {
+    border-width: 3px;
+    background: linear-gradient(135deg, #CC5520 0%, #DD7040 100%);
+  }
+
+  .banner-text strong,
+  .banner-text p {
+    font-weight: 700;
+  }
+
+  .postponed-label {
+    border: 2px solid white;
+  }
+
+  .status-badge {
+    border-width: 2px;
+  }
+}
