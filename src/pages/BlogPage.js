@@ -48,7 +48,21 @@ const BlogPage = () => {
               Read Full Review
             </Link>
           </div>
+                  <div className="post-card">
+            <h3>A Witness to a Quiet Revolution of Verse</h3>
+            <p>Samuel J. Gordon shares his powerful reflection on Vibrations Poetry Festival, where he witnessed poetry honored as both art and healing practice—a sacred gathering that transformed the amphitheater into a sanctuary of words and spirit.</p>
+            <div className="post-meta">
+              <span className="category">Festival Review</span>
+              <span className="author">By Samuel J. Gordon</span>
+              <span className="date">February 4, 2026</span>
+            </div>
+            <Link to="/blog/samuel-gordon-witness" className="read-review-btn">
+              Read Full Review
+            </Link>
+          </div>
         </div>
+
+
         
         <div className="coming-soon-section">
           <h2>More Content Coming Soon</h2>

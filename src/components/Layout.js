@@ -15,8 +15,6 @@ const Layout = () => {
 
   return (
     <div>
-      {/* Global Event Alert Banner - Visible on all pages */}
-      <EventAlert />
 
       {/* Sidebar Component */}
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />

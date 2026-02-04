@@ -24,6 +24,8 @@ import WinnerDetailJane from './pages/WinnerDetailJane'
 import CommunityOutreach from './pages/CommunityOutreach'
 import ProclamationsBlog from './pages/ProclamationsBlog';
 import TanishaBentBlog from './pages/TanishaBentBlog';
+import SamuelGordonBlog from './pages/SamuelGordonBlog';
+
 
 import ScrollToTop from './ScrollToTop';
 
@@ -55,7 +57,7 @@ function App() {
         <Route path="/communityoutreach" element={<CommunityOutreach />} />
         <Route path="/blog/proclamations-review" element={<ProclamationsBlog />} />
         <Route path="/blog/tanisha-bent" element={<TanishaBentBlog />} />
-
+      <Route path="/blog/samuel-gordon-witness" element={<SamuelGordonBlog />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
       </Routes>
