@@ -91,7 +91,7 @@ const SamuelGordonBlog = () => {
             <p>Another standout performance came from Anniel Rodgers, the saxophonist from St. Andrew High School for Girls. Rodgers gave a remarkable interlude in a festival grounded in spoken word. Her music wrapped itself around the poetry, elevating both to new heights. It wasn't just accompaniment—it became part of the storytelling, a seamless fusion of sound and speech, creating a multisensory heartbeat for the event.</p>
             
             <h2>Poetry as Healing, Liberation, Testimony</h2>
-            <blockquote>
+            <blockquote style={{color: 'black'}}>
               "What struck me most was the festival's understanding of poetry as more than art but as a tool for healing, for releasing what wounds us, for reframing traumas into testimonies. Here, words were not only spoken; they were medicine."
             </blockquote>
             
