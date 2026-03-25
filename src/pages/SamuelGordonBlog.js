@@ -83,7 +83,7 @@ const SamuelGordonBlog = () => {
             
             <div className="highlighted-section">
               <h3>The Blind Visionary</h3>
-              <p>A poet whose performance transcended the physical limitations of the stage. Their words glowed, entering the audience's space as pure luminosity. It wasn't only what the poet formally known as Kevin Cooper said; it was how he spoke—unfettered, raw, and ineffably present.</p>
+              <p>A poet whose performance transcended the physical limitations of the stage. His words glowed, entering the audience's space as pure luminosity. It wasn't only what the poet formally known as Kevin Cooper said; it was how he spoke—unfettered, raw, and ineffably present.</p>
               <p>The Blind Vizionary's performance was "so luminous it transcended the stage and entered the realm of the unforgettable." He stirred the audience's heart even more when he spoke with deep reverence of his high school English/Literature teacher, Marguerite C. Anderson, whose steadfast guidance continues to shape his art and his life.</p>
             </div>
             
