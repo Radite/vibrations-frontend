@@ -1,56 +1,390 @@
 backend:
   name: git-gateway
-  branch: main  # or master, depending on your repo
+  branch: main
 
 media_folder: "public/assets"
 public_folder: "/assets"
 
 collections:
-  - name: "festival"
-    label: "Festival Info"
+  - name: "site"
+    label: "Site Content"
     files:
-      - label: "Festival Details"
-        name: "festival"
-        file: "src/data/festival.json"
+      - label: "Announcement Banner"
+        name: "banner"
+        file: "src/data/banner.json"
+        description: "The dismissible banner shown at the top of every page."
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date", name: "date", widget: "string"}
-          - {label: "Venue", name: "venue", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Show Banner", name: "enabled", widget: "boolean", default: false, hint: "Turn this on to display the banner, off to hide it without deleting the message."}
+          - {label: "Icon (emoji)", name: "icon", widget: "string", required: false}
+          - {label: "Message", name: "message", widget: "text"}
 
-  - name: "presenters"
-    label: "Presenters"
-    folder: "src/data/presenters"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Bio", name: "bio", widget: "text"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - label: "Homepage"
+        name: "home"
+        file: "src/data/home.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+          - label: "Highlight Cards"
+            name: "highlights"
+            widget: "list"
+            min: 4
+            max: 4
+            hint: "These 4 cards link to Blog, Competition Results, Festival Years, and Gallery, in that order. Only the text can be edited here."
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "text", widget: "text"}
+              - {label: "Link Text", name: "linkText", widget: "string"}
+          - label: "Join Us Section"
+            name: "joinUs"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Paragraph 1", name: "paragraph1", widget: "text"}
+              - {label: "Paragraph 2", name: "paragraph2", widget: "text"}
+
+      - label: "Social Media Links"
+        name: "socialLinks"
+        file: "src/data/socialLinks.json"
+        fields:
+          - {label: "Instagram URL", name: "instagram", widget: "string"}
+          - {label: "YouTube URL", name: "youtube", widget: "string"}
+          - {label: "Facebook URL", name: "facebook", widget: "string"}
+
+      - label: "About Page"
+        name: "about"
+        file: "src/data/about.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "Intro Paragraph 1", name: "introParagraph1", widget: "text"}
+          - {label: "Intro Paragraph 2", name: "introParagraph2", widget: "text"}
+          - label: "Founders"
+            name: "founders"
+            widget: "list"
+            min: 1
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Photo", name: "photo", widget: "image"}
+              - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Vision", name: "vision", widget: "text"}
+          - {label: "Mission", name: "mission", widget: "text"}
+          - {label: "Our Journey Text", name: "journeyText", widget: "text"}
+          - {label: "Inaugural Festival Date", name: "inauguralDate", widget: "string"}
+          - {label: "Inaugural Festival Location", name: "inauguralLocation", widget: "string"}
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "src/data/contact.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "Public Contact Email", name: "email", widget: "string"}
+          - {label: "Mailing Address", name: "address", widget: "string"}
+
+      - label: "Festival Years Page"
+        name: "festivalYears"
+        file: "src/data/festivalYears.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "Intro Title", name: "introTitle", widget: "string"}
+          - {label: "Intro Text", name: "introText", widget: "text"}
+          - label: "Festival Years"
+            name: "years"
+            widget: "list"
+            hint: "Add a new entry here each time you have a new festival year to show."
+            fields:
+              - {label: "Year", name: "year", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Poster Image", name: "poster", widget: "image", required: false}
+              - {label: "Link URL", name: "linkUrl", widget: "string", required: false}
+              - {label: "Link Text", name: "linkText", widget: "string", required: false}
+
+      - label: "Festival Reviews Page"
+        name: "reviews"
+        file: "src/data/reviews.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "Year Heading", name: "yearHeading", widget: "string"}
+          - {label: "Event Details Line", name: "eventDetails", widget: "string"}
+          - {label: "Intro Text", name: "introText", widget: "text"}
+          - label: "Reviews"
+            name: "reviews"
+            widget: "list"
+            hint: "Add, edit, or remove attendee testimonials."
+            fields:
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Author Name", name: "author", widget: "string"}
+              - {label: "Author Title (optional)", name: "title", widget: "string", required: false}
+          - {label: "Impact Section Heading", name: "impactHeading", widget: "string"}
+          - {label: "Impact Section Text", name: "impactText", widget: "text"}
+          - label: "Impact Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+
+      - label: "Vendors Page (Intro)"
+        name: "vendors"
+        file: "src/data/vendors.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "About Paragraph 1", name: "aboutParagraph1", widget: "text"}
+          - {label: "About Paragraph 2", name: "aboutParagraph2", widget: "text"}
+          - {label: "Payment Note", name: "paymentNote", widget: "text"}
+
+      - label: "Vendor Guidelines Page"
+        name: "vendorGuidelines"
+        file: "src/data/vendorGuidelines.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "Overview Text", name: "overviewText", widget: "text"}
+          - {label: "Guidelines (full text)", name: "guidelinesBody", widget: "markdown", hint: "Covers eligibility, booth pricing, payment policy, presentation & product standards, and vendor responsibilities. Use headings (###) to start a new section."}
+          - {label: "Application Process Intro", name: "applicationProcessText", widget: "text"}
+          - label: "Application Steps"
+            name: "applicationSteps"
+            widget: "list"
+            min: 3
+            max: 3
+            fields:
+              - {label: "Icon (Font Awesome class)", name: "icon", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+          - {label: "FAQ (full text)", name: "faqBody", widget: "markdown", hint: "Use headings (###) for each question."}
+          - {label: "Vendor Coordinator Email", name: "contactEmail", widget: "string"}
+          - {label: "Vendor Coordinator Phone", name: "contactPhone", widget: "string"}
+
+      - label: "Community Outreach Page"
+        name: "communityOutreach"
+        file: "src/data/communityOutreach.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - {label: "Sponsorship Heading", name: "sponsorshipHeading", widget: "string"}
+          - {label: "Sponsorship Paragraph 1", name: "sponsorshipParagraph1", widget: "text"}
+          - {label: "Sponsorship Paragraph 2", name: "sponsorshipParagraph2", widget: "text"}
+          - {label: "Highlight Note", name: "highlightNote", widget: "text"}
+          - {label: "Sponsorship Paragraph 3", name: "sponsorshipParagraph3", widget: "text"}
+          - {label: "Gallery Heading", name: "galleryHeading", widget: "string"}
+          - {label: "Gallery Caption", name: "galleryCaption", widget: "text"}
+
+  - name: "festivalPage"
+    label: "Festival Page (2025 Details)"
+    files:
+      - label: "Festival Page Content"
+        name: "festivalPage"
+        file: "src/data/festivalPage.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Overview"
+            name: "overview"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+          - {label: "About Tab (full text)", name: "aboutBody", widget: "markdown", hint: "Use #### for the Our Vision / Our Mission / Join Us sub-headings."}
+          - label: "Sponsors & Partners"
+            name: "sponsors"
+            widget: "object"
+            fields:
+              - {label: "Caption Line 1", name: "caption1", widget: "text"}
+              - {label: "Caption Line 2 (hashtags)", name: "caption2", widget: "string"}
+              - {label: "Sponsors Collage Image", name: "image", widget: "image", required: false}
+              - label: "Sponsors List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+              - {label: "Individual Contributors", name: "contributors", widget: "list", hint: "One name per line."}
+              - {label: "Partnership Note", name: "partnershipNote", widget: "text"}
+          - label: "Presenters"
+            name: "presenters"
+            widget: "list"
+            hint: "Add or remove presenters here. 'Featured' presenters show at the top of the Presenters tab."
+            fields:
+              - {label: "Featured Presenter?", name: "featured", widget: "boolean", default: false}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Title/Role", name: "title", widget: "string"}
+              - {label: "Photo", name: "photo", widget: "image"}
+              - {label: "Bio", name: "bio", widget: "text"}
+              - {label: "Video Upload (optional)", name: "video", widget: "file", required: false, hint: "Use this OR the YouTube link below, not both."}
+              - {label: "YouTube Embed URL (optional)", name: "youtubeUrl", widget: "string", required: false, hint: "Use the embed link, e.g. https://www.youtube.com/embed/VIDEO_ID"}
+          - label: "Schedule"
+            name: "schedule"
+            widget: "object"
+            fields:
+              - {label: "Intro Text", name: "introText", widget: "text"}
+              - label: "Opening & Presentations"
+                name: "openingSection"
+                widget: "object"
+                fields:
+                  - {label: "Section Title", name: "title", widget: "string"}
+                  - {label: "Items", name: "items", widget: "list"}
+              - label: "Performers"
+                name: "performersSection"
+                widget: "object"
+                fields:
+                  - {label: "Section Title", name: "title", widget: "string"}
+                  - {label: "Items", name: "items", widget: "list"}
+              - label: "Competition & Closing"
+                name: "closingSection"
+                widget: "object"
+                fields:
+                  - {label: "Section Title", name: "title", widget: "string"}
+                  - {label: "Items", name: "items", widget: "list"}
+              - {label: "Note", name: "note", widget: "text"}
+          - label: "Venue"
+            name: "venue"
+            widget: "object"
+            fields:
+              - {label: "Intro Text", name: "introText", widget: "text"}
+              - {label: "Venue Name", name: "name", widget: "string"}
+              - {label: "Venue Photo", name: "image", widget: "image"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Extra Text", name: "extraText", widget: "text"}
+              - {label: "Facilities", name: "facilities", widget: "list"}
+
+  - name: "poetryCompetitions"
+    label: "Poetry Competitions Page"
+    files:
+      - label: "Poetry Competitions Content"
+        name: "poetryCompetitions"
+        file: "src/data/poetryCompetitions.json"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
+          - label: "Current / Upcoming Event"
+            name: "openMicNight"
+            widget: "object"
+            hint: "Use this block for whatever open event is currently happening or upcoming. Turn 'Show this event' off to hide it entirely."
+            fields:
+              - {label: "Show this event", name: "enabled", widget: "boolean", default: true}
+              - {label: "Mark as postponed?", name: "postponed", widget: "boolean", default: false}
+              - {label: "Poster Image", name: "image", widget: "image"}
+              - {label: "Event Title", name: "title", widget: "string"}
+              - {label: "Theme Line", name: "theme", widget: "string", required: false}
+              - {label: "Postponed Status Message", name: "statusBody", widget: "markdown", required: false}
+              - {label: "Date/Time", name: "originalWhen", widget: "string"}
+              - {label: "Location", name: "originalWhere", widget: "string"}
+              - {label: "Cost", name: "cost", widget: "string"}
+              - {label: "Intro Text", name: "introBody", widget: "markdown"}
+              - {label: "Opportunities List", name: "opportunities", widget: "list"}
+              - {label: "\"Wanna Perform?\" Text", name: "performInfoBody", widget: "markdown"}
+              - {label: "Contact Email", name: "contactEmail", widget: "string"}
+              - {label: "Hashtags", name: "hashtags", widget: "list"}
+          - label: "Featured Challenge / Winner"
+            name: "heritageChallenge"
+            widget: "object"
+            hint: "Use this to spotlight a past challenge winner. Turn 'Show this section' off to hide it."
+            fields:
+              - {label: "Show this section", name: "enabled", widget: "boolean", default: true}
+              - {label: "Collaboration Text", name: "collaborationText", widget: "string", required: false}
+              - {label: "Quote", name: "quote", widget: "string", required: false}
+              - {label: "Quote Author", name: "quoteAuthor", widget: "string", required: false}
+              - {label: "Winner Photo", name: "winnerImage", widget: "image"}
+              - {label: "Winner Name", name: "winnerName", widget: "string"}
+              - {label: "Winning Poem Title", name: "poemTitle", widget: "string"}
+              - {label: "Intro Text", name: "introBody", widget: "markdown"}
+              - {label: "Poem Description", name: "poemCardText", widget: "text"}
+              - {label: "What's Next Steps", name: "nextSteps", widget: "list"}
+              - {label: "Challenge Theme", name: "theme", widget: "string"}
+              - {label: "Submission Deadline", name: "submissionDeadline", widget: "string"}
+              - {label: "Submission Period", name: "submissionPeriod", widget: "string"}
+              - {label: "Collaboration Credit", name: "collaboration", widget: "string"}
+              - {label: "Hashtags", name: "hashtags", widget: "list"}
+              - {label: "Feature Article Link (e.g. /blog/slug)", name: "featureLinkUrl", widget: "string"}
+          - label: "Competition Recap"
+            name: "competitionRecap"
+            widget: "object"
+            hint: "Recap of a completed competition (winners, finalists, stats). Turn 'Show this section' off to hide it."
+            fields:
+              - {label: "Show this section", name: "enabled", widget: "boolean", default: true}
+              - {label: "Competition Name/Year", name: "year", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Dates", name: "dates", widget: "string"}
+              - {label: "Overview Text", name: "overviewText", widget: "text"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+              - label: "Winners"
+                name: "winners"
+                widget: "list"
+                fields:
+                  - {label: "Medal Emoji", name: "medal", widget: "string"}
+                  - {label: "Place", name: "place", widget: "string"}
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Poem Title", name: "poemTitle", widget: "string"}
+                  - {label: "Prize", name: "prize", widget: "string"}
+                  - {label: "Tier", name: "tier", widget: "select", options: ["gold", "silver", "bronze"]}
+              - label: "All Finalists"
+                name: "finalists"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Poem Title", name: "poemTitle", widget: "string"}
+                  - {label: "Badge Text", name: "badge", widget: "string"}
+                  - {label: "Tier (blank if not a winner)", name: "tier", widget: "select", options: ["", "gold", "silver", "bronze"], required: false}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Icon (emoji)", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Text", name: "text", widget: "string"}
+          - label: "Future Competitions"
+            name: "futureSection"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "blog"
     label: "Blog Posts"
     folder: "src/data/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    identifier_field: "title"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["Book Review", "Culture", "Interview", "History"]}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Published", name: "published", widget: "boolean", default: false}
-
-  - name: "sponsors"
-    label: "Sponsors"
-    folder: "src/data/sponsors"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Website", name: "website", widget: "string", required: false}
+      - {label: "URL Slug", name: "slug", widget: "string", hint: "Used in the page URL, e.g. /blog/my-post. Lowercase, hyphens instead of spaces, no spaces or special characters."}
+      - {label: "Category", name: "category", widget: "select", options: ["Poet Feature", "Book Review", "Festival Review", "Culture", "Interview", "History"]}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Author Name", name: "author", widget: "string"}
+      - {label: "Author Title", name: "authorTitle", widget: "string", required: false}
+      - {label: "Excerpt (shown on Blog listing page)", name: "excerpt", widget: "text"}
+      - {label: "Featured Image (optional)", name: "image", widget: "image", required: false}
+      - {label: "Featured Image Link (optional)", name: "imageLink", widget: "string", required: false}
+      - {label: "Featured Image Caption (optional)", name: "imageCaption", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Article Body", name: "body", widget: "markdown"}
+      - {label: "Call-to-action Heading (optional)", name: "ctaHeading", widget: "string", required: false}
+      - {label: "Call-to-action Text (optional)", name: "ctaText", widget: "text", required: false}
+      - {label: "Call-to-action Link Text (optional)", name: "ctaLinkText", widget: "string", required: false}
+      - {label: "Call-to-action Link URL (optional)", name: "ctaLinkUrl", widget: "string", required: false}

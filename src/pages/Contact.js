@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import './global-hero.css';
+import contactData from '../data/contact.json';
 
 const Contact = () => {
   const formRef = useRef();
@@ -77,8 +78,8 @@ const Contact = () => {
     <div className="contact-page">
       <section className="site-hero">
         <div className="site-hero-content">
-          <h1>Contact Us</h1>
-          <p>Reach out and let's connect about Vibrations Poetry Festival</p>
+          <h1>{contactData.heroTitle}</h1>
+          <p>{contactData.heroSubtitle}</p>
         </div>
       </section>
 
@@ -131,10 +132,10 @@ const Contact = () => {
 
           <div className="contact-info">
             <div className="contact-info-item">
-              📧 vibrationspoetryfestival@gmail.com
+              📧 {contactData.email}
             </div>
             <div className="contact-info-item">
-              📍 P.O. Box 2232 Liguanea Post Mall, 115 Hope Road, Kingston 6
+              📍 {contactData.address}
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import metGala2 from '../assets/Gallery/MetGala2.jpg';
 import metGala3 from '../assets/Gallery/MetGala3.jpg';
 import metGala4 from '../assets/Gallery/MetGala4.jpg';
 import banner from '../assets/banner.png';
+import outreachData from '../data/communityOutreach.json';
 
 const CommunityOutreach = () => {
   return (
@@ -62,9 +63,9 @@ const CommunityOutreach = () => {
 
         {/* Content */}
         <div style={{ position: 'relative', zIndex: 2 }}>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>Community Involvement</h1>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{outreachData.heroTitle}</h1>
           <p style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
-            Celebrating culture, fashion, and empowerment through active community engagement and proud sponsorships.
+            {outreachData.heroSubtitle}
           </p>
         </div>
       </section>
@@ -83,9 +84,9 @@ const CommunityOutreach = () => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>
-            🌸✨ Proud Sponsors of "Spring into Fashion" Mother's Day Gala ✨🌸
+            {outreachData.sponsorshipHeading}
           </h2>
-          
+
           <div style={{
             backgroundColor: 'white',
             padding: '2.5rem',
@@ -93,22 +94,22 @@ const CommunityOutreach = () => {
             boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
             marginBottom: '2rem'
           }}>
-            <p style={{ 
-              fontSize: '1.2rem', 
+            <p style={{
+              fontSize: '1.2rem',
               lineHeight: '1.8',
               color: '#2c3e50',
               marginBottom: '1.5rem'
             }}>
-              Vibrations Poetry Festival was a proud sponsor of the <strong>14th Annual "Spring into Fashion" Gala Fashion Show</strong>, hosted by the Canadian Women's Club of Jamaica on <strong>Sunday, May 11, 2025</strong>, at the elegant AC Marriott Hotel in Kingston.
+              {outreachData.sponsorshipParagraph1}
             </p>
-            
-            <p style={{ 
-              fontSize: '1.1rem', 
+
+            <p style={{
+              fontSize: '1.1rem',
               lineHeight: '1.7',
               color: '#34495e',
               marginBottom: '1.5rem'
             }}>
-              This vibrant Mother's Day celebration brought together grace, glamour, and gratitude as patrons enjoyed a dazzling runway show featuring designs from some of Jamaica's most talented fashion creatives.
+              {outreachData.sponsorshipParagraph2}
             </p>
 
             <div style={{
@@ -118,22 +119,22 @@ const CommunityOutreach = () => {
               padding: '1.5rem',
               margin: '1.5rem 0'
             }}>
-              <p style={{ 
-                fontSize: '1.1rem', 
+              <p style={{
+                fontSize: '1.1rem',
                 lineHeight: '1.7',
                 color: '#856404',
                 fontWeight: '500'
               }}>
-                We were especially thrilled to see our very own <strong>Co-Founder, Canute Lawrence</strong>, grace the runway as one of the featured models in the show's stunning fashion showcase! His presence was a celebration of style, confidence, and the multifaceted nature of artistic expression.
+                {outreachData.highlightNote}
               </p>
             </div>
 
-            <p style={{ 
-              fontSize: '1.1rem', 
+            <p style={{
+              fontSize: '1.1rem',
               lineHeight: '1.7',
               color: '#34495e'
             }}>
-              We extend heartfelt congratulations to the Canadian Women's Club of Jamaica for curating another spectacular event and for the important work they continue to do in support of charitable causes and women's empowerment. Vibrations Poetry Festival is proud to stand with organizations that uplift communities and celebrate culture in all its forms — from the runway to the written word.
+              {outreachData.sponsorshipParagraph3}
             </p>
           </div>
         </div>
@@ -151,8 +152,8 @@ const CommunityOutreach = () => {
           maxWidth: '1200px',
           margin: '0 auto'
         }}>
-          <h2>Photo Highlights</h2>
-          <p>Moments from the Spring Into Fashion Mother's Day Gala at AC Marriott Hotel, Kingston - May 11, 2025</p>
+          <h2>{outreachData.galleryHeading}</h2>
+          <p>{outreachData.galleryCaption}</p>
 
           <div style={{
             display: 'grid',

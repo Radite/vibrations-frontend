@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BlogPage.css';
-// Import the global hero styles
 import './global-hero.css';
+import { getAllPosts } from '../utils/blogPosts';
 
 const BlogPage = () => {
   useEffect(() => {
     document.title = "Island Narratives - Vibrations Poetry Festival";
   }, []);
+
+  const posts = getAllPosts();
 
   return (
     <div className="blog-coming-soon-container">
@@ -17,53 +19,29 @@ const BlogPage = () => {
           <p>Stories, reviews, and reflections from the vibrant world of Caribbean poetry</p>
         </div>
       </section>
-      
-      
+
       <section className="blog-preview-content">
         <div className="featured-post-preview">
           <h2>Featured Content</h2>
-          
-          <div className="post-card">
-            <h3>Tanisha Bent: Siloah's Brawta Voice — founder, teacher, and slam-stage contender</h3>
-            <p>Marguerite C. Anderson profiles Tanisha Bent, a spoken-word poet and community arts leader from St. Elizabeth who has brought vibrant poetry programming to rural Jamaica through her Brawta Backyard Poetry project, and whose voice has resonated on the Caribbean slam circuit.</p>
-            <div className="post-meta">
-              <span className="category">Poet Feature</span>
-              <span className="author">By Marguerite C. Anderson</span>
-              <span className="date">November 20, 2025</span>
+
+          {posts.map((post) => (
+            <div className="post-card" key={post.slug}>
+              <h3>{post.title}</h3>
+              <p>{post.excerpt}</p>
+              <div className="post-meta">
+                <span className="category">{post.category}</span>
+                <span className="author">By {post.author}</span>
+                <span className="date">
+                  {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </span>
+              </div>
+              <Link to={`/blog/${post.slug}`} className="read-review-btn">
+                Read Full {post.category === 'Book Review' || post.category === 'Festival Review' ? 'Review' : 'Feature'}
+              </Link>
             </div>
-            <Link to="/blog/tanisha-bent" className="read-review-btn">
-              Read Full Feature
-            </Link>
-          </div>
-          
-          <div className="post-card">
-            <h3>Lyrical Truths & Social Reckonings: A Scholarly Reflection on "Proclamations</h3>
-            <p>Vivienne Grant reviews Marguerite C. Anderson's latest poetry collection, exploring themes of memory, identity, and the pursuit of dignity amid silence and struggle.</p>
-            <div className="post-meta">
-              <span className="category">Book Review</span>
-              <span className="author">By Vivienne Grant</span>
-              <span className="date">June 21, 2025</span>
-            </div>
-            <Link to="/blog/proclamations-review" className="read-review-btn">
-              Read Full Review
-            </Link>
-          </div>
-                  <div className="post-card">
-            <h3>A Witness to a Quiet Revolution of Verse</h3>
-            <p>Samuel J. Gordon shares his powerful reflection on Vibrations Poetry Festival, where he witnessed poetry honored as both art and healing practice—a sacred gathering that transformed the amphitheater into a sanctuary of words and spirit.</p>
-            <div className="post-meta">
-              <span className="category">Festival Review</span>
-              <span className="author">By Samuel J. Gordon</span>
-              <span className="date">February 4, 2026</span>
-            </div>
-            <Link to="/blog/samuel-gordon-witness" className="read-review-btn">
-              Read Full Review
-            </Link>
-          </div>
+          ))}
         </div>
 
-
-        
         <div className="coming-soon-section">
           <h2>More Content Coming Soon</h2>
           <p>Stay tuned for exciting updates including cultural essays, literary reviews, and more poet features!</p>

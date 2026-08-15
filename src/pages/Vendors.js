@@ -5,6 +5,7 @@ import './global-hero.css'; // Import global hero CSS
 
 // Import any components you might need
 import Sidebar from '../components/Sidebar';
+import vendorsData from '../data/vendors.json';
 
 const Vendors = () => {
   const [formData, setFormData] = useState({
@@ -97,21 +98,21 @@ const Vendors = () => {
         {/* Hero Section - Updated to use global hero styles */}
         <section className="site-hero">
           <div className="site-hero-content">
-            <h1>Call for Vendors</h1>
-            <p>Join our vibrant community of artists, craftspeople, and cultural entrepreneurs showcasing authentic Caribbean creativity</p>
+            <h1>{vendorsData.heroTitle}</h1>
+            <p>{vendorsData.heroSubtitle}</p>
           </div>
         </section>
-        
+
         {/* About Section */}
         <section className="vendors-content-section">
           <div className="vendors-section-title">
             <h2>Become a Vendor</h2>
           </div>
           <div className="vendors-section-content">
-            <p>Vibrations Poetry Festival Cultural Marketplace is a celebration of Caribbean craftsmanship, artistry, and entrepreneurship. We invite vendors who embody the spirit of the islands to showcase their unique offerings to our diverse audience of art enthusiasts, cultural connoisseurs, and poetry lovers.</p>
-            <p>Selected vendors will benefit from high visibility at our premium event space, promotional opportunities through our festival marketing channels, and direct access to a targeted audience passionate about authentic cultural experiences.</p>
+            <p>{vendorsData.aboutParagraph1}</p>
+            <p>{vendorsData.aboutParagraph2}</p>
           </div>
-        </section> 
+        </section>
         
         {/* Application Form */}
         <section className="vendors-content-section">
@@ -205,7 +206,7 @@ const Vendors = () => {
             </form>
             
             <div className="vendors-payment-section">
-              <p>After your application is approved, you will receive instructions to secure your vendor spot with payment.</p>
+              <p>{vendorsData.paymentNote}</p>
             </div>
           </div>
         </section>

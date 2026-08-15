@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Footer.css';
+import socialLinks from '../data/socialLinks.json';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -77,7 +78,7 @@ const Footer = () => {
           <h3>Connect With Us</h3>
           <div className="social-icons">
   <a
-    href="https://www.instagram.com/vibrationspoetryfestival"
+    href={socialLinks.instagram}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -90,7 +91,7 @@ const Footer = () => {
     />
   </a>
   <a
-    href="https://youtube.com/@vibrationspoetryfestival?si=T_OuORVhBIuZzYml"
+    href={socialLinks.youtube}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="YouTube"
@@ -103,7 +104,7 @@ const Footer = () => {
     />
   </a>
   <a
-    href="https://www.facebook.com/share/14DMJ7zEpBU/"
+    href={socialLinks.facebook}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Facebook"

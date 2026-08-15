@@ -15,16 +15,13 @@ import Gallery from './pages/Gallery';
 import Reviews from './pages/Reviews';
 import SubmitReview from './pages/SubmitReview';
 import Contact from './pages/Contact'; 
-import FestivalPage from './pages/FestivalPage'; 
-import DubPoetryBlog from './pages/DubPoetryBlog'
+import FestivalPage from './pages/FestivalPage';
+import BlogPost from './pages/BlogPost';
 import EntryForm from './pages/EntryForm'
 import VendorGuidelines from './pages/VendorGuidelines'
 import TicketPurchasePage from './pages/TicketPurchasePage'
 import WinnerDetailJane from './pages/WinnerDetailJane'
 import CommunityOutreach from './pages/CommunityOutreach'
-import ProclamationsBlog from './pages/ProclamationsBlog';
-import TanishaBentBlog from './pages/TanishaBentBlog';
-import SamuelGordonBlog from './pages/SamuelGordonBlog';
 
 
 import ScrollToTop from './ScrollToTop';
@@ -42,7 +39,7 @@ function App() {
         <Route path="/poetry-competitions" element={<PoetryCompetitions />} />
         <Route path="/festival-years" element={<FestivalYears />} />
         <Route path="/festival-page" element={<FestivalPage />} />
-        <Route path="/blog/the-rhythm-of-jamaican-dub-poetry" element={<DubPoetryBlog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/entry-form-spring" element={<EntryForm />} />
 
         <Route path="/vendors" element={<Vendors />} />
@@ -55,9 +52,6 @@ function App() {
 
         <Route path="/submit-review" element={<SubmitReview />} />
         <Route path="/communityoutreach" element={<CommunityOutreach />} />
-        <Route path="/blog/proclamations-review" element={<ProclamationsBlog />} />
-        <Route path="/blog/tanisha-bent" element={<TanishaBentBlog />} />
-      <Route path="/blog/samuel-gordon-witness" element={<SamuelGordonBlog />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
       </Routes>

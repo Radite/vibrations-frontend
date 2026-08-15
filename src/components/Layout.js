@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import EventAlert from './EventAlert';
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,6 +26,9 @@ const Layout = () => {
       }}>
         {/* Header Component */}
         <Header toggleSidebar={toggleSidebar} />
+
+        {/* Site-wide announcement banner (editable via /admin) */}
+        <EventAlert />
 
         {/* Page Content */}
         <Outlet />
