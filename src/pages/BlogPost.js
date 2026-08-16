@@ -67,7 +67,7 @@ const BlogPost = () => {
             post.imageLink ? (
               <a href={post.imageLink} target="_blank" rel="noopener noreferrer">
                 <div className="blog-featured-image">
-                  <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
                 </div>
               </a>
             ) : (

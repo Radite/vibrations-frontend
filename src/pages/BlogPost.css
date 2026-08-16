@@ -131,7 +131,6 @@
 /* Featured Image */
 .blog-featured-image {
   width: 100%;
-  height: 450px;
   border-radius: 8px;
   margin-bottom: 30px;
   background-color: #eee;
@@ -140,6 +139,7 @@
 }
 
 .blog-featured-image.placeholder {
+  height: 450px;
   background: linear-gradient(45deg, #006400, #40a340);
   opacity: 0.8;
 }
@@ -423,10 +423,10 @@ blockquote cite {
     font-size: 2.5rem;
   }
   
-  .blog-featured-image {
+  .blog-featured-image.placeholder {
     height: 300px;
   }
-  
+
   .article-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -464,7 +464,7 @@ blockquote cite {
     font-size: 1.7rem;
   }
   
-  .blog-featured-image {
+  .blog-featured-image.placeholder {
     height: 200px;
   }
 }
