@@ -1,36 +1,128 @@
 {
-  "heroTitle": "Festival Reviews",
+  "yearHeading": "T",
+  "eventDetails": "T",
   "heroSubtitle": "What our community is saying about Vibrations Poetry Festival experience",
-  "yearHeading": "Vibrations Poetry Festival 2025",
-  "eventDetails": "August 9, 2025 • Edna Manley College of the Visual & Performing Arts • Kingston, Jamaica",
-  "introText": "Our inaugural festival brought together poets, artists, and literary enthusiasts for an unforgettable evening of spoken word, music, and cultural celebration. Here's what our attendees had to say about their experience.",
+  "impactText": "The overwhelming response to our inaugural festival demonstrates the hunger for authentic poetic expression in Jamaica. From seasoned poetry lovers to first-time attendees, Vibrations Poetry Festival created connections, inspired creativity, and celebrated the power of the spoken word.",
+  "introText": "T",
   "reviews": [
-    { "quote": "It was an amazing experience. Fun-filled and exciting diverse group of artists. Excellent pieces.", "author": "Martin Thames", "title": "" },
-    { "quote": "The experience is unforgettable. Food for the soul, voice for the voiceless, life for the soulless.", "author": "Keya", "title": "" },
-    { "quote": "What an amazing display of the talent of poetry in our Jamaican people!", "author": "Jacqueline Downie", "title": "Resident Nurse" },
-    { "quote": "I am incredibly grateful to have experienced this event. I am absolutely stunned!", "author": "Alyssa Reynolds", "title": "Big sister of performer Abigail Reynolds" },
-    { "quote": "The festival was amazing! Each poem shared touched my soul.", "author": "Arlene Reynolds", "title": "" },
-    { "quote": "Beautiful collection of talent.", "author": "Hugh Williams", "title": "" },
-    { "quote": "Hope this can become a community event. Want to discuss bringing this to Claremont Heights in Old Harbour.", "author": "Patricia Henry", "title": "" },
-    { "quote": "My experience was eclectic! The poems were fantastic and engaging.", "author": "Britton Wright", "title": "2025 CariCon Poetry Slam Champion" },
-    { "quote": "It was great! I have been inspired.", "author": "J. Hemmings", "title": "" },
-    { "quote": "A fantastic start to what will be an amazing journey. All the best.", "author": "Stacie Ann Taylor", "title": "" },
-    { "quote": "A wonderful show of poetic excellence. Excellently done!", "author": "Natasha Peterkin", "title": "" },
-    { "quote": "Most enjoyable! Happy to see young people participating.", "author": "Carol Samuel-Johnson", "title": "" },
-    { "quote": "An enjoyable experience!", "author": "Pete Taylor", "title": "" },
-    { "quote": "I enjoyed myself. A marvelous start to a new era of the written and spoken word! Congratulations!", "author": "Eunice", "title": "" },
-    { "quote": "It was an amazing experience. I truly enjoyed myself, hearing and seeing everyone pour out their hearts in their pieces. It was truly inspiring and engaging.", "author": "Neferton Hibbert", "title": "" },
-    { "quote": "Thanks for bringing respect and awareness of the inherent healing value of poetry. Maybe I'll be your next fave!", "author": "Kindred", "title": "" },
-    { "quote": "Loved that the event started on time! The cocktails provided, upon arrival was a most welcoming mix-and-mingle session for those who arrived on-time for the event.", "author": "Michca Satchell", "title": "" },
-    { "quote": "Happy to watch this showcase!", "author": "Gabrielle Burgess", "title": "SugaLifestyle" },
-    { "quote": "I had a great time at the Vibration Poetry Festival. I had the impression that the poets' words transported me back in time. The poetry collection I was presented with was culturally rich and exquisitely varied. Their experiences, expressed in words, made me feel happy, proud, hurt, and sad. There was a mix of emotions pouring through me. I hope this project continues to develop because it was a great experience. Canute and Marguerite went above and beyond. I hope and pray that it spreads internationally and becomes an annual event. It was all worthwhile. It's also fantastic to see that there are still young people who are able to articulate their experiences and are so culturally aware. I'm thrilled that, as a nation, we continue to inspire our youth to compose and use poetry as a means of self-expression. I'm so glad I was able to see the greats up close and personal!", "author": "Rashema Simpson", "title": "" }
+    {
+      "quote": "It was an amazing experience. Fun-filled and exciting diverse group of artists. Excellent pieces.",
+      "author": "Martin Thames",
+      "title": ""
+    },
+    {
+      "quote": "The experience is unforgettable. Food for the soul, voice for the voiceless, life for the soulless.",
+      "author": "Keya",
+      "title": ""
+    },
+    {
+      "quote": "What an amazing display of the talent of poetry in our Jamaican people!",
+      "author": "Jacqueline Downie",
+      "title": "Resident Nurse"
+    },
+    {
+      "quote": "I am incredibly grateful to have experienced this event. I am absolutely stunned!",
+      "author": "Alyssa Reynolds",
+      "title": "Big sister of performer Abigail Reynolds"
+    },
+    {
+      "quote": "The festival was amazing! Each poem shared touched my soul.",
+      "author": "Arlene Reynolds",
+      "title": ""
+    },
+    {
+      "quote": "Beautiful collection of talent.",
+      "author": "Hugh Williams",
+      "title": ""
+    },
+    {
+      "quote": "Hope this can become a community event. Want to discuss bringing this to Claremont Heights in Old Harbour.",
+      "author": "Patricia Henry",
+      "title": ""
+    },
+    {
+      "quote": "My experience was eclectic! The poems were fantastic and engaging.",
+      "author": "Britton Wright",
+      "title": "2025 CariCon Poetry Slam Champion"
+    },
+    {
+      "quote": "It was great! I have been inspired.",
+      "author": "J. Hemmings",
+      "title": ""
+    },
+    {
+      "quote": "A fantastic start to what will be an amazing journey. All the best.",
+      "author": "Stacie Ann Taylor",
+      "title": ""
+    },
+    {
+      "quote": "A wonderful show of poetic excellence. Excellently done!",
+      "author": "Natasha Peterkin",
+      "title": ""
+    },
+    {
+      "quote": "Most enjoyable! Happy to see young people participating.",
+      "author": "Carol Samuel-Johnson",
+      "title": ""
+    },
+    {
+      "quote": "An enjoyable experience!",
+      "author": "Pete Taylor",
+      "title": ""
+    },
+    {
+      "quote": "I enjoyed myself. A marvelous start to a new era of the written and spoken word! Congratulations!",
+      "author": "Eunice",
+      "title": ""
+    },
+    {
+      "quote": "It was an amazing experience. I truly enjoyed myself, hearing and seeing everyone pour out their hearts in their pieces. It was truly inspiring and engaging.",
+      "author": "Neferton Hibbert",
+      "title": ""
+    },
+    {
+      "quote": "Thanks for bringing respect and awareness of the inherent healing value of poetry. Maybe I'll be your next fave!",
+      "author": "Kindred",
+      "title": ""
+    },
+    {
+      "quote": "Loved that the event started on time! The cocktails provided, upon arrival was a most welcoming mix-and-mingle session for those who arrived on-time for the event.",
+      "author": "Michca Satchell",
+      "title": ""
+    },
+    {
+      "quote": "Happy to watch this showcase!",
+      "author": "Gabrielle Burgess",
+      "title": "SugaLifestyle"
+    },
+    {
+      "quote": "I had a great time at the Vibration Poetry Festival. I had the impression that the poets' words transported me back in time. The poetry collection I was presented with was culturally rich and exquisitely varied. Their experiences, expressed in words, made me feel happy, proud, hurt, and sad. There was a mix of emotions pouring through me. I hope this project continues to develop because it was a great experience. Canute and Marguerite went above and beyond. I hope and pray that it spreads internationally and becomes an annual event. It was all worthwhile. It's also fantastic to see that there are still young people who are able to articulate their experiences and are so culturally aware. I'm thrilled that, as a nation, we continue to inspire our youth to compose and use poetry as a means of self-expression. I'm so glad I was able to see the greats up close and personal!",
+      "author": "Rashema Simpson",
+      "title": ""
+    },
+    {
+      "quote": "TEST",
+      "author": "TESET"
+    }
   ],
   "impactHeading": "Building Our Poetry Community",
-  "impactText": "The overwhelming response to our inaugural festival demonstrates the hunger for authentic poetic expression in Jamaica. From seasoned poetry lovers to first-time attendees, Vibrations Poetry Festival created connections, inspired creativity, and celebrated the power of the spoken word.",
+  "heroTitle": "Festival Reviews",
   "stats": [
-    { "number": "150+", "label": "Attendees" },
-    { "number": "11", "label": "Featured Poets" },
-    { "number": "19", "label": "Guestbook Reviews" },
-    { "number": "100%", "label": "Memorable Evening" }
+    {
+      "number": "150+",
+      "label": "Attendees"
+    },
+    {
+      "number": "11",
+      "label": "Featured Poets"
+    },
+    {
+      "number": "19",
+      "label": "Guestbook Reviews"
+    },
+    {
+      "number": "100%",
+      "label": "Memorable Evening"
+    }
   ]
 }
