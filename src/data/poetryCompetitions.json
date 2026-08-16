@@ -2,7 +2,7 @@
   "heroTitle": "Poetry Competitions",
   "heroSubtitle": "Celebrating the voices that shaped our inaugural festival and looking forward to future competitions.",
   "openMicNight": {
-    "enabled": true,
+    "enabled": false,
     "hashtags": [
       "#VibrationsPoetry",
       "#OpenMicNight",
