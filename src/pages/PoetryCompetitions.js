@@ -19,6 +19,7 @@ const PoetryCompetitions = () => {
   const [vpf2025Open, setVpf2025Open] = useState(false);
   const [heritageMonthOpen, setHeritageMonthOpen] = useState(false);
   const [openCompetitionKey, setOpenCompetitionKey] = useState(null);
+  const [openMicArchivedOpen, setOpenMicArchivedOpen] = useState(false);
 
   useEffect(() => {
     document.title = "Poetry Competitions - Vibrations Poetry Festival";
@@ -111,6 +112,102 @@ const PoetryCompetitions = () => {
     </div>
   );
 
+  // Open Mic Night's content, shared between its two possible placements: the
+  // top "Current Competitions" area when active, or Past Competitions when archived.
+  const renderOpenMicPanel = () => (
+    <>
+      {openMicNight.postponed && (
+        <div className="postponement-banner" role="alert" aria-live="assertive">
+          <div className="banner-content">
+            <div className="banner-icon">⏸️</div>
+            <div className="banner-text">
+              <strong>EVENT POSTPONED</strong>
+              <p>Due to unforeseen circumstances, tonight's {openMicNight.title} has been postponed.</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="open-mic-container">
+        <div className="open-mic-image">
+          <img src={openMicNight.image} alt={openMicNight.title} className="open-mic-poster" />
+          {openMicNight.postponed && (
+            <div className="postponed-overlay">
+              <span className="postponed-label">POSTPONED</span>
+            </div>
+          )}
+        </div>
+
+        <div className="open-mic-content">
+          <div className="open-mic-header">
+            <h2>{openMicNight.title}</h2>
+            <h3>{openMicNight.theme}</h3>
+          </div>
+
+          {openMicNight.postponed && (
+            <div className="event-status-message">
+              <h4>⏸️ Event Status: Postponed</h4>
+              <ReactMarkdown>{openMicNight.statusBody}</ReactMarkdown>
+            </div>
+          )}
+
+          <div className="original-event-details">
+            <h4>{openMicNight.postponed ? 'Originally Scheduled For:' : 'Event Details:'}</h4>
+            <div className="open-mic-details">
+              <div className="detail-item">
+                <span className="detail-icon">📅</span>
+                <div className="detail-text"><strong>When:</strong> {openMicNight.originalWhen}</div>
+              </div>
+              <div className="detail-item">
+                <span className="detail-icon">🌐</span>
+                <div className="detail-text"><strong>Where:</strong> {openMicNight.originalWhere}</div>
+              </div>
+              <div className="detail-item">
+                <span className="detail-icon">💰</span>
+                <div className="detail-text"><strong>Cost:</strong> {openMicNight.cost}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="open-mic-intro">
+            <ReactMarkdown>{openMicNight.introBody}</ReactMarkdown>
+          </div>
+
+          <div className="open-mic-opportunities">
+            <h4>Whether you're an emerging poet or a seasoned wordsmith, this is your moment to:</h4>
+            <ul className="opportunity-list">
+              {openMicNight.opportunities.map((item) => <li key={item}>✅ {item}</li>)}
+            </ul>
+          </div>
+
+          <div className={`performer-info ${openMicNight.postponed ? 'performer-info-disabled' : ''}`}>
+            <h4>🎤 Wanna Perform?</h4>
+            <ReactMarkdown
+              components={{
+                p: ({ node, ...props }) => <p {...props} />,
+              }}
+            >
+              {openMicNight.performInfoBody.replace(
+                openMicNight.contactEmail,
+                `[${openMicNight.contactEmail}](mailto:${openMicNight.contactEmail})`
+              )}
+            </ReactMarkdown>
+          </div>
+
+          <div className="open-mic-hashtags">
+            {openMicNight.hashtags.map((tag) => <span key={tag}>{tag}</span>)}
+          </div>
+
+          <div className="button-container">
+            <a href="/contact" className="competitions-btn competitions-btn-outline">
+              Subscribe for Updates
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+
   return (
     <div className="competitions-container">
       {/* Hero Section */}
@@ -139,98 +236,10 @@ const PoetryCompetitions = () => {
           </>
         )}
 
-        {/* OPEN MIC NIGHT */}
+        {/* OPEN MIC NIGHT - shown here while active; moves into Past Competitions when archived */}
         {openMicNight.enabled && (
           <div className="open-mic-night-section">
-            {openMicNight.postponed && (
-              <div className="postponement-banner" role="alert" aria-live="assertive">
-                <div className="banner-content">
-                  <div className="banner-icon">⏸️</div>
-                  <div className="banner-text">
-                    <strong>EVENT POSTPONED</strong>
-                    <p>Due to unforeseen circumstances, tonight's {openMicNight.title} has been postponed.</p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="open-mic-container">
-              <div className="open-mic-image">
-                <img src={openMicNight.image} alt={openMicNight.title} className="open-mic-poster" />
-                {openMicNight.postponed && (
-                  <div className="postponed-overlay">
-                    <span className="postponed-label">POSTPONED</span>
-                  </div>
-                )}
-              </div>
-
-              <div className="open-mic-content">
-                <div className="open-mic-header">
-                  <h2>{openMicNight.title}</h2>
-                  <h3>{openMicNight.theme}</h3>
-                </div>
-
-                {openMicNight.postponed && (
-                  <div className="event-status-message">
-                    <h4>⏸️ Event Status: Postponed</h4>
-                    <ReactMarkdown>{openMicNight.statusBody}</ReactMarkdown>
-                  </div>
-                )}
-
-                <div className="original-event-details">
-                  <h4>{openMicNight.postponed ? 'Originally Scheduled For:' : 'Event Details:'}</h4>
-                  <div className="open-mic-details">
-                    <div className="detail-item">
-                      <span className="detail-icon">📅</span>
-                      <div className="detail-text"><strong>When:</strong> {openMicNight.originalWhen}</div>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-icon">🌐</span>
-                      <div className="detail-text"><strong>Where:</strong> {openMicNight.originalWhere}</div>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-icon">💰</span>
-                      <div className="detail-text"><strong>Cost:</strong> {openMicNight.cost}</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="open-mic-intro">
-                  <ReactMarkdown>{openMicNight.introBody}</ReactMarkdown>
-                </div>
-
-                <div className="open-mic-opportunities">
-                  <h4>Whether you're an emerging poet or a seasoned wordsmith, this is your moment to:</h4>
-                  <ul className="opportunity-list">
-                    {openMicNight.opportunities.map((item) => <li key={item}>✅ {item}</li>)}
-                  </ul>
-                </div>
-
-                <div className={`performer-info ${openMicNight.postponed ? 'performer-info-disabled' : ''}`}>
-                  <h4>🎤 Wanna Perform?</h4>
-                  <ReactMarkdown
-                    components={{
-                      p: ({ node, ...props }) => <p {...props} />,
-                    }}
-                  >
-                    {openMicNight.performInfoBody.replace(
-                      openMicNight.contactEmail,
-                      `[${openMicNight.contactEmail}](mailto:${openMicNight.contactEmail})`
-                    )}
-                  </ReactMarkdown>
-                </div>
-
-                <div className="open-mic-hashtags">
-                  {openMicNight.hashtags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
-
-                <div className="button-container">
-                  <a href="/contact" className="competitions-btn competitions-btn-outline">
-                    Subscribe for Updates
-                  </a>
-                </div>
-              </div>
-            </div>
+            {renderOpenMicPanel()}
           </div>
         )}
 
@@ -245,6 +254,25 @@ const PoetryCompetitions = () => {
 
           <div className="past-competitions-content">
             <p>Take a journey through our competition history and discover the talented poets who have graced our stages.</p>
+
+            {!openMicNight.enabled && (
+              <>
+                <div className="past-competition-buttons">
+                  <button
+                    className={`year-toggle-btn ${openMicArchivedOpen ? 'active' : ''}`}
+                    onClick={() => setOpenMicArchivedOpen(!openMicArchivedOpen)}
+                  >
+                    🎤 {openMicNight.title} <span className="toggle-icon">{openMicArchivedOpen ? '▲' : '▼'}</span>
+                  </button>
+                </div>
+
+                <div className={`expandable-competition-content ${openMicArchivedOpen ? 'open' : ''}`}>
+                  <div className="open-mic-night-section">
+                    {renderOpenMicPanel()}
+                  </div>
+                </div>
+              </>
+            )}
 
             {heritageChallenge.enabled && (
               <>

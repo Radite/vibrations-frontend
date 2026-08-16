@@ -285,9 +285,9 @@ collections:
           - label: "Current / Upcoming Event"
             name: "openMicNight"
             widget: "object"
-            hint: "Use this block for whatever open event is currently happening or upcoming. Turn 'Show this event' off to hide it entirely."
+            hint: "Use this block for whatever open event is currently happening or upcoming."
             fields:
-              - {label: "Show this event", name: "enabled", widget: "boolean", default: true}
+              - {label: "Active (shown at the top)", name: "enabled", widget: "boolean", default: true, hint: "On = shown at the top of the page as the current event. Off = archived — moved down into the 'Past Competitions' section instead of being deleted."}
               - {label: "Mark as postponed?", name: "postponed", widget: "boolean", default: false}
               - {label: "Poster Image", name: "image", widget: "image"}
               - {label: "Event Title", name: "title", widget: "string"}
