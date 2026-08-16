@@ -3,13 +3,17 @@ import { useParams, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import './FestivalPage.css';
 
-// Every file in src/data/festivalYearPages is a full festival year's page content,
-// added via the CMS "Festival Year Detail Pages" collection.
-const yearPagesContext = require.context('../data/festivalYearPages', false, /\.json$/);
+// Every file in src/data/festivalYears is one festival year, added via the CMS
+// "Festival Years" collection. This page only shows years where the entry's
+// "Full Festival Details" section has been filled in (at least a Hero Title).
+const yearsContext = require.context('../data/festivalYears', false, /\.json$/);
 
-const yearPages = yearPagesContext
+const hasFullDetails = (entry) => !!(entry.fullDetails && entry.fullDetails.hero && entry.fullDetails.hero.title);
+
+const yearPages = yearsContext
   .keys()
-  .map((key) => yearPagesContext(key))
+  .map((key) => yearsContext(key))
+  .filter(hasFullDetails)
   .sort((a, b) => (b.year || '').localeCompare(a.year || ''));
 
 const FestivalPage = () => {
@@ -39,14 +43,28 @@ const FestivalPage = () => {
     };
   }, []);
 
-  // No year in the URL (/festival-page) shows the most recent year.
-  const festivalData = year ? yearPages.find((p) => p.year === year) : yearPages[0];
+  // No year in the URL (/festival-page) shows the most recent year with full details.
+  const yearEntry = year ? yearPages.find((p) => p.year === year) : yearPages[0];
 
-  if (!festivalData) {
+  if (!yearEntry) {
     return <Navigate to="/festival-years" replace />;
   }
 
-  const { hero, overview, aboutBody, sponsors, presenters, schedule, venue } = festivalData;
+  const fullDetails = yearEntry.fullDetails;
+  const hero = fullDetails.hero;
+  const overview = fullDetails.overview || { heading: '', description: '', stats: [] };
+  const aboutBody = fullDetails.aboutBody || '';
+  const sponsors = fullDetails.sponsors || { caption1: '', caption2: '', list: [], contributors: [], partnershipNote: '' };
+  const presenters = fullDetails.presenters || [];
+  const schedule = fullDetails.schedule || {
+    introText: '',
+    openingSection: { title: '', items: [] },
+    performersSection: { title: '', items: [] },
+    closingSection: { title: '', items: [] },
+    note: '',
+  };
+  const venue = fullDetails.venue || { introText: '', name: '', image: '', description: '', address: '', extraText: '', facilities: [] };
+
   const featuredPresenters = presenters.filter((p) => p.featured);
   const additionalPresenters = presenters.filter((p) => !p.featured);
 
@@ -88,7 +106,7 @@ const FestivalPage = () => {
     <div className="festival-page">
       {isEditor && (
         <a
-          href={`/admin/#/collections/festivalYearPages/entries/${festivalData.year}`}
+          href={`/admin/#/collections/festivalYears/entries/${yearEntry.year}`}
           className="edit-this-page-link"
         >
           ✏️ Edit this page
@@ -151,53 +169,65 @@ const FestivalPage = () => {
                     </div>
                   )}
 
-                  <div className="sponsors-list">
-                    <h5>Thank you to our valued sponsors:</h5>
-                    <ul>
-                      {sponsors.list.map((sponsor) => (
-                        <li key={sponsor.name}><strong>{sponsor.name}</strong> - {sponsor.description}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Individual Contributors Section */}
-                  <div className="contributors-section">
-                    <h5>Individual Contributors</h5>
-                    <p>We extend our heartfelt gratitude to these individual contributors who have supported Vibrations Poetry Festival:</p>
-                    <div className="contributors-grid">
-                      <ul className="contributors-list">
-                        {sponsors.contributors.slice(0, Math.ceil(sponsors.contributors.length / 2)).map((name) => <li key={name}>{name}</li>)}
-                      </ul>
-                      <ul className="contributors-list">
-                        {sponsors.contributors.slice(Math.ceil(sponsors.contributors.length / 2)).map((name) => <li key={name}>{name}</li>)}
+                  {sponsors.list && sponsors.list.length > 0 && (
+                    <div className="sponsors-list">
+                      <h5>Thank you to our valued sponsors:</h5>
+                      <ul>
+                        {sponsors.list.map((sponsor) => (
+                          <li key={sponsor.name}><strong>{sponsor.name}</strong> - {sponsor.description}</li>
+                        ))}
                       </ul>
                     </div>
-                  </div>
+                  )}
 
-                  <p className="partnership-note">
-                    <em>{sponsors.partnershipNote}</em>
-                  </p>
+                  {/* Individual Contributors Section */}
+                  {sponsors.contributors && sponsors.contributors.length > 0 && (
+                    <div className="contributors-section">
+                      <h5>Individual Contributors</h5>
+                      <p>We extend our heartfelt gratitude to these individual contributors who have supported Vibrations Poetry Festival:</p>
+                      <div className="contributors-grid">
+                        <ul className="contributors-list">
+                          {sponsors.contributors.slice(0, Math.ceil(sponsors.contributors.length / 2)).map((name) => <li key={name}>{name}</li>)}
+                        </ul>
+                        <ul className="contributors-list">
+                          {sponsors.contributors.slice(Math.ceil(sponsors.contributors.length / 2)).map((name) => <li key={name}>{name}</li>)}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {sponsors.partnershipNote && (
+                    <p className="partnership-note">
+                      <em>{sponsors.partnershipNote}</em>
+                    </p>
+                  )}
                 </div>
               </div>
 
               {/* Presenters Tab */}
               <div className={`tab-pane ${activeTab === 'presenters' ? 'active' : ''}`}>
                 <h3>Festival Presenters & Founders</h3>
-                <p>Meet the accomplished poets, emerging and aspiring artists who will be presenting at Vibrations Poetry Festival 2025.</p>
+                <p>Meet the accomplished poets, emerging and aspiring artists who will be presenting at Vibrations Poetry Festival {yearEntry.year}.</p>
 
-                <div className="presenters-section">
-                  <h4>Featured Presenters</h4>
-                  <div className="presenters-grid">
-                    {featuredPresenters.map(renderPresenterCard)}
+                {featuredPresenters.length > 0 && (
+                  <div className="presenters-section">
+                    <h4>Featured Presenters</h4>
+                    <div className="presenters-grid">
+                      {featuredPresenters.map(renderPresenterCard)}
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div className="presenters-section">
-                  <h4>Additional Presenters</h4>
-                  <div className="presenters-grid">
-                    {additionalPresenters.map(renderPresenterCard)}
+                {additionalPresenters.length > 0 && (
+                  <div className="presenters-section">
+                    <h4>Additional Presenters</h4>
+                    <div className="presenters-grid">
+                      {additionalPresenters.map(renderPresenterCard)}
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {presenters.length === 0 && <p>Presenters will be announced soon.</p>}
               </div>
 
               {/* Schedule Tab */}
@@ -207,35 +237,46 @@ const FestivalPage = () => {
 
                 <div className="running-order">
                   <h4>Running Order</h4>
-                  <div className="schedule-section">
-                    <h5>{schedule.openingSection.title}</h5>
-                    <ol className="schedule-list">
-                      {schedule.openingSection.items.map((item, i) => <li key={i}>{item}</li>)}
-                    </ol>
-                  </div>
+                  {schedule.openingSection && schedule.openingSection.items && schedule.openingSection.items.length > 0 && (
+                    <div className="schedule-section">
+                      <h5>{schedule.openingSection.title}</h5>
+                      <ol className="schedule-list">
+                        {schedule.openingSection.items.map((item, i) => <li key={i}>{item}</li>)}
+                      </ol>
+                    </div>
+                  )}
 
-                  <div className="schedule-section">
-                    <h5>{schedule.performersSection.title}</h5>
-                    <ol className="schedule-list" start={schedule.openingSection.items.length + 1}>
-                      {schedule.performersSection.items.map((item, i) => <li key={i}>{item}</li>)}
-                    </ol>
-                  </div>
-                  <div className="intermission">
-                    <h5>INTERMISSION</h5>
-                  </div>
+                  {schedule.performersSection && schedule.performersSection.items && schedule.performersSection.items.length > 0 && (
+                    <div className="schedule-section">
+                      <h5>{schedule.performersSection.title}</h5>
+                      <ol className="schedule-list" start={(schedule.openingSection?.items?.length || 0) + 1}>
+                        {schedule.performersSection.items.map((item, i) => <li key={i}>{item}</li>)}
+                      </ol>
+                    </div>
+                  )}
 
-                  <div className="schedule-section">
-                    <h5>{schedule.closingSection.title}</h5>
-                    <ol className="schedule-list">
-                      {schedule.closingSection.items.map((item, i) => <li key={i}>{item}</li>)}
-                    </ol>
-                    <p className="schedule-end"><strong>THE END</strong></p>
-                  </div>
+                  {(schedule.openingSection?.items?.length > 0 || schedule.performersSection?.items?.length > 0) && (
+                    <div className="intermission">
+                      <h5>INTERMISSION</h5>
+                    </div>
+                  )}
+
+                  {schedule.closingSection && schedule.closingSection.items && schedule.closingSection.items.length > 0 && (
+                    <div className="schedule-section">
+                      <h5>{schedule.closingSection.title}</h5>
+                      <ol className="schedule-list">
+                        {schedule.closingSection.items.map((item, i) => <li key={i}>{item}</li>)}
+                      </ol>
+                      <p className="schedule-end"><strong>THE END</strong></p>
+                    </div>
+                  )}
                 </div>
 
-                <div className="schedule-note">
-                  <p><em>{schedule.note}</em></p>
-                </div>
+                {schedule.note && (
+                  <div className="schedule-note">
+                    <p><em>{schedule.note}</em></p>
+                  </div>
+                )}
               </div>
 
               {/* Venues Tab */}
@@ -243,24 +284,28 @@ const FestivalPage = () => {
                 <h3>Festival Venue</h3>
                 <p>{venue.introText}</p>
 
-                <div className="venues-list">
-                  <div className="venue-item">
-                    <img src={venue.image} alt={venue.name} className="venue-image" />
-                    <div className="venue-details">
-                      <h4>{venue.name}</h4>
-                      <p>{venue.description}</p>
-                      <p><strong>Address:</strong> {venue.address}</p>
-                      <p>{venue.extraText}</p>
+                {venue.name && (
+                  <div className="venues-list">
+                    <div className="venue-item">
+                      {venue.image && <img src={venue.image} alt={venue.name} className="venue-image" />}
+                      <div className="venue-details">
+                        <h4>{venue.name}</h4>
+                        <p>{venue.description}</p>
+                        <p><strong>Address:</strong> {venue.address}</p>
+                        <p>{venue.extraText}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
 
-                <div className="venue-info">
-                  <h4>Venue Facilities</h4>
-                  <ul>
-                    {venue.facilities.map((facility) => <li key={facility}>{facility}</li>)}
-                  </ul>
-                </div>
+                {venue.facilities && venue.facilities.length > 0 && (
+                  <div className="venue-info">
+                    <h4>Venue Facilities</h4>
+                    <ul>
+                      {venue.facilities.map((facility) => <li key={facility}>{facility}</li>)}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>

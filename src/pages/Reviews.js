@@ -8,7 +8,7 @@ const Reviews = () => {
     document.title = "Festival Reviews - Vibrations Poetry Festival";
   }, []);
 
-  const { heroTitle, heroSubtitle, yearHeading, eventDetails, introText, reviews, impactHeading, impactText, stats } = reviewsData;
+  const { heroTitle, heroSubtitle, reviews, impactHeading, impactText, stats } = reviewsData;
 
   return (
     <div className="reviews-page">
@@ -17,15 +17,6 @@ const Reviews = () => {
         <div className="site-hero-content">
           <h1>{heroTitle}</h1>
           <p>{heroSubtitle}</p>
-        </div>
-      </section>
-
-      {/* Festival Year Header */}
-      <section className="festival-year-header">
-        <div className="year-header-content">
-          <h2>{yearHeading}</h2>
-          <p className="event-details">{eventDetails}</p>
-          <p className="intro-text">{introText}</p>
         </div>
       </section>
 

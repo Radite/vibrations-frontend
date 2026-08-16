@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 import './FestivalYears.css';
 import './global-hero.css'; // Import global hero CSS
 import { initializeYearsPageAnimations } from './utils/festivalYearsAnimations';
-import festivalYearsData from '../data/festivalYears.json';
+import festivalYearsPageData from '../data/festivalYears.json';
 
-// Detects which years already have a full "Festival Year Detail Pages" entry,
-// so the timeline can link to it automatically instead of requiring a manually
-// typed URL that has to be kept in sync by hand.
-const festivalYearPagesContext = require.context('../data/festivalYearPages', false, /\.json$/);
-const yearsWithDetailPages = new Set(
-  festivalYearPagesContext.keys().map((key) => festivalYearPagesContext(key).year)
-);
+// Every file in src/data/festivalYears is one festival year, added via the CMS
+// "Festival Years" collection — the same entry powers both this timeline card
+// and (if "Full Festival Details" is filled in) the full /festival-page/:year.
+const yearsContext = require.context('../data/festivalYears', false, /\.json$/);
+
+const years = yearsContext
+  .keys()
+  .map((key) => yearsContext(key))
+  .sort((a, b) => (a.year || '').localeCompare(b.year || ''));
 
 const FestivalYears = () => {
   useEffect(() => {
@@ -35,7 +37,7 @@ const FestivalYears = () => {
     return cleanup;
   }, []);
 
-  const { heroTitle, heroSubtitle, introTitle, introText, years } = festivalYearsData;
+  const { heroTitle, heroSubtitle, introTitle, introText } = festivalYearsPageData;
 
   return (
     <div className="festival-years-page">
@@ -64,9 +66,7 @@ const FestivalYears = () => {
 
         <div className="years-grid">
           {years.map((yearEntry) => {
-            const hasDetailPage = yearsWithDetailPages.has(yearEntry.year);
-            const linkUrl = hasDetailPage ? `/festival-page/${yearEntry.year}` : yearEntry.linkUrl;
-            const linkText = yearEntry.linkText || (hasDetailPage ? 'View Festival Details' : 'Learn More');
+            const hasDetailPage = !!(yearEntry.fullDetails && yearEntry.fullDetails.hero && yearEntry.fullDetails.hero.title);
 
             return (
               <div className="year-card" key={yearEntry.year}>
@@ -79,8 +79,8 @@ const FestivalYears = () => {
                   </div>
                 )}
 
-                {linkUrl && (
-                  <Link to={linkUrl} className="btn">{linkText}</Link>
+                {hasDetailPage && (
+                  <Link to={`/festival-page/${yearEntry.year}`} className="btn">View Festival Details</Link>
                 )}
               </div>
             );

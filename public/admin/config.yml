@@ -88,23 +88,13 @@ collections:
           - {label: "Mailing Address", name: "address", widget: "string"}
 
       - label: "Festival Years Page"
-        name: "festivalYears"
+        name: "festivalYearsPage"
         file: "src/data/festivalYears.json"
         fields:
           - {label: "Hero Title", name: "heroTitle", widget: "string"}
           - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
           - {label: "Intro Title", name: "introTitle", widget: "string"}
           - {label: "Intro Text", name: "introText", widget: "text"}
-          - label: "Festival Years"
-            name: "years"
-            widget: "list"
-            hint: "Add a new entry here each time you have a new festival year to show. If you also create a matching entry in 'Festival Year Detail Pages' with the same Year, this card links to it automatically — no need to fill in Link URL."
-            fields:
-              - {label: "Year", name: "year", widget: "string", hint: "Must exactly match the Year on the corresponding 'Festival Year Detail Pages' entry (if any) for the automatic link to work."}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Poster Image", name: "poster", widget: "image", required: false}
-              - {label: "Link URL", name: "linkUrl", widget: "string", required: false, hint: "Only needed if you want this to link somewhere other than a matching Festival Year Detail Page — e.g. a blog post."}
-              - {label: "Link Text", name: "linkText", widget: "string", required: false}
 
       - label: "Festival Reviews Page"
         name: "reviews"
@@ -112,9 +102,6 @@ collections:
         fields:
           - {label: "Hero Title", name: "heroTitle", widget: "string"}
           - {label: "Hero Subtitle", name: "heroSubtitle", widget: "text"}
-          - {label: "Year Heading", name: "yearHeading", widget: "string"}
-          - {label: "Event Details Line", name: "eventDetails", widget: "string"}
-          - {label: "Intro Text", name: "introText", widget: "text"}
           - label: "Reviews"
             name: "reviews"
             widget: "list"
@@ -178,100 +165,120 @@ collections:
           - {label: "Gallery Heading", name: "galleryHeading", widget: "string"}
           - {label: "Gallery Caption", name: "galleryCaption", widget: "text"}
 
-  - name: "festivalYearPages"
-    label: "Festival Year Detail Pages"
-    folder: "src/data/festivalYearPages"
+  - name: "festivalYears"
+    label: "Festival Years"
+    folder: "src/data/festivalYears"
     create: true
     delete: true
     extension: "json"
     format: "json"
     slug: "{{year}}"
     identifier_field: "year"
-    summary: "{{year}} — {{fields.hero.title}}"
-    hint: "One entry per festival year. Add a new one here each time you have a new year's full details (presenters, schedule, venue, etc.) to publish. Set its Link URL on the Festival Years page to /festival-page/<year> to connect them, e.g. /festival-page/2026."
+    summary: "{{year}} — {{description}}"
+    hint: "One entry per festival year — works just like Blog Posts. Click 'New Festival Years' below, fill in at least Year/Card Description/Card Poster so it shows up on the Festival Years timeline, and optionally expand 'Full Festival Details' in the same form to also publish a complete detail page (presenters, schedule, venue, etc.) at /festival-page/<year>. No separate page or URL to manage — it's all in this one entry."
     fields:
-      - {label: "Year", name: "year", widget: "string", hint: "e.g. 2026. This becomes the page's URL: /festival-page/2026"}
-      - label: "Hero"
-        name: "hero"
+      - {label: "Year", name: "year", widget: "string", hint: "e.g. 2026"}
+      - {label: "Card Description", name: "description", widget: "text", hint: "Short blurb shown on the Festival Years timeline card."}
+      - {label: "Card Poster Image", name: "poster", widget: "image", required: false, hint: "Shown on the Festival Years timeline card."}
+      - label: "Full Festival Details (optional)"
+        name: "fullDetails"
         widget: "object"
+        required: false
+        collapsed: true
+        hint: "Fill this in to also publish a full detail page for this year, automatically linked from the timeline card. Leave collapsed/empty if you only want a simple timeline entry for now."
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
-      - label: "Overview"
-        name: "overview"
-        widget: "object"
-        fields:
-          - {label: "Heading", name: "heading", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - label: "Stats"
-            name: "stats"
-            widget: "list"
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            required: false
             fields:
-              - {label: "Number", name: "number", widget: "string"}
-              - {label: "Label", name: "label", widget: "string"}
-      - {label: "About Tab (full text)", name: "aboutBody", widget: "markdown", hint: "Use #### for the Our Vision / Our Mission / Join Us sub-headings."}
-      - label: "Sponsors & Partners"
-        name: "sponsors"
-        widget: "object"
-        fields:
-          - {label: "Caption Line 1", name: "caption1", widget: "text"}
-          - {label: "Caption Line 2 (hashtags)", name: "caption2", widget: "string"}
-          - {label: "Sponsors Collage Image", name: "image", widget: "image", required: false}
-          - label: "Sponsors List"
-            name: "list"
-            widget: "list"
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Overview"
+            name: "overview"
+            widget: "object"
+            required: false
             fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+          - {label: "About Tab (full text)", name: "aboutBody", widget: "markdown", required: false, hint: "Use #### for the Our Vision / Our Mission / Join Us sub-headings."}
+          - label: "Sponsors & Partners"
+            name: "sponsors"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Caption Line 1", name: "caption1", widget: "text", required: false}
+              - {label: "Caption Line 2 (hashtags)", name: "caption2", widget: "string", required: false}
+              - {label: "Sponsors Collage Image", name: "image", widget: "image", required: false}
+              - label: "Sponsors List"
+                name: "list"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+              - {label: "Individual Contributors", name: "contributors", widget: "list", required: false, hint: "One name per line."}
+              - {label: "Partnership Note", name: "partnershipNote", widget: "text", required: false}
+          - label: "Presenters"
+            name: "presenters"
+            widget: "list"
+            required: false
+            hint: "Add or remove presenters here. 'Featured' presenters show at the top of the Presenters tab."
+            fields:
+              - {label: "Featured Presenter?", name: "featured", widget: "boolean", default: false}
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Description", name: "description", widget: "string"}
-          - {label: "Individual Contributors", name: "contributors", widget: "list", hint: "One name per line."}
-          - {label: "Partnership Note", name: "partnershipNote", widget: "text"}
-      - label: "Presenters"
-        name: "presenters"
-        widget: "list"
-        hint: "Add or remove presenters here. 'Featured' presenters show at the top of the Presenters tab."
-        fields:
-          - {label: "Featured Presenter?", name: "featured", widget: "boolean", default: false}
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Title/Role", name: "title", widget: "string"}
-          - {label: "Photo", name: "photo", widget: "image"}
-          - {label: "Bio", name: "bio", widget: "text"}
-          - {label: "Video Upload (optional)", name: "video", widget: "file", required: false, hint: "Use this OR the YouTube link below, not both."}
-          - {label: "YouTube Embed URL (optional)", name: "youtubeUrl", widget: "string", required: false, hint: "Use the embed link, e.g. https://www.youtube.com/embed/VIDEO_ID"}
-      - label: "Schedule"
-        name: "schedule"
-        widget: "object"
-        fields:
-          - {label: "Intro Text", name: "introText", widget: "text"}
-          - label: "Opening & Presentations"
-            name: "openingSection"
+              - {label: "Title/Role", name: "title", widget: "string"}
+              - {label: "Photo", name: "photo", widget: "image"}
+              - {label: "Bio", name: "bio", widget: "text"}
+              - {label: "Video Upload (optional)", name: "video", widget: "file", required: false, hint: "Use this OR the YouTube link below, not both."}
+              - {label: "YouTube Embed URL (optional)", name: "youtubeUrl", widget: "string", required: false, hint: "Use the embed link, e.g. https://www.youtube.com/embed/VIDEO_ID"}
+          - label: "Schedule"
+            name: "schedule"
             widget: "object"
+            required: false
             fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Items", name: "items", widget: "list"}
-          - label: "Performers"
-            name: "performersSection"
+              - {label: "Intro Text", name: "introText", widget: "text", required: false}
+              - label: "Opening & Presentations"
+                name: "openingSection"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Section Title", name: "title", widget: "string"}
+                  - {label: "Items", name: "items", widget: "list"}
+              - label: "Performers"
+                name: "performersSection"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Section Title", name: "title", widget: "string"}
+                  - {label: "Items", name: "items", widget: "list"}
+              - label: "Competition & Closing"
+                name: "closingSection"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Section Title", name: "title", widget: "string"}
+                  - {label: "Items", name: "items", widget: "list"}
+              - {label: "Note", name: "note", widget: "text", required: false}
+          - label: "Venue"
+            name: "venue"
             widget: "object"
+            required: false
             fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Items", name: "items", widget: "list"}
-          - label: "Competition & Closing"
-            name: "closingSection"
-            widget: "object"
-            fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Items", name: "items", widget: "list"}
-          - {label: "Note", name: "note", widget: "text"}
-      - label: "Venue"
-        name: "venue"
-        widget: "object"
-        fields:
-          - {label: "Intro Text", name: "introText", widget: "text"}
-          - {label: "Venue Name", name: "name", widget: "string"}
-          - {label: "Venue Photo", name: "image", widget: "image"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Address", name: "address", widget: "string"}
-          - {label: "Extra Text", name: "extraText", widget: "text"}
-          - {label: "Facilities", name: "facilities", widget: "list"}
+              - {label: "Intro Text", name: "introText", widget: "text", required: false}
+              - {label: "Venue Name", name: "name", widget: "string"}
+              - {label: "Venue Photo", name: "image", widget: "image"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Extra Text", name: "extraText", widget: "text", required: false}
+              - {label: "Facilities", name: "facilities", widget: "list", required: false}
 
   - name: "poetryCompetitions"
     label: "Poetry Competitions Page"
@@ -439,7 +446,7 @@ collections:
     identifier_field: "title"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "URL Slug", name: "slug", widget: "string", hint: "Used in the page URL, e.g. /blog/my-post. Lowercase, hyphens instead of spaces, no spaces or special characters."}
+      - {label: "URL Slug", name: "slug", widget: "string", hint: "Just the last part of the page URL — do NOT include /blog/. For example, if the URL should be vibrationspoetryfestival.com/blog/my-post, enter only: my-post. Lowercase, hyphens instead of spaces, no spaces or slashes."}
       - {label: "Category", name: "category", widget: "select", options: ["Poet Feature", "Book Review", "Festival Review", "Culture", "Interview", "History"]}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
       - {label: "Author Name", name: "author", widget: "string"}
