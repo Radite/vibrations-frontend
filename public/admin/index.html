@@ -64,6 +64,33 @@
       outline: 3px solid #1f8b4c !important;
       outline-offset: 2px !important;
     }
+
+    /*
+      Boolean (Yes/No) toggle switches: the editor's default track color is a
+      very pale grey-blue and the handle is always pure white regardless of
+      on/off state, so the whole control reads as "white on white" and is
+      easy to miss. Force a clearly different color for on vs. off, plus a
+      visible outline on both the track and the handle.
+    */
+    [role="switch"] > span:first-child {
+      background-color: #b0b0b0 !important;
+      border: 2px solid #555 !important;
+      box-sizing: border-box !important;
+    }
+
+    [role="switch"][aria-checked="true"] > span:first-child {
+      background-color: #1f8b4c !important;
+      border-color: #14602f !important;
+    }
+
+    [role="switch"] > span:last-child {
+      border: 2px solid #555 !important;
+      box-sizing: border-box !important;
+    }
+
+    [role="switch"][aria-checked="true"] > span:last-child {
+      border-color: #14602f !important;
+    }
   </style>
 </head>
 <body>

@@ -383,16 +383,17 @@ collections:
       - {label: "Display Order", name: "order", widget: "number", required: false, value_type: "int", hint: "Lower numbers show first within their section. Leave blank to show last."}
 
   - name: "competitions"
-    label: "Competitions (Archive)"
+    label: "Competitions"
     folder: "src/data/competitions"
     create: true
     delete: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}"
     identifier_field: "title"
+    summary: "{{title}} — {{status}}"
     fields:
-      - {label: "Status", name: "status", widget: "select", options: ["Active", "Archived"], default: "Active", hint: "Archived competitions are hidden from the Poetry Competitions page. Use this instead of deleting old ones."}
+      - {label: "Status", name: "status", widget: "select", options: ["Active", "Archived"], default: "Active", hint: "Active = shown at the TOP of the page under 'Current Competitions'. Archived = moved down into the 'Past Competitions' section. Flip this instead of deleting old competitions."}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Year", name: "year", widget: "string", required: false}
+      - {label: "Year", name: "competitionYear", widget: "string", required: false}
       - {label: "Tagline", name: "tagline", widget: "string", required: false}
       - {label: "Dates", name: "dates", widget: "string", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}

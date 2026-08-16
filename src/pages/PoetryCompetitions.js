@@ -3,14 +3,17 @@ import ReactMarkdown from 'react-markdown';
 import './PoetryCompetitions.css';
 import competitionsData from '../data/poetryCompetitions.json';
 
-// Any competitions added via the CMS "Competitions (Archive)" collection are picked up automatically.
+// Any competitions added via the CMS "Competitions" collection are picked up automatically.
+// Filenames are timestamp-prefixed at creation time, so sorting by key puts the most recently added entry first.
 const competitionsContext = require.context('../data/competitions', false, /\.json$/);
 
-const archivedCompetitions = competitionsContext
+const allCompetitions = competitionsContext
   .keys()
   .map((key) => ({ ...competitionsContext(key), _key: key }))
-  .filter((comp) => comp.status === 'Active')
-  .sort((a, b) => (b.year || '').localeCompare(a.year || ''));
+  .sort((a, b) => b._key.localeCompare(a._key));
+
+const activeCompetitions = allCompetitions.filter((comp) => comp.status === 'Active');
+const archivedCompetitions = allCompetitions.filter((comp) => comp.status === 'Archived');
 
 const PoetryCompetitions = () => {
   const [vpf2025Open, setVpf2025Open] = useState(false);
@@ -34,6 +37,71 @@ const PoetryCompetitions = () => {
       </section>
 
       <section className="competitions-content">
+        {/* CURRENT COMPETITIONS - added via the CMS "Competitions" collection with Status: Active */}
+        {activeCompetitions.length > 0 && (
+          <div className="current-competitions-section">
+            <div className="announcement-header">
+              <h2>🎤 Current Competitions</h2>
+              <p className="announcement-date">Happening Now</p>
+            </div>
+
+            <div className="current-competitions-grid">
+              {activeCompetitions.map((comp) => (
+                <div className="current-competition-card" key={comp._key}>
+                  {comp.image && (
+                    <img src={comp.image} alt={comp.title} className="current-competition-image" />
+                  )}
+                  <div className="current-competition-body">
+                    <h3>{comp.title}</h3>
+                    {comp.tagline && <p className="current-competition-tagline">{comp.tagline}</p>}
+                    {comp.dates && <p className="current-competition-dates">📅 {comp.dates}</p>}
+
+                    {comp.description && (
+                      <div className="current-competition-description">
+                        <ReactMarkdown>{comp.description}</ReactMarkdown>
+                      </div>
+                    )}
+
+                    {comp.winners && comp.winners.length > 0 && (
+                      <div className="recap-winners-grid">
+                        {comp.winners.map((winner) => (
+                          <div className="recap-winner-card" key={winner.name + (winner.poemTitle || '')}>
+                            {winner.medal && <div className="recap-medal">{winner.medal}</div>}
+                            {winner.place && <div className="recap-place">{winner.place}</div>}
+                            <div className="recap-name">{winner.name}</div>
+                            {winner.poemTitle && <div className="recap-poem-title">"{winner.poemTitle}"</div>}
+                            {winner.prize && <div className="recap-prize">{winner.prize}</div>}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {comp.highlights && comp.highlights.length > 0 && (
+                      <div className="highlights-grid">
+                        {comp.highlights.map((highlight) => (
+                          <div className="highlight-item" key={highlight.title}>
+                            {highlight.icon && <div className="highlight-icon">{highlight.icon}</div>}
+                            <h5>{highlight.title}</h5>
+                            <p>{highlight.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {comp.linkUrl && (
+                      <div className="button-container">
+                        <a href={comp.linkUrl} className="competitions-btn competitions-btn-primary">
+                          {comp.linkText || 'Learn More'}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* OPEN MIC NIGHT */}
         {openMicNight.enabled && (
           <div className="open-mic-night-section">
@@ -314,7 +382,7 @@ const PoetryCompetitions = () => {
                       className={`year-toggle-btn ${isOpen ? 'active' : ''}`}
                       onClick={() => setOpenCompetitionKey(isOpen ? null : comp._key)}
                     >
-                      🏅 {comp.title}{comp.year ? ` (${comp.year})` : ''} <span className="toggle-icon">{isOpen ? '▲' : '▼'}</span>
+                      🏅 {comp.title}{comp.competitionYear ? ` (${comp.competitionYear})` : ''} <span className="toggle-icon">{isOpen ? '▲' : '▼'}</span>
                     </button>
                   </div>
 
