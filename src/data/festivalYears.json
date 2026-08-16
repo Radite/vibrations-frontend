@@ -10,6 +10,11 @@
       "poster": "/assets/UpdatedFlyer.png",
       "linkUrl": "/festival-page",
       "linkText": "Learn More"
+    },
+    {
+      "year": "2026",
+      "description": "TEST",
+      "poster": "/assets/Canute.png"
     }
   ]
 }
