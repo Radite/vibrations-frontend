@@ -39,6 +39,7 @@ function App() {
         <Route path="/poetry-competitions" element={<PoetryCompetitions />} />
         <Route path="/festival-years" element={<FestivalYears />} />
         <Route path="/festival-page" element={<FestivalPage />} />
+        <Route path="/festival-page/:year" element={<FestivalPage />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/entry-form-spring" element={<EntryForm />} />
 

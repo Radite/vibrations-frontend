@@ -2,12 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# Lets you save several entries as drafts (nothing goes live) and publish
-# each one individually whenever you're ready, instead of every Publish
-# click going live immediately. Adds an "Editorial Workflow" view in the
-# sidebar with Draft / In Review / Ready columns.
-publish_mode: editorial_workflow
-
 media_folder: "public/assets"
 public_folder: "/assets"
 logo_url: "/assets/logo.png"
@@ -104,12 +98,12 @@ collections:
           - label: "Festival Years"
             name: "years"
             widget: "list"
-            hint: "Add a new entry here each time you have a new festival year to show."
+            hint: "Add a new entry here each time you have a new festival year to show. If you also created a full detail page for that year in 'Festival Year Detail Pages', set Link URL below to /festival-page/<year> (e.g. /festival-page/2026) to connect them."
             fields:
               - {label: "Year", name: "year", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Poster Image", name: "poster", widget: "image", required: false}
-              - {label: "Link URL", name: "linkUrl", widget: "string", required: false}
+              - {label: "Link URL", name: "linkUrl", widget: "string", required: false, hint: "e.g. /festival-page/2026 to link to that year's full detail page."}
               - {label: "Link Text", name: "linkText", widget: "string", required: false}
 
       - label: "Festival Reviews Page"
@@ -184,94 +178,100 @@ collections:
           - {label: "Gallery Heading", name: "galleryHeading", widget: "string"}
           - {label: "Gallery Caption", name: "galleryCaption", widget: "text"}
 
-  - name: "festivalPage"
-    label: "Festival Page (2025 Details)"
-    files:
-      - label: "Festival Page Content"
-        name: "festivalPage"
-        file: "src/data/festivalPage.json"
+  - name: "festivalYearPages"
+    label: "Festival Year Detail Pages"
+    folder: "src/data/festivalYearPages"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}"
+    identifier_field: "year"
+    summary: "{{year}} — {{fields.hero.title}}"
+    hint: "One entry per festival year. Add a new one here each time you have a new year's full details (presenters, schedule, venue, etc.) to publish. Set its Link URL on the Festival Years page to /festival-page/<year> to connect them, e.g. /festival-page/2026."
+    fields:
+      - {label: "Year", name: "year", widget: "string", hint: "e.g. 2026. This becomes the page's URL: /festival-page/2026"}
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
         fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Overview"
-            name: "overview"
-            widget: "object"
-            fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - label: "Stats"
-                name: "stats"
-                widget: "list"
-                fields:
-                  - {label: "Number", name: "number", widget: "string"}
-                  - {label: "Label", name: "label", widget: "string"}
-          - {label: "About Tab (full text)", name: "aboutBody", widget: "markdown", hint: "Use #### for the Our Vision / Our Mission / Join Us sub-headings."}
-          - label: "Sponsors & Partners"
-            name: "sponsors"
-            widget: "object"
-            fields:
-              - {label: "Caption Line 1", name: "caption1", widget: "text"}
-              - {label: "Caption Line 2 (hashtags)", name: "caption2", widget: "string"}
-              - {label: "Sponsors Collage Image", name: "image", widget: "image", required: false}
-              - label: "Sponsors List"
-                name: "list"
-                widget: "list"
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Description", name: "description", widget: "string"}
-              - {label: "Individual Contributors", name: "contributors", widget: "list", hint: "One name per line."}
-              - {label: "Partnership Note", name: "partnershipNote", widget: "text"}
-          - label: "Presenters"
-            name: "presenters"
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - label: "Overview"
+        name: "overview"
+        widget: "object"
+        fields:
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - label: "Stats"
+            name: "stats"
             widget: "list"
-            hint: "Add or remove presenters here. 'Featured' presenters show at the top of the Presenters tab."
             fields:
-              - {label: "Featured Presenter?", name: "featured", widget: "boolean", default: false}
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+      - {label: "About Tab (full text)", name: "aboutBody", widget: "markdown", hint: "Use #### for the Our Vision / Our Mission / Join Us sub-headings."}
+      - label: "Sponsors & Partners"
+        name: "sponsors"
+        widget: "object"
+        fields:
+          - {label: "Caption Line 1", name: "caption1", widget: "text"}
+          - {label: "Caption Line 2 (hashtags)", name: "caption2", widget: "string"}
+          - {label: "Sponsors Collage Image", name: "image", widget: "image", required: false}
+          - label: "Sponsors List"
+            name: "list"
+            widget: "list"
+            fields:
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Title/Role", name: "title", widget: "string"}
-              - {label: "Photo", name: "photo", widget: "image"}
-              - {label: "Bio", name: "bio", widget: "text"}
-              - {label: "Video Upload (optional)", name: "video", widget: "file", required: false, hint: "Use this OR the YouTube link below, not both."}
-              - {label: "YouTube Embed URL (optional)", name: "youtubeUrl", widget: "string", required: false, hint: "Use the embed link, e.g. https://www.youtube.com/embed/VIDEO_ID"}
-          - label: "Schedule"
-            name: "schedule"
+              - {label: "Description", name: "description", widget: "string"}
+          - {label: "Individual Contributors", name: "contributors", widget: "list", hint: "One name per line."}
+          - {label: "Partnership Note", name: "partnershipNote", widget: "text"}
+      - label: "Presenters"
+        name: "presenters"
+        widget: "list"
+        hint: "Add or remove presenters here. 'Featured' presenters show at the top of the Presenters tab."
+        fields:
+          - {label: "Featured Presenter?", name: "featured", widget: "boolean", default: false}
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title/Role", name: "title", widget: "string"}
+          - {label: "Photo", name: "photo", widget: "image"}
+          - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Video Upload (optional)", name: "video", widget: "file", required: false, hint: "Use this OR the YouTube link below, not both."}
+          - {label: "YouTube Embed URL (optional)", name: "youtubeUrl", widget: "string", required: false, hint: "Use the embed link, e.g. https://www.youtube.com/embed/VIDEO_ID"}
+      - label: "Schedule"
+        name: "schedule"
+        widget: "object"
+        fields:
+          - {label: "Intro Text", name: "introText", widget: "text"}
+          - label: "Opening & Presentations"
+            name: "openingSection"
             widget: "object"
             fields:
-              - {label: "Intro Text", name: "introText", widget: "text"}
-              - label: "Opening & Presentations"
-                name: "openingSection"
-                widget: "object"
-                fields:
-                  - {label: "Section Title", name: "title", widget: "string"}
-                  - {label: "Items", name: "items", widget: "list"}
-              - label: "Performers"
-                name: "performersSection"
-                widget: "object"
-                fields:
-                  - {label: "Section Title", name: "title", widget: "string"}
-                  - {label: "Items", name: "items", widget: "list"}
-              - label: "Competition & Closing"
-                name: "closingSection"
-                widget: "object"
-                fields:
-                  - {label: "Section Title", name: "title", widget: "string"}
-                  - {label: "Items", name: "items", widget: "list"}
-              - {label: "Note", name: "note", widget: "text"}
-          - label: "Venue"
-            name: "venue"
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Items", name: "items", widget: "list"}
+          - label: "Performers"
+            name: "performersSection"
             widget: "object"
             fields:
-              - {label: "Intro Text", name: "introText", widget: "text"}
-              - {label: "Venue Name", name: "name", widget: "string"}
-              - {label: "Venue Photo", name: "image", widget: "image"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Address", name: "address", widget: "string"}
-              - {label: "Extra Text", name: "extraText", widget: "text"}
-              - {label: "Facilities", name: "facilities", widget: "list"}
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Items", name: "items", widget: "list"}
+          - label: "Competition & Closing"
+            name: "closingSection"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Items", name: "items", widget: "list"}
+          - {label: "Note", name: "note", widget: "text"}
+      - label: "Venue"
+        name: "venue"
+        widget: "object"
+        fields:
+          - {label: "Intro Text", name: "introText", widget: "text"}
+          - {label: "Venue Name", name: "name", widget: "string"}
+          - {label: "Venue Photo", name: "image", widget: "image"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Address", name: "address", widget: "string"}
+          - {label: "Extra Text", name: "extraText", widget: "text"}
+          - {label: "Facilities", name: "facilities", widget: "list"}
 
   - name: "poetryCompetitions"
     label: "Poetry Competitions Page"

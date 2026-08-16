@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import './FestivalPage.css';
-import festivalData from '../data/festivalPage.json';
+
+// Every file in src/data/festivalYearPages is a full festival year's page content,
+// added via the CMS "Festival Year Detail Pages" collection.
+const yearPagesContext = require.context('../data/festivalYearPages', false, /\.json$/);
+
+const yearPages = yearPagesContext
+  .keys()
+  .map((key) => yearPagesContext(key))
+  .sort((a, b) => (b.year || '').localeCompare(a.year || ''));
 
 const FestivalPage = () => {
+  const { year } = useParams();
   const [activeTab, setActiveTab] = useState('about');
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -11,6 +21,13 @@ const FestivalPage = () => {
     window.scrollTo(0, 0);
     setTimeout(() => setIsLoaded(true), 100);
   }, []);
+
+  // No year in the URL (/festival-page) shows the most recent year.
+  const festivalData = year ? yearPages.find((p) => p.year === year) : yearPages[0];
+
+  if (!festivalData) {
+    return <Navigate to="/festival-years" replace />;
+  }
 
   const { hero, overview, aboutBody, sponsors, presenters, schedule, venue } = festivalData;
   const featuredPresenters = presenters.filter((p) => p.featured);

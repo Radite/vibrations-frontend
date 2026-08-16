@@ -1,0 +1,249 @@
+{
+  "year": "2025",
+  "hero": {
+    "title": "Vibrations Poetry Festival 2025",
+    "subtitle": "August 9, 2025 • Kingston, Jamaica"
+  },
+  "overview": {
+    "heading": "Celebrate Caribbean Poetry & Culture",
+    "description": "Join us for the inaugural Vibrations Poetry Festival, a celebration of Jamaican literary arts, poetry, and culture in Kingston. Experience performances from award-winning poets, interactive workshops, and vibrant cultural showcases.",
+    "stats": [
+      {
+        "number": "11",
+        "label": "Poets & Artists"
+      },
+      {
+        "number": "1",
+        "label": "Day"
+      },
+      {
+        "number": "1",
+        "label": "Venue"
+      }
+    ]
+  },
+  "aboutBody": "Welcome to Vibrations Poetry Festival (VPF), a dynamic and exciting new literary celebration dedicated to nurturing the art of poetry in Jamaica. Our inaugural festival, scheduled for August 9, 2025 at Edna Manley College of the Visual & Performing Arts, promises to be a landmark event that showcases the creativity, resilience, and vibrancy of emerging and established Jamaican poets. With a rich cultural heritage to draw from, VPF is committed to providing a platform that fosters growth and transformation within the Jamaican poetry community and beyond.\n\nAt the heart of Vibrations Poetry Festival is our unwavering dedication to creating an inclusive space for aspiring poets to learn, grow, and express themselves. We believe that poetry has the power to uplift, challenge, and inspire, and through our festival, we seek to highlight the ways in which the art form can impact not only individual lives but society as a whole.\n\n#### Our Vision\n\nVPF is dedicated to fostering a passion for poetry writing and creating an inclusive space for aspiring and emerging Jamaican poets to showcase and hone their poetry writing and performance skills. By celebrating the rich tradition of Jamaican poetry, we aim to cultivate a new generation of poets who will shape the cultural and literary landscape for years to come.\n\n#### Our Mission\n\nVPF's mission is to educate and sensitize both Jamaican society and the world-at-large to the transformative power of poetry. We believe in poetry's ability to create positive change by shifting mindsets, attitudes, and actions—addressing issues that range from local concerns to global challenges. The festival is grounded in the backdrop of Jamaica's rich cultural heritage, which serves as both inspiration and a call to action for poets to use their voices as agents of change.\n\n#### Join Us\n\nWhether you're a poet, poetry lover, or someone interested in the transformative power of words, Vibrations Poetry Festival is for you. We invite you to be a part of our inaugural event in 2025, where you'll experience the richness of Jamaican poetry, hear from inspiring poets, and witness firsthand how poetry can spark change.\n\nLet Vibrations of the festival inspire you—because poetry is not just a form of art, it is a force for change.",
+  "sponsors": {
+    "caption1": "A heartfelt THANK YOU to our amazing sponsors- individuals as well as partnering organizations! Your support helps Vibration Poetry Festival celebrate creativity and build a stage where \"Voices Rise and Metaphors Dance\" We couldn't do it without you!",
+    "caption2": "#Gratitude #VibrationsPoetryFestival #oursponsorsrock",
+    "image": "/assets/VPFSponsors.png",
+    "list": [
+      {
+        "name": "PBC Jamaica",
+        "description": "Supporting Caribbean media and cultural initiatives"
+      },
+      {
+        "name": "Marnei Trading",
+        "description": "Committed to community development and arts"
+      },
+      {
+        "name": "EMCVP (Edna Manley College of the Visual and Performing Arts)",
+        "description": "Our venue partner and champion of the arts"
+      },
+      {
+        "name": "Dr. ABC Teachable Moments",
+        "description": "Promoting education and learning through creative expression"
+      },
+      {
+        "name": "ECON Enterprise Jamaica",
+        "description": "Delivering high-quality promotional products with passion and pride for over 20 years"
+      },
+      {
+        "name": "Brain Edibles Collection",
+        "description": "Founded by our co-founder Marguerite C. Anderson, supporting literary excellence"
+      },
+      {
+        "name": "Emkay Sports & Trophies",
+        "description": "Providing awards, medals, and sporting supplies across Jamaica"
+      },
+      {
+        "name": "WholesalePhoto Lab Studio & Docu-Centre",
+        "description": "Offering photo, print, and document services in Kingston"
+      },
+      {
+        "name": "T & T Fashions",
+        "description": "Showcasing Jamaican fashion through locally designed apparel"
+      },
+      {
+        "name": "aviola accessories",
+        "description": "Handcrafted eco-friendly accessories celebrating Caribbean culture"
+      }
+    ],
+    "contributors": [
+      "Sheila Bryan",
+      "Dr. Andrew Campbell",
+      "Dr. Derwin Campbell",
+      "Janice Clarke",
+      "Ichelle Cole-Creed",
+      "Shelly-Ann Dyer",
+      "Lorraina Forrest",
+      "Dr. Juanita Gilliam",
+      "Sheila Hall",
+      "Dr. Denise Jarrett",
+      "Tanitia Munroe",
+      "Christine Reynolds",
+      "Bev Edwards-Stewart",
+      "Dr. Pauline Sawyer",
+      "Dr. Maygon Smythe-Thompson",
+      "Audrey Thomas",
+      "Peaches Joy Williams",
+      "Luke Williams"
+    ],
+    "partnershipNote": "Interested in becoming a sponsor or partner? Contact us to learn about opportunities to support Caribbean poetry and cultural arts."
+  },
+  "presenters": [
+    {
+      "featured": true,
+      "name": "Canute Lawrence",
+      "title": "Co-Founder & Featured Poet",
+      "photo": "/assets/Canute.png",
+      "bio": "Canute Lawrence is an award-winning author, educator, and poet. His book \"Pathology of a Pandemic\" won the International Impact Book Awards in 2024. Published in 2021, it is a powerful collection of poems written during the COVID-19 pandemic, exploring a range of voices and perspectives.",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": true,
+      "name": "Marguerite C. Anderson",
+      "title": "Co-Founder & Featured Poet",
+      "photo": "/assets/Marguerite.jpeg",
+      "bio": "Marguerite C. Anderson is an international-award winning poet, author of children's books, educator, actress and advocate for the arts, known for her evocative exploration of the human condition and Caribbean identity. Born in Kingston, Marguerite has spent over three decades as an English and Literature teacher in Jamaica and the Turks & Caicos Islands. Marguerite is the founder and CEO of Brain Edibles Collection. She has also contributed to the arts as a thespian, appearing in The Pantomime Company's 2022-23 \"Trash & Hype\" and 2023-24 \"SKoolaz 3.0\" as well as in David Tulloch's 2024 theatre production \"Pit To Pulpit\".",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": true,
+      "name": "Angela Jarrett",
+      "title": "Featured Poet",
+      "photo": "/assets/Angela.jpeg",
+      "bio": "Angela Jarrett is an Award-winning Writer, Producer, and Actress. She started writing at the age of fifteen when she won an award in the JCDC Junior Literary competition. She wrote and produced the JIS Radio Series 'MaB's Family.' She was one of the cast members in Trevor's Rhone's play, \"IT'S NOT MY FAULT, BABY.\" Jarrett worked with Blue Mountain Productions, a London-based theatre company, acting in numerous productions during the 1990s and early 2000s. She wrote and produced several plays including 'Something Fishy.'\n\nAngela Jarrett is a judge for the Jamaica Cultural Development Committee (JCDC) Speech Competitions.",
+      "video": "/assets/Video5.mp4",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": true,
+      "name": "Joan-Andrea Hutchinson",
+      "title": "Featured Poet",
+      "photo": "/assets/Joan-Andrea.jpeg",
+      "bio": "Joan Andrea Hutchinson – Communications and Public Relations Specialist, Public Speaking Coach, Speechwriter, Remedial and Developmental English Lecturer, Editor, Radio and Television Producer, Poet.\n\nJoan-Andrea Hutchinson is a celebrated cultural ambassador whose poetry and storytelling celebrate Jamaican language, humor, and traditions. Her performances blend entertainment with cultural education, delighting audiences of all ages.",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": false,
+      "name": "Abigail Reynolds",
+      "title": "Poet",
+      "photo": "/assets/Abigale.jpeg",
+      "bio": "Abigail Reynolds is a seventeen-year-old student of Lower-sixth form at St. Andrew High School for Girls. She is the 1st Place winner of the Jamaica Book Festival Young Writer's Prize for the Poetry category (announced January 20th, 2025).\n\nHer entry focuses on themes of nature while documenting the feeling of growing up.\n\nShe began writing as a way to express things that she didn't feel she could talk about with others. She credits her teachers, Ms. Gayle, Ms. Hemmings, and Mr. Simpson for their support along her writing journey.",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": false,
+      "name": "Andre Smith",
+      "title": "Poet",
+      "photo": "/assets/Andre.jpeg",
+      "bio": "Andre Smith is the Head Boy for the academic year 2024–2025 and a passionate 19-year-old poet. Inspired by his high school literature teachers—most notably Ms. Marguerite Anderson, one of the organizers of this very event—Andre began writing poetry as a way to deepen his appreciation for literature. For him, poetry is more than just art; it is a powerful tool for self-expression and reflection, as well as a medium for critiquing personal thoughts and the world at large. Through his writing, Andre continues to explore the transformative power of words and their ability to open minds and spark meaningful conversations.",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": false,
+      "name": "Anniel Rodgers",
+      "title": "Saxophonist",
+      "photo": "/assets/Anniel.jpeg",
+      "bio": "Anniel Rodgers is one of the talented performers who will be showcased at the festival - not as a poet but as a musician! She is seventeen years old and a gifted saxophonist and Sixth-form student at St Andrew High School.\n\nHer deep passion for music was discovered through her involvement at church, where she was taught to play the saxophone. For Anniel, the saxophone is now more than an instrument! It is her source of joy and her voice for authentic expression.\n\nShe adds that she has seen her music move people to tears and bring smiles to numerous faces. As she continues to blossom, she aims to always sharpen her craft so that her passion for music is not only seen and heard but felt. Her desire is that her music will leave a lasting impact wherever it is shared.",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": false,
+      "name": "Ansel Brown",
+      "title": "Poet",
+      "photo": "/assets/Ansel.jpeg",
+      "bio": "Ansel Brown is a life-long lover of words and writer of poems from Lluidas Vale, St. Catherine. He excelled in debating and public speaking at Dinthill Technical High School before studying English Language and Psychology in Birmingham, UK.\n\nAnsel has published eight poetry collections including 'The Wind Blows and It Stops,' 'Birthwrite,' and 'The Sanity of Ink.' He works with schools to use poetry as an educational tool and has received positive reviews from the Ministry of Education for his work. He considers poetry one of the purest forms of human expression and currently teaches private English classes while continuing to write and perform.",
+      "video": "",
+      "youtubeUrl": "https://www.youtube.com/embed/254EBjFgSeo"
+    },
+    {
+      "featured": false,
+      "name": "Britton Wright",
+      "title": "Poet & 2025 CariCon Poetry Slam Champion",
+      "photo": "/assets/Britton.jpeg",
+      "bio": "Britton Wright is a dynamic poet from Stony Hill, now based in Manchester, who brings pure vibes to every performance. Deeply inspired by music and Jamaican culture, his poetry explores themes like love of country, the Divine Feminine, sensuality, nature, and mental health - particularly men's mental health awareness. For Britton, poetry is a therapeutic and expressive journey that fosters connection and cultural pride.\n\nIn 2024, he was shortlisted for the Louise Bennett Coverly Prize and received multiple JCDC awards. Most recently, he won the 2025 CariCon Poetry Slam Championship, cementing his place as one of Jamaica's rising poetry stars. His performances blend culture, truth, and island pride, making him a powerful voice for authentic Caribbean expression.\n\nAs an advocate for mental health through poetry, Britton uses his platform to address important social issues while celebrating Jamaican identity and the transformative power of spoken word.",
+      "video": "/assets/Video3.mp4",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": false,
+      "name": "Kevin Cooper",
+      "title": "Poet",
+      "photo": "/assets/Kevin.jpeg",
+      "bio": "Kevin Cooper, also known as Blind Vizionary, is a poet and artist born with cataracts and later diagnosed with glaucoma, ultimately losing his sight. Despite these challenges, he's always seen the world through a visionary lens. Deeply influenced by hip-hop and cultural icons like George Carlin, Louise Bennett, and Nas, Kevin uses his gift for language to explore the human experience. His work blends vulnerability, wisdom, and inspiration, aiming to uplift, educate, and connect. Through poetry and music, he continues to be a voice for authenticity, resilience, and purpose.",
+      "video": "",
+      "youtubeUrl": ""
+    },
+    {
+      "featured": false,
+      "name": "Quickore' Bennett",
+      "title": "Poet, Performer & Operations Manager",
+      "photo": "/assets/Quickore.jpg",
+      "bio": "Quickore' Bennett is a Jamaican creative whose voice is deeply rooted in poetry, performance, and personal truth. She began writing at the age of 10, turning to short poems as a way to express herself and make sense of a world where her father was absent and adolescence was anything but simple. Poetry became both a refuge and a release—helping her navigate the emotional challenges of growing up while shaping her into the artist she is today.\n\nHer work often appeared in The Jamaica Gleaner, where her early writings gained public recognition. She continues to write in traditional rhyme schemes such as ABABB, CDCDD, and ABAB BCDC EFEF, using rhythm and structure to reflect the layered nature of her emotions and experiences. Her writing is honest, reflective, and deeply resonant—built on a foundation of lived experience and heartfelt introspection.\n\nAs a performer, Quickore has taken on impactful roles in several Jamaican productions. She portrayed \"Big K\" in Nesta's Rock, Nia in \"Skoolaz 2.0\" (The Pantomime Company 2023-24), and starred in BEAM Jungle of Treasures. She was also named 2nd runner-up in the 2014 staging of Miss Jamaica Talented Teen, where her dramatic abilities and expressive storytelling stood out. Her most recent lead role was as Mama CeeCee in The Pantomime Company's 2024-25 production \"Channel 876\" - a powerful performance that further affirmed her command of character and stage presence.\n\nProfessionally, Quickore' is currently an Operations Manager, where her leadership reflects the same passion and precision she brings to her creative work. She balances her professional and artistic lives with grace, never losing sight of her ultimate goal: to become a published writer. She dreams of releasing a collection of poetry and reflections that speak to young people navigating pain, identity, and healing—just as she once did through her earliest poems. Quickore' Bennett is a woman of voice, vision, and vulnerability—and she continues to write, perform, and lead with authenticity.",
+      "video": "",
+      "youtubeUrl": ""
+    }
+  ],
+  "schedule": {
+    "introText": "Join us for an evening of poetry, performance, and cultural celebration on August 9, 2025.",
+    "openingSection": {
+      "title": "Opening & Presentations",
+      "items": [
+        "Founders Welcome",
+        "Dorrett Campbell - Welcome",
+        "Dr. Denise Jarrett"
+      ]
+    },
+    "performersSection": {
+      "title": "Performers",
+      "items": [
+        "Angela Jarrett",
+        "Britton Wright",
+        "Abigail Reynolds",
+        "Kevin Cooper",
+        "Quickore Bennett",
+        "Anniel Rodgers - Saxophone",
+        "Andre Smith",
+        "Ansel Brown",
+        "Angela Jarrett",
+        "Joan Andrea Hutchinson"
+      ]
+    },
+    "closingSection": {
+      "title": "Competition & Closing",
+      "items": [
+        "VPF Competition - Founders",
+        "Finalists and their pieces",
+        "Introduction of the judges",
+        "Awards",
+        "Marguerite C Anderson (PERFORMANCE)",
+        "Canute Lawrence (PERFORMANCE)"
+      ]
+    },
+    "note": "Join us for this exciting celebration of Jamaican poetry and culture. All performances and activities take place at Edna Manley College of the Visual & Performing Arts."
+  },
+  "venue": {
+    "introText": "Vibrations Poetry Festival takes place at Kingston's premier arts institution.",
+    "name": "Edna Manley College of the Visual & Performing Arts",
+    "image": "/assets/Edna.jpg",
+    "description": "Our venue for all performances, workshops, and activities, celebrating the intersection of poetry and other art forms.",
+    "address": "1 Arthur Wint Drive, Kingston, Jamaica",
+    "extraText": "The College provides an ideal setting for our inaugural festival, with its dedication to nurturing artistic expression and cultural heritage.",
+    "facilities": [
+      "Amphitheater for main performances",
+      "Workshop spaces",
+      "Exhibition areas",
+      "Outdoor performance space",
+      "Accessible facilities",
+      "Parking available"
+    ]
+  }
+}
