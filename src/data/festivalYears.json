@@ -14,7 +14,9 @@
     {
       "year": "2026",
       "description": "TEST",
-      "poster": "/assets/Canute.png"
+      "poster": "/assets/Canute.png",
+      "linkUrl": "/festival-page2026",
+      "linkText": "HI"
     }
   ]
 }
