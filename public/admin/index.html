@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VPF Content Management</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /*
+      Accessibility pass for the CMS editor: larger base text, higher-contrast
+      buttons/links, and bigger click targets. Most of the editor's internal
+      styling is scoped in rem units, so raising the root font size scales
+      the whole app proportionally; the rules below add extra clarity on top
+      of that for the plain HTML form elements the editor renders.
+    */
+    html {
+      font-size: 19px;
+    }
+
+    body,
+    input,
+    textarea,
+    select,
+    button {
+      font-size: 1rem !important;
+      line-height: 1.5 !important;
+    }
+
+    label {
+      font-size: 1.05rem !important;
+      font-weight: 600 !important;
+    }
+
+    input,
+    textarea,
+    select {
+      min-height: 2.75rem !important;
+      padding: 0.5rem 0.65rem !important;
+      border-width: 2px !important;
+    }
+
+    textarea {
+      min-height: 6rem !important;
+    }
+
+    button {
+      min-height: 2.75rem !important;
+      padding: 0.5rem 1.1rem !important;
+      font-weight: 600 !important;
+      cursor: pointer;
+    }
+
+    a {
+      text-underline-offset: 2px;
+    }
+
+    /* Strong, visible focus ring for keyboard and low-vision users */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #1f8b4c !important;
+      outline-offset: 2px !important;
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
