@@ -1,5 +1,46 @@
 {
   "year": "2026",
   "description": "TEST",
-  "poster": "/assets/Canute.png"
+  "poster": "/assets/Canute.png",
+  "fullDetails": {
+    "hero": {
+      "title": "TESTEST",
+      "subtitle": "TESTSEAFDAS"
+    },
+    "overview": {
+      "heading": "TESADFA",
+      "description": "TESDTDSAFDSAFASDFDSAFDSAFSADGSDAFGDS",
+      "stats": [
+        {
+          "number": "1232",
+          "label": "321"
+        },
+        {
+          "number": "3213",
+          "label": "555"
+        }
+      ]
+    },
+    "aboutBody": "T﻿ESESTE",
+    "sponsors": {
+      "caption1": "TESATESTATA"
+    },
+    "venue": {
+      "description": "TEWRTDS",
+      "address": "TAWSTE",
+      "image": "/assets/Edna.jpg",
+      "name": "TEWRATDS"
+    },
+    "schedule": {
+      "closingSection": {
+        "title": "TESTES"
+      },
+      "performersSection": {
+        "title": "TESTES"
+      },
+      "openingSection": {
+        "title": "TESTSE"
+      }
+    }
+  }
 }
