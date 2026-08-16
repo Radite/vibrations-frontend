@@ -3,75 +3,164 @@
   "heroSubtitle": "Celebrating the voices that shaped our inaugural festival and looking forward to future competitions.",
   "openMicNight": {
     "enabled": true,
-    "postponed": true,
-    "image": "/assets/vibrations-open-mic-night.jpeg",
-    "title": "VIBRATIONS OPEN MIC NIGHT – VIRTUAL EDITION!",
+    "hashtags": [
+      "#VibrationsPoetry",
+      "#OpenMicNight",
+      "#VirtualPoetry",
+      "#EmergingPoets",
+      "#SpokenWord",
+      "🌿🇯🇲"
+    ],
     "theme": "🌀 Theme: Nature's Fury 🌀",
-    "statusBody": "We know many of you were excited to share your voices, your stories, and your creativity—and we truly appreciate your passion and support.\n\nBut don't worry! This is not a cancellation—just a brief pause. A new date will be announced soon, and when we return, it's going to be even more powerful, more inspiring, and full of the vibrant energy that defines our community.\n\n**Thank you for your understanding. Thank you for your patience. And above all—thank you for keeping the VIBRATIONS alive. Stay tuned, stay safe, and stay inspired.**",
     "originalWhen": "Friday, November 28, 2025 @ 6:00 PM (JA time)",
-    "originalWhere": "Online via Zoom/Google Meet",
     "cost": "FREE!",
     "introBody": "After Hurricane Melissa, we know you have stories — old and new — to share!\n\n**VPF is calling all poets, wordsmiths, and lovers of spoken word!**\n\nWe're bringing the stage to your screen with our first-ever Virtual Open Mic Night!",
+    "postponed": true,
+    "performInfoBody": "Registration is temporarily closed while we finalize the new date. Check back soon for updates!\n\nIn the meantime, feel free to reach out at vibrationspoetryfestival@gmail.com with any questions.",
     "opportunities": [
       "Share your poem inspired by Nature's Fury",
       "Discover fresh poetic voices",
       "Connect with a vibrant creative community"
     ],
-    "performInfoBody": "Registration is temporarily closed while we finalize the new date. Check back soon for updates!\n\nIn the meantime, feel free to reach out at vibrationspoetryfestival@gmail.com with any questions.",
-    "contactEmail": "vibrationspoetryfestival@gmail.com",
-    "hashtags": ["#VibrationsPoetry", "#OpenMicNight", "#VirtualPoetry", "#EmergingPoets", "#SpokenWord", "🌿🇯🇲"]
+    "statusBody": "We know many of you were excited to share your voices, your stories, and your creativity—and we truly appreciate your passion and support.\n\nBut don't worry! This is not a cancellation—just a brief pause. A new date will be announced soon, and when we return, it's going to be even more powerful, more inspiring, and full of the vibrant energy that defines our community.\n\n**Thank you for your understanding. Thank you for your patience. And above all—thank you for keeping the VIBRATIONS alive. Stay tuned, stay safe, and stay inspired.**",
+    "originalWhere": "Online via Zoom/Google Meet",
+    "title": "VIBRATIONS OPEN MIC NIGHT – VIRTUAL EDITION!",
+    "image": "/assets/vibrations-open-mic-night.jpeg",
+    "contactEmail": "vibrationspoetryfestival@gmail.com"
   },
   "heritageChallenge": {
     "enabled": true,
-    "collaborationText": "Vibrations Poetry Festival in collaboration with Brain Edibles Collection",
-    "quote": "Injustice anywhere is a threat to justice everywhere.",
-    "quoteAuthor": "Martin Luther King Jr.",
-    "winnerImage": "/assets/tanisha-bent-winner.jpeg",
-    "winnerName": "Tanisha Bent",
-    "poemTitle": "In Her Skin",
-    "introBody": "Congratulations to **Tanisha Bent** on winning Vibrations Poetry Festival's Heritage Month Poetry & Human Rights Challenge with her powerful piece, **\"In Her Skin.\"**",
     "poemCardText": "Bent's poem is a fearless confrontation of the everyday injustices women face and a passionate call for respect, dignity, and autonomy. Her work perfectly captures the spirit of October's theme and embodies exactly what this challenge was about.",
+    "submissionDeadline": "October 28, 2025",
+    "collaboration": "Vibrations Poetry Festival & Brain Edibles Collection",
+    "hashtags": [
+      "#HeritageMonthPoetryChallenge",
+      "#TanishaBent",
+      "#InHerSkin",
+      "#Winner",
+      "#vibrationspoetryfestival",
+      "#brainediblescollection",
+      "#poetrycommunity"
+    ],
+    "quoteAuthor": "Martin Luther King Jr.",
+    "theme": "Poetry on Justice, Injustice, and the Pursuit of Peace",
+    "winnerName": "Tanisha Bent",
+    "submissionPeriod": "September - October 2025",
+    "introBody": "Congratulations to **Tanisha Bent** on winning Vibrations Poetry Festival's Heritage Month Poetry & Human Rights Challenge with her powerful piece, **\"In Her Skin.\"**",
+    "poemTitle": "In Her Skin",
+    "collaborationText": "Vibrations Poetry Festival in collaboration with Brain Edibles Collection",
     "nextSteps": [
       "Feature in Vibrations Poetry Festival Showcase 2025 — A dedicated profile celebrating her work and artistry",
       "Interview Spotlight — An in-depth conversation about her poetry, inspirations, and creative journey",
       "Publication Across Digital Channels — Her winning poem will be shared on our website, social media, and promotional materials"
     ],
-    "theme": "Poetry on Justice, Injustice, and the Pursuit of Peace",
-    "submissionDeadline": "October 28, 2025",
-    "submissionPeriod": "September - October 2025",
-    "collaboration": "Vibrations Poetry Festival & Brain Edibles Collection",
-    "hashtags": ["#HeritageMonthPoetryChallenge", "#TanishaBent", "#InHerSkin", "#Winner", "#vibrationspoetryfestival", "#brainediblescollection", "#poetrycommunity"],
+    "winnerImage": "/assets/tanisha-bent-winner.jpeg",
+    "quote": "Injustice anywhere is a threat to justice everywhere.",
     "featureLinkUrl": "/blog/tanisha-bent"
   },
   "competitionRecap": {
     "enabled": true,
-    "year": "Vibrations Poetry Festival 2025",
-    "tagline": "Our Inaugural Competition",
     "dates": "August 9, 2025 • Edna Manley College • Kingston, Jamaica",
     "overviewText": "The inaugural Vibrations Poetry Festival Competition brought together Jamaica's most talented emerging and established poets for an unforgettable evening of spoken word artistry. Open to all Jamaican poets and poetry enthusiasts, this competition celebrated the power of the written and performed word.",
-    "stats": [
-      { "number": "50+", "label": "Submissions" },
-      { "number": "5", "label": "Finalists" },
-      { "number": "3", "label": "Winners" },
-      { "number": "$135K", "label": "Prize Money" }
-    ],
+    "tagline": "Our Inaugural Competition",
     "winners": [
-      { "medal": "🥇", "place": "1st Place", "name": "Keya (pen name)", "poemTitle": "In Silence", "prize": "JA $70,000", "tier": "gold" },
-      { "medal": "🥈", "place": "2nd Place", "name": "Jaheal Letford", "poemTitle": "Why Me", "prize": "JA $40,000", "tier": "silver" },
-      { "medal": "🥉", "place": "3rd Place", "name": "Abigail Clayton", "poemTitle": "The Shift", "prize": "JA $25,000", "tier": "bronze" }
+      {
+        "medal": "🥇",
+        "place": "1st Place",
+        "name": "Keya (pen name)",
+        "poemTitle": "In Silence",
+        "prize": "JA $70,000",
+        "tier": "gold"
+      },
+      {
+        "medal": "🥈",
+        "place": "2nd Place",
+        "name": "Jaheal Letford",
+        "poemTitle": "Why Me",
+        "prize": "JA $40,000",
+        "tier": "silver"
+      },
+      {
+        "medal": "🥉",
+        "place": "3rd Place",
+        "name": "Abigail Clayton",
+        "poemTitle": "The Shift",
+        "prize": "JA $25,000",
+        "tier": "bronze"
+      }
     ],
-    "finalists": [
-      { "name": "Keya (pen name)", "poemTitle": "In Silence", "badge": "🥇 1st Place Winner", "tier": "gold" },
-      { "name": "Jaheal Letford", "poemTitle": "Why Me", "badge": "🥈 2nd Place Winner", "tier": "silver" },
-      { "name": "Abigail Clayton", "poemTitle": "The Shift", "badge": "🥉 3rd Place Winner", "tier": "bronze" },
-      { "name": "Abigail Clayton", "poemTitle": "The Little Flower", "badge": "Finalist", "tier": "" },
-      { "name": "Andre Smith", "poemTitle": "Figure Hate Cycle", "badge": "Finalist", "tier": "" }
+    "year": "Vibrations Poetry Festival 2025",
+    "stats": [
+      {
+        "number": "50+",
+        "label": "Submissions"
+      },
+      {
+        "number": "5",
+        "label": "Finalists"
+      },
+      {
+        "number": "3",
+        "label": "Winners"
+      },
+      {
+        "number": "$135K",
+        "label": "Prize Money"
+      }
     ],
     "highlights": [
-      { "icon": "📝", "title": "Submission Period", "text": "March - June 2025" },
-      { "icon": "🎭", "title": "Live Performances", "text": "5 finalists performed at the festival" },
-      { "icon": "👥", "title": "Audience Choice", "text": "Live audience voting participated" },
-      { "icon": "🏆", "title": "Prize Distribution", "text": "Winners announced on festival night" }
+      {
+        "icon": "📝",
+        "title": "Submission Period",
+        "text": "March - June 2025"
+      },
+      {
+        "icon": "🎭",
+        "title": "Live Performances",
+        "text": "5 finalists performed at the festival"
+      },
+      {
+        "icon": "👥",
+        "title": "Audience Choice",
+        "text": "Live audience voting participated"
+      },
+      {
+        "icon": "🏆",
+        "title": "Prize Distribution",
+        "text": "Winners announced on festival night"
+      }
+    ],
+    "finalists": [
+      {
+        "name": "Keya (pen name)",
+        "poemTitle": "In Silence",
+        "badge": "🥇 1st Place Winner",
+        "tier": "gold"
+      },
+      {
+        "name": "Jaheal Letford",
+        "poemTitle": "Why Me",
+        "badge": "🥈 2nd Place Winner",
+        "tier": "silver"
+      },
+      {
+        "name": "Abigail Clayton",
+        "poemTitle": "The Shift",
+        "badge": "🥉 3rd Place Winner",
+        "tier": "bronze"
+      },
+      {
+        "name": "Abigail Clayton",
+        "poemTitle": "The Little Flower",
+        "badge": "Finalist",
+        "tier": ""
+      },
+      {
+        "name": "Andre Smith",
+        "poemTitle": "Figure Hate Cycle",
+        "badge": "Finalist",
+        "tier": ""
+      }
     ]
   },
   "futureSection": {
