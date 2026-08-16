@@ -3,9 +3,19 @@ import ReactMarkdown from 'react-markdown';
 import './PoetryCompetitions.css';
 import competitionsData from '../data/poetryCompetitions.json';
 
+// Any competitions added via the CMS "Competitions (Archive)" collection are picked up automatically.
+const competitionsContext = require.context('../data/competitions', false, /\.json$/);
+
+const archivedCompetitions = competitionsContext
+  .keys()
+  .map((key) => ({ ...competitionsContext(key), _key: key }))
+  .filter((comp) => comp.status === 'Active')
+  .sort((a, b) => (b.year || '').localeCompare(a.year || ''));
+
 const PoetryCompetitions = () => {
   const [vpf2025Open, setVpf2025Open] = useState(false);
   const [heritageMonthOpen, setHeritageMonthOpen] = useState(false);
+  const [openCompetitionKey, setOpenCompetitionKey] = useState(null);
 
   useEffect(() => {
     document.title = "Poetry Competitions - Vibrations Poetry Festival";
@@ -294,6 +304,84 @@ const PoetryCompetitions = () => {
                 </div>
               </>
             )}
+
+            {archivedCompetitions.map((comp) => {
+              const isOpen = openCompetitionKey === comp._key;
+              return (
+                <React.Fragment key={comp._key}>
+                  <div className="past-competition-buttons">
+                    <button
+                      className={`year-toggle-btn ${isOpen ? 'active' : ''}`}
+                      onClick={() => setOpenCompetitionKey(isOpen ? null : comp._key)}
+                    >
+                      🏅 {comp.title}{comp.year ? ` (${comp.year})` : ''} <span className="toggle-icon">{isOpen ? '▲' : '▼'}</span>
+                    </button>
+                  </div>
+
+                  <div className={`expandable-competition-content ${isOpen ? 'open' : ''}`}>
+                    <div className="competition-year-section">
+                      <div className="year-banner">
+                        <h3>{comp.title}</h3>
+                        {comp.tagline && <p className="year-tagline">{comp.tagline}</p>}
+                        {comp.dates && <p className="competition-dates">{comp.dates}</p>}
+                      </div>
+
+                      {comp.image && (
+                        <div className="winner-announcement-image">
+                          <img src={comp.image} alt={comp.title} className="winner-announcement-photo" />
+                        </div>
+                      )}
+
+                      {comp.description && (
+                        <div className="competition-overview">
+                          <ReactMarkdown>{comp.description}</ReactMarkdown>
+                        </div>
+                      )}
+
+                      {comp.winners && comp.winners.length > 0 && (
+                        <div className="winners-recap">
+                          <h4>🏆 Winners</h4>
+                          <div className="recap-winners-grid">
+                            {comp.winners.map((winner) => (
+                              <div className="recap-winner-card" key={winner.name + (winner.poemTitle || '')}>
+                                {winner.medal && <div className="recap-medal">{winner.medal}</div>}
+                                {winner.place && <div className="recap-place">{winner.place}</div>}
+                                <div className="recap-name">{winner.name}</div>
+                                {winner.poemTitle && <div className="recap-poem-title">"{winner.poemTitle}"</div>}
+                                {winner.prize && <div className="recap-prize">{winner.prize}</div>}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {comp.highlights && comp.highlights.length > 0 && (
+                        <div className="competition-highlights">
+                          <h4>✨ Highlights</h4>
+                          <div className="highlights-grid">
+                            {comp.highlights.map((highlight) => (
+                              <div className="highlight-item" key={highlight.title}>
+                                {highlight.icon && <div className="highlight-icon">{highlight.icon}</div>}
+                                <h5>{highlight.title}</h5>
+                                <p>{highlight.text}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {comp.linkUrl && (
+                        <div className="button-container">
+                          <a href={comp.linkUrl} className="competitions-btn competitions-btn-primary">
+                            {comp.linkText || 'Learn More'}
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </React.Fragment>
+              );
+            })}
           </div>
         </div>
 

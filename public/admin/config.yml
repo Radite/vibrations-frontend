@@ -364,6 +364,60 @@ collections:
               - {label: "Heading", name: "heading", widget: "string"}
               - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "gallery"
+    label: "Gallery Photos & Videos"
+    folder: "src/data/gallery"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: "caption"
+    media_folder: "public/assets/gallery"
+    public_folder: "/assets/gallery"
+    fields:
+      - {label: "Section", name: "section", widget: "select", options: ["Festival Highlights", "Festival Performance Videos", "Behind the Scenes & Preparation", "Poetry in Motion", "More from YouTube"], hint: "Which part of the Gallery page this appears in."}
+      - {label: "Type", name: "mediaType", widget: "select", options: ["Photo", "Video File", "YouTube Video"]}
+      - {label: "Photo", name: "image", widget: "image", required: false, hint: "Required if Type is Photo."}
+      - {label: "Video File", name: "video", widget: "file", required: false, hint: "Required if Type is Video File. Upload an .mp4."}
+      - {label: "YouTube Embed URL", name: "youtubeUrl", widget: "string", required: false, hint: "Required if Type is YouTube Video. Use the embed link, e.g. https://www.youtube.com/embed/VIDEO_ID"}
+      - {label: "Caption (optional)", name: "caption", widget: "string", required: false}
+      - {label: "Display Order", name: "order", widget: "number", required: false, value_type: "int", hint: "Lower numbers show first within their section. Leave blank to show last."}
+
+  - name: "competitions"
+    label: "Competitions (Archive)"
+    folder: "src/data/competitions"
+    create: true
+    delete: true
+    slug: "{{year}}-{{slug}}"
+    identifier_field: "title"
+    fields:
+      - {label: "Status", name: "status", widget: "select", options: ["Active", "Archived"], default: "Active", hint: "Archived competitions are hidden from the Poetry Competitions page. Use this instead of deleting old ones."}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Year", name: "year", widget: "string", required: false}
+      - {label: "Tagline", name: "tagline", widget: "string", required: false}
+      - {label: "Dates", name: "dates", widget: "string", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - label: "Winners"
+        name: "winners"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Medal Emoji", name: "medal", widget: "string", required: false}
+          - {label: "Place", name: "place", widget: "string", required: false}
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Poem Title", name: "poemTitle", widget: "string", required: false}
+          - {label: "Prize", name: "prize", widget: "string", required: false}
+      - label: "Highlights"
+        name: "highlights"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Icon (emoji)", name: "icon", widget: "string", required: false}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text", widget: "string"}
+      - {label: "Link URL (optional, e.g. /blog/slug)", name: "linkUrl", widget: "string", required: false}
+      - {label: "Link Text", name: "linkText", widget: "string", required: false}
+
   - name: "blog"
     label: "Blog Posts"
     folder: "src/data/blog"
