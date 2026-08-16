@@ -2,6 +2,12 @@ backend:
   name: git-gateway
   branch: main
 
+# Lets you save several entries as drafts (nothing goes live) and publish
+# each one individually whenever you're ready, instead of every Publish
+# click going live immediately. Adds an "Editorial Workflow" view in the
+# sidebar with Draft / In Review / Ready columns.
+publish_mode: editorial_workflow
+
 media_folder: "public/assets"
 public_folder: "/assets"
 logo_url: "/assets/logo.png"

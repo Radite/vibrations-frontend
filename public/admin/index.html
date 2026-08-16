@@ -91,6 +91,21 @@
     [role="switch"][aria-checked="true"] > span:last-child {
       border-color: #14602f !important;
     }
+
+    /*
+      Dropdown menus (Publish, status, locale, etc.): the editor hardcodes
+      each menu's width in pixels (e.g. 150-160px), sized for its default
+      ~14px text. At the larger font size set above, labels like "Publish
+      and duplicate" no longer fit and get clipped, since the menu also
+      hides overflow. Let every dropdown menu size itself to its content
+      instead of a fixed width.
+    */
+    [role="menu"] {
+      width: auto !important;
+      min-width: 220px !important;
+      max-width: none !important;
+      overflow: visible !important;
+    }
   </style>
 </head>
 <body>
