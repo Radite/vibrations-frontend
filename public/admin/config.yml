@@ -369,6 +369,8 @@ collections:
     folder: "src/data/gallery"
     create: true
     delete: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     identifier_field: "caption"
     media_folder: "public/assets/gallery"
@@ -387,6 +389,8 @@ collections:
     folder: "src/data/competitions"
     create: true
     delete: true
+    extension: "json"
+    format: "json"
     slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}"
     identifier_field: "title"
     summary: "{{title}} — {{status}}"
