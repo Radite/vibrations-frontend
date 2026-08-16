@@ -26,6 +26,91 @@ const PoetryCompetitions = () => {
 
   const { heroTitle, heroSubtitle, openMicNight, heritageChallenge, competitionRecap, futureSection } = competitionsData;
 
+  // Shared layout for every entry from the CMS "Competitions" collection (Active or Archived),
+  // matching the Open Mic Night section so all competitions look consistent.
+  const renderCompetitionPanel = (comp) => (
+    <div className="open-mic-container">
+      {comp.image && (
+        <div className="open-mic-image">
+          <img src={comp.image} alt={comp.title} className="open-mic-poster" />
+        </div>
+      )}
+
+      <div className={`open-mic-content ${comp.image ? '' : 'open-mic-content-full'}`}>
+        <div className="open-mic-header">
+          <h2>{comp.title}</h2>
+          {comp.tagline && <h3>{comp.tagline}</h3>}
+        </div>
+
+        {(comp.dates || comp.competitionYear) && (
+          <div className="original-event-details">
+            <h4>Details:</h4>
+            <div className="open-mic-details">
+              {comp.dates && (
+                <div className="detail-item">
+                  <span className="detail-icon">📅</span>
+                  <div className="detail-text"><strong>When:</strong> {comp.dates}</div>
+                </div>
+              )}
+              {comp.competitionYear && (
+                <div className="detail-item">
+                  <span className="detail-icon">🏆</span>
+                  <div className="detail-text"><strong>Year:</strong> {comp.competitionYear}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {comp.description && (
+          <div className="open-mic-intro">
+            <ReactMarkdown>{comp.description}</ReactMarkdown>
+          </div>
+        )}
+
+        {comp.winners && comp.winners.length > 0 && (
+          <div className="open-mic-opportunities">
+            <h4>🏆 Winners</h4>
+            <div className="open-mic-details">
+              {comp.winners.map((winner) => (
+                <div className="detail-item" key={winner.name + (winner.poemTitle || '')}>
+                  <span className="detail-icon">{winner.medal || '🏅'}</span>
+                  <div className="detail-text">
+                    <strong>{winner.place ? `${winner.place} — ` : ''}{winner.name}</strong>
+                    {winner.poemTitle && <> · "{winner.poemTitle}"</>}
+                    {winner.prize && <> · {winner.prize}</>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {comp.highlights && comp.highlights.length > 0 && (
+          <div className="open-mic-opportunities">
+            <h4>✨ Highlights</h4>
+            <div className="open-mic-details">
+              {comp.highlights.map((highlight) => (
+                <div className="detail-item" key={highlight.title}>
+                  <span className="detail-icon">{highlight.icon || '✨'}</span>
+                  <div className="detail-text"><strong>{highlight.title}</strong> — {highlight.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {comp.linkUrl && (
+          <div className="button-container">
+            <a href={comp.linkUrl} className="competitions-btn competitions-btn-outline">
+              {comp.linkText || 'Learn More'}
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <div className="competitions-container">
       {/* Hero Section */}
@@ -37,69 +122,21 @@ const PoetryCompetitions = () => {
       </section>
 
       <section className="competitions-content">
-        {/* CURRENT COMPETITIONS - added via the CMS "Competitions" collection with Status: Active */}
+        {/* CURRENT COMPETITIONS - added via the CMS "Competitions" collection with Status: Active.
+            Uses the same open-mic-night-section panel layout as Open Mic Night below for consistency. */}
         {activeCompetitions.length > 0 && (
-          <div className="current-competitions-section">
+          <>
             <div className="announcement-header">
               <h2>🎤 Current Competitions</h2>
               <p className="announcement-date">Happening Now</p>
             </div>
 
-            <div className="current-competitions-grid">
-              {activeCompetitions.map((comp) => (
-                <div className="current-competition-card" key={comp._key}>
-                  {comp.image && (
-                    <img src={comp.image} alt={comp.title} className="current-competition-image" />
-                  )}
-                  <div className="current-competition-body">
-                    <h3>{comp.title}</h3>
-                    {comp.tagline && <p className="current-competition-tagline">{comp.tagline}</p>}
-                    {comp.dates && <p className="current-competition-dates">📅 {comp.dates}</p>}
-
-                    {comp.description && (
-                      <div className="current-competition-description">
-                        <ReactMarkdown>{comp.description}</ReactMarkdown>
-                      </div>
-                    )}
-
-                    {comp.winners && comp.winners.length > 0 && (
-                      <div className="recap-winners-grid">
-                        {comp.winners.map((winner) => (
-                          <div className="recap-winner-card" key={winner.name + (winner.poemTitle || '')}>
-                            {winner.medal && <div className="recap-medal">{winner.medal}</div>}
-                            {winner.place && <div className="recap-place">{winner.place}</div>}
-                            <div className="recap-name">{winner.name}</div>
-                            {winner.poemTitle && <div className="recap-poem-title">"{winner.poemTitle}"</div>}
-                            {winner.prize && <div className="recap-prize">{winner.prize}</div>}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {comp.highlights && comp.highlights.length > 0 && (
-                      <div className="highlights-grid">
-                        {comp.highlights.map((highlight) => (
-                          <div className="highlight-item" key={highlight.title}>
-                            {highlight.icon && <div className="highlight-icon">{highlight.icon}</div>}
-                            <h5>{highlight.title}</h5>
-                            <p>{highlight.text}</p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {comp.linkUrl && (
-                      <div className="button-container">
-                        <a href={comp.linkUrl} className="competitions-btn competitions-btn-primary">
-                          {comp.linkText || 'Learn More'}
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+            {activeCompetitions.map((comp) => (
+              <div className="open-mic-night-section" key={comp._key}>
+                {renderCompetitionPanel(comp)}
+              </div>
+            ))}
+          </>
         )}
 
         {/* OPEN MIC NIGHT */}
@@ -387,64 +424,8 @@ const PoetryCompetitions = () => {
                   </div>
 
                   <div className={`expandable-competition-content ${isOpen ? 'open' : ''}`}>
-                    <div className="competition-year-section">
-                      <div className="year-banner">
-                        <h3>{comp.title}</h3>
-                        {comp.tagline && <p className="year-tagline">{comp.tagline}</p>}
-                        {comp.dates && <p className="competition-dates">{comp.dates}</p>}
-                      </div>
-
-                      {comp.image && (
-                        <div className="winner-announcement-image">
-                          <img src={comp.image} alt={comp.title} className="winner-announcement-photo" />
-                        </div>
-                      )}
-
-                      {comp.description && (
-                        <div className="competition-overview">
-                          <ReactMarkdown>{comp.description}</ReactMarkdown>
-                        </div>
-                      )}
-
-                      {comp.winners && comp.winners.length > 0 && (
-                        <div className="winners-recap">
-                          <h4>🏆 Winners</h4>
-                          <div className="recap-winners-grid">
-                            {comp.winners.map((winner) => (
-                              <div className="recap-winner-card" key={winner.name + (winner.poemTitle || '')}>
-                                {winner.medal && <div className="recap-medal">{winner.medal}</div>}
-                                {winner.place && <div className="recap-place">{winner.place}</div>}
-                                <div className="recap-name">{winner.name}</div>
-                                {winner.poemTitle && <div className="recap-poem-title">"{winner.poemTitle}"</div>}
-                                {winner.prize && <div className="recap-prize">{winner.prize}</div>}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {comp.highlights && comp.highlights.length > 0 && (
-                        <div className="competition-highlights">
-                          <h4>✨ Highlights</h4>
-                          <div className="highlights-grid">
-                            {comp.highlights.map((highlight) => (
-                              <div className="highlight-item" key={highlight.title}>
-                                {highlight.icon && <div className="highlight-icon">{highlight.icon}</div>}
-                                <h5>{highlight.title}</h5>
-                                <p>{highlight.text}</p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {comp.linkUrl && (
-                        <div className="button-container">
-                          <a href={comp.linkUrl} className="competitions-btn competitions-btn-primary">
-                            {comp.linkText || 'Learn More'}
-                          </a>
-                        </div>
-                      )}
+                    <div className="open-mic-night-section">
+                      {renderCompetitionPanel(comp)}
                     </div>
                   </div>
                 </React.Fragment>

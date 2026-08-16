@@ -2231,118 +2231,15 @@
 }
 
 /* ========================================
-   CURRENT COMPETITIONS SECTION
+   CMS-ADDED COMPETITIONS (Current + Archived)
+   Both share the .open-mic-night-section panel layout (see above) so
+   every competition added via the CMS looks consistent.
    ======================================== */
 
-.current-competitions-section {
-  background: linear-gradient(135deg, #00843D 0%, #006B28 100%);
-  color: #fff;
-  padding: 50px 40px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 20px 40px rgba(0, 132, 61, 0.35);
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #FED100;
-}
-
-.current-competitions-section .announcement-header h2 {
-  color: #FED100;
-  font-size: 2.6em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.current-competitions-section .announcement-date {
-  color: #fff;
-  opacity: 0.9;
-}
-
-.current-competitions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.current-competition-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 2px solid rgba(254, 209, 0, 0.4);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.current-competition-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-.current-competition-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.current-competition-body {
-  padding: 25px;
-}
-
-.current-competition-body h3 {
-  color: #FED100;
-  font-size: 1.6em;
-  margin-bottom: 10px;
-}
-
-.current-competition-tagline {
-  font-style: italic;
-  color: #d4a574;
-  margin-bottom: 10px;
-}
-
-.current-competition-dates {
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.current-competition-description {
-  color: #fff;
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
-
-.current-competition-body .recap-winners-grid,
-.current-competition-body .highlights-grid {
-  margin-top: 20px;
-}
-
-/* The default recap/highlight colors assume a dark background; override for
-   legibility on this section's green gradient. */
-.current-competition-body .recap-prize {
-  background: rgba(254, 209, 0, 0.25);
-  color: #FED100;
-}
-
-.current-competition-body .highlight-item {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(254, 209, 0, 0.4);
-}
-
-@media (max-width: 768px) {
-  .current-competitions-section {
-    padding: 30px 20px;
-  }
-
-  .current-competitions-section .announcement-header h2 {
-    font-size: 2em;
-  }
-
-  .current-competitions-grid {
-    grid-template-columns: 1fr;
-  }
+/* When a competition has no image, let its content span the full panel
+   instead of leaving an empty column. */
+.open-mic-content.open-mic-content-full {
+  grid-column: 1 / -1;
 }
 
 /* ========================================
