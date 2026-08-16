@@ -98,12 +98,12 @@ collections:
           - label: "Festival Years"
             name: "years"
             widget: "list"
-            hint: "Add a new entry here each time you have a new festival year to show. If you also created a full detail page for that year in 'Festival Year Detail Pages', set Link URL below to /festival-page/<year> (e.g. /festival-page/2026) to connect them."
+            hint: "Add a new entry here each time you have a new festival year to show. If you also create a matching entry in 'Festival Year Detail Pages' with the same Year, this card links to it automatically — no need to fill in Link URL."
             fields:
-              - {label: "Year", name: "year", widget: "string"}
+              - {label: "Year", name: "year", widget: "string", hint: "Must exactly match the Year on the corresponding 'Festival Year Detail Pages' entry (if any) for the automatic link to work."}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Poster Image", name: "poster", widget: "image", required: false}
-              - {label: "Link URL", name: "linkUrl", widget: "string", required: false, hint: "e.g. /festival-page/2026 to link to that year's full detail page."}
+              - {label: "Link URL", name: "linkUrl", widget: "string", required: false, hint: "Only needed if you want this to link somewhere other than a matching Festival Year Detail Page — e.g. a blog post."}
               - {label: "Link Text", name: "linkText", widget: "string", required: false}
 
       - label: "Festival Reviews Page"

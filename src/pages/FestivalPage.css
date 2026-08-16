@@ -748,3 +748,30 @@
     font-size: 0.7rem;
   }
 }
+
+/* "Edit this page" quick link — only shown to logged-in CMS editors */
+.edit-this-page-link {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #00843D;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #FED100;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit-this-page-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}

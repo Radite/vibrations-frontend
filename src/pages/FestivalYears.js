@@ -5,6 +5,14 @@ import './global-hero.css'; // Import global hero CSS
 import { initializeYearsPageAnimations } from './utils/festivalYearsAnimations';
 import festivalYearsData from '../data/festivalYears.json';
 
+// Detects which years already have a full "Festival Year Detail Pages" entry,
+// so the timeline can link to it automatically instead of requiring a manually
+// typed URL that has to be kept in sync by hand.
+const festivalYearPagesContext = require.context('../data/festivalYearPages', false, /\.json$/);
+const yearsWithDetailPages = new Set(
+  festivalYearPagesContext.keys().map((key) => festivalYearPagesContext(key).year)
+);
+
 const FestivalYears = () => {
   useEffect(() => {
     // Scroll to top when component mounts
@@ -55,22 +63,28 @@ const FestivalYears = () => {
         </div>
 
         <div className="years-grid">
-          {years.map((yearEntry) => (
-            <div className="year-card" key={yearEntry.year}>
-              <h2>{yearEntry.year}</h2>
-              <p>{yearEntry.description}</p>
+          {years.map((yearEntry) => {
+            const hasDetailPage = yearsWithDetailPages.has(yearEntry.year);
+            const linkUrl = hasDetailPage ? `/festival-page/${yearEntry.year}` : yearEntry.linkUrl;
+            const linkText = yearEntry.linkText || (hasDetailPage ? 'View Festival Details' : 'Learn More');
 
-              {yearEntry.poster && (
-                <div className="poster-container">
-                  <img src={yearEntry.poster} alt={`Vibrations Poetry Festival ${yearEntry.year} Poster`} className="festival-poster" />
-                </div>
-              )}
+            return (
+              <div className="year-card" key={yearEntry.year}>
+                <h2>{yearEntry.year}</h2>
+                <p>{yearEntry.description}</p>
 
-              {yearEntry.linkUrl && (
-                <Link to={yearEntry.linkUrl} className="btn">{yearEntry.linkText || 'Learn More'}</Link>
-              )}
-            </div>
-          ))}
+                {yearEntry.poster && (
+                  <div className="poster-container">
+                    <img src={yearEntry.poster} alt={`Vibrations Poetry Festival ${yearEntry.year} Poster`} className="festival-poster" />
+                  </div>
+                )}
+
+                {linkUrl && (
+                  <Link to={linkUrl} className="btn">{linkText}</Link>
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>

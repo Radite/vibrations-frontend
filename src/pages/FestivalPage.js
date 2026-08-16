@@ -16,10 +16,27 @@ const FestivalPage = () => {
   const { year } = useParams();
   const [activeTab, setActiveTab] = useState('about');
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isEditor, setIsEditor] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => setIsLoaded(true), 100);
+  }, []);
+
+  // Show a quick "Edit this page" link straight to the CMS when the visitor
+  // is already logged in as a content editor (via the Netlify Identity widget
+  // loaded site-wide in public/index.html).
+  useEffect(() => {
+    const identity = window.netlifyIdentity;
+    if (!identity) return undefined;
+    const checkUser = () => setIsEditor(!!identity.currentUser());
+    checkUser();
+    identity.on('login', checkUser);
+    identity.on('logout', checkUser);
+    return () => {
+      identity.off('login', checkUser);
+      identity.off('logout', checkUser);
+    };
   }, []);
 
   // No year in the URL (/festival-page) shows the most recent year.
@@ -69,6 +86,15 @@ const FestivalPage = () => {
 
   return (
     <div className="festival-page">
+      {isEditor && (
+        <a
+          href={`/admin/#/collections/festivalYearPages/entries/${festivalData.year}`}
+          className="edit-this-page-link"
+        >
+          ✏️ Edit this page
+        </a>
+      )}
+
       {/* Hero Section */}
       <section className="site-hero festival-hero">
         <div className="site-hero-content">
